@@ -6,6 +6,21 @@ module LargeHotel
   def model_custom_hvac_tweaks(building_type, climate_zone, prototype_input, model)
     OpenStudio.logFree(OpenStudio::Info, 'openstudio.model.Model', 'Started building type specific adjustments')
 
+    # add transformer
+    transformer_efficiency = nil
+    case template
+    when '90.1-2004', '90.1-2007'
+      transformer_efficiency = 0.971
+    when '90.1-2010', '90.1-2013'
+      transformer_efficiency = 0.983
+    end
+    return true unless !transformer_efficiency.nil?
+
+    model_add_transformer(model,
+                          wired_lighting_frac: 0.0352,
+                          transformer_size: 150000,
+                          transformer_efficiency: transformer_efficiency)
+
     # add extra equipment for kitchen
     add_extra_equip_kitchen(model)
 
@@ -20,13 +35,15 @@ module LargeHotel
     end
 
     exhaust_fan_space_types.each do |space_type_name|
-      space_type_data = model_find_object(standards_data['space_types'], 'template' => template, 'building_type' => building_type, 'space_type' => space_type_name)
+      space_type_data = standards_lookup_table_first(table_name: 'space_types', search_criteria:{'template' => template,
+                                                                                                 'building_type' => building_type,
+                                                                                                 'space_type' => space_type_name})
       if space_type_data.nil?
         OpenStudio.logFree(OpenStudio::Error, 'openstudio.model.Model', "Unable to find space type #{template}-#{building_type}-#{space_type_name}")
         return false
       end
 
-      exhaust_schedule = model_add_schedule(model, space_type_data['exhaust_schedule'])
+      exhaust_schedule = model_add_schedule(model, space_type_data['exhaust_availability_schedule'])
       unless exhaust_schedule
         OpenStudio.logFree(OpenStudio::Error, 'openstudio.model.Model', "Unable to find Exhaust Schedule for space type #{template}-#{building_type}-#{space_type_name}")
         return false
@@ -174,6 +191,20 @@ module LargeHotel
 
   def model_custom_swh_tweaks(model, building_type, climate_zone, prototype_input)
     update_waterheater_ambient_parameters(model)
+
+    return true
+  end
+
+  def model_custom_geometry_tweaks(building_type, climate_zone, prototype_input, model)
+
+    return true
+  end
+
+  def air_terminal_single_duct_vav_reheat_apply_initial_prototype_damper_position(air_terminal_single_duct_vav_reheat, zone_oa_per_area)
+    min_damper_position = template == '90.1-2010' || template == '90.1-2013' ? 0.2 : 0.3
+
+    # Set the minimum flow fraction
+    air_terminal_single_duct_vav_reheat.setConstantMinimumAirFlowFraction(min_damper_position)
 
     return true
   end
