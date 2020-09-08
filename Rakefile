@@ -153,9 +153,8 @@ namespace :data do
   # Order matters: most general/shared must be first,
   # as data may be overwritten when parsing later spreadsheets.
   spreadsheets_ashrae = [
-      'OpenStudio_Standards-ashrae_90_1',
-      'OpenStudio_Standards-ashrae_90_1(space_types)',
-      'OpenStudio_Standards-ashrae_90_1(speed)'
+      'OpenStudio_Standards-ashrae_90_1(speed)',
+      'OpenStudio_Standards-ashrae_90_1(space_types_speed)'
   ]
 
   spreadsheets_deer = [
