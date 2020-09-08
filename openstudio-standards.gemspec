@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop', '0.68.1'
   spec.add_development_dependency 'rubocop-checkstyle_formatter', '~> 0.1.1'
   spec.add_development_dependency 'minitest-ci', '<= 5.10.3'
-  spec.add_development_dependency 'rubyXL', '3.3.8' # install rubyXL gem to export excel files to json
+  spec.add_development_dependency 'rubyXL', '3.3.33' # install rubyXL gem to export excel files to json
   spec.add_development_dependency 'activesupport', '4.2.5' # pairs with google-api-client, > 5.0.0 does not work
   spec.add_development_dependency 'public_suffix', '3.0.3' # fixing version of google-api-client dependency
   spec.add_development_dependency 'faraday', '0.15.4' # fixing version of google-api-client dependency

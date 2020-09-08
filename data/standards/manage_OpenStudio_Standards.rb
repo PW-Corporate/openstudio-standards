@@ -5,6 +5,12 @@ require 'json'
 require 'rubyXL'
 require 'csv'
 
+def rubyxl_extract_data(worksheet)
+  worksheet.sheet_data.rows.map { |row|
+    row.cells.map { |c| c && c.value() } unless row.nil?
+  }
+end
+
 class String
 
   def snake_case
@@ -281,6 +287,7 @@ def export_spreadsheet_to_json(spreadsheet_titles)
   warnings = []
   duplicate_data = []
   spreadsheet_titles.each do |spreadsheet_title|
+    puts "Looking for #{spreadsheet_title}"
 
     # Path to the xlsx file
     xlsx_path = "#{__dir__}/#{spreadsheet_title}.xlsx"
@@ -347,17 +354,18 @@ def export_spreadsheet_to_json(spreadsheet_titles)
     workbook.worksheets.each do |worksheet|
       sheet_name = worksheet.sheet_name.snake_case
 
-    # Get all data
-    all_data = worksheet.sheet_data.rows.map { |row|
-        row.cells.map { |c| c && c.value() } unless row.nil?
-    }
+      # Get all data
+      all_data = worksheet.sheet_data.rows.map { |row|
+          row.cells.map { |c| c && c.value() } unless row.nil?
+      }
 
       # All spreadsheets must have headers in row 3
       # and data from roworksheet 4 onward.
       header_row = 2 # Base 0
 
       # Get all data
-      all_data = worksheet.extract_data
+      puts "worksheet.class = #{worksheet.class}"
+      all_data = rubyxl_extract_data(worksheet)
 
       # Get the header row data
       header_data = all_data[header_row]

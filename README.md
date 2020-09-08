@@ -2,7 +2,7 @@
 
 Install Ruby and OpenStudio as described below for either OpenStudio 3.0.0 or 2.9.1. Note if switching between versions of OpenStudio you will have to delete the `Gemfile.lock` file in the root directory of this repository.
 
-Edit `./data/standards/OpenStudio_Standards.xslx`.
+Edit `./data/standards/OpenStudio_Standards-ashrae_90_1(speed).xslx`. You will have to add other worksheets if you want to override other fields beyond schedules.
 
 Run the commands:
 ```
