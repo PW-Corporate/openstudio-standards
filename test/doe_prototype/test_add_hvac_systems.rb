@@ -31,6 +31,8 @@ class TestAddHVACSystems < Minitest::Test
        unmet_hrs_htg: 650.0},
       {system_type: 'VAV Reheat', main_heat_fuel: 'NaturalGas', zone_heat_fuel: 'NaturalGas', cool_fuel: 'Electricity',
        unmet_hrs_htg: 450.0},
+      # {system_type: 'VAV No Reheat', main_heat_fuel: 'NaturalGas', zone_heat_fuel: 'NaturalGas', cool_fuel: 'Electricity',
+      #  unmet_hrs_htg: 450.0},
 
       # Electric, Electric, forced air
       {system_type: 'PTHP', main_heat_fuel: 'Electricity', zone_heat_fuel: nil, cool_fuel: 'Electricity'},
@@ -102,8 +104,8 @@ class TestAddHVACSystems < Minitest::Test
       # Ambient Loop, Ambient Loop, hydronic
       {system_type: 'Water Source Heat Pumps with DOAS', main_heat_fuel: 'AmbientLoop', zone_heat_fuel: nil, cool_fuel: 'AmbientLoop',
        zone_equipment_ventilation: false},
-      {system_type: 'Water Source Heat Pumps with ERVs', main_heat_fuel: 'AmbientLoop', zone_heat_fuel: nil, cool_fuel: 'AmbientLoop',
-       zone_equipment_ventilation: false},
+      # {system_type: 'Water Source Heat Pumps with ERVs', main_heat_fuel: 'AmbientLoop', zone_heat_fuel: nil, cool_fuel: 'AmbientLoop',
+      #  zone_equipment_ventilation: false},
 
       # District Hot Water, District Chilled Water, hydronic
       {system_type: 'Fan Coil with ERVs', main_heat_fuel: 'DistrictHeating', zone_heat_fuel: nil, cool_fuel: 'DistrictCooling',

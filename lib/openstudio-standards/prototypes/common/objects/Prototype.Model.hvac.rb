@@ -36,10 +36,12 @@ class Standard
             condenser_water_loop = model_add_cw_loop(model,
                                                      cooling_tower_type: 'Open Cooling Tower',
                                                      cooling_tower_fan_type: 'Centrifugal',
-                                                     cooling_tower_capacity_control: 'Fan Cycling',
+                                                     cooling_tower_capacity_control: 'Variable Speed Fan',
                                                      number_of_cells_per_tower: 2,
                                                      number_cooling_towers: 1)
           end
+          num_chillers = prototype_input['chw_number_chillers']
+          num_chillers = 1 if num_chillers == nil
           chilled_water_loop = model_add_chw_loop(model,
                                                   cooling_fuel: 'Electricity',
                                                   dsgn_sup_wtr_temp: system['chilled_water_design_supply_water_temperature'],
@@ -48,7 +50,8 @@ class Standard
                                                   chiller_cooling_type: system['chiller_cooling_type'],
                                                   chiller_condenser_type: system['chiller_condenser_type'],
                                                   chiller_compressor_type: system['chiller_compressor_type'],
-                                                  condenser_water_loop: condenser_water_loop)
+                                                  condenser_water_loop: condenser_water_loop,
+                                                  num_chillers: num_chillers.to_i)
         end
 
         # Add the VAV
@@ -81,7 +84,7 @@ class Standard
           chilled_water_loop = model.getPlantLoopByName('Chilled Water Loop').get
         elsif building_type == 'Hospital'
           condenser_water_loop = nil
-          condenser_water_loop = model_add_cw_loop(model) if system['chiller_cooling_type'] == 'WaterCooled'
+          condenser_water_loop = model_add_cw_loop(model, cooling_tower_capacity_control: 'Variable Speed Fan') if system['chiller_cooling_type'] == 'WaterCooled'
           chilled_water_loop = model_add_chw_loop(model,
                                                   cooling_fuel: 'Electricity',
                                                   dsgn_sup_wtr_temp: system['chilled_water_design_supply_water_temperature'],
@@ -286,7 +289,8 @@ class Standard
                        oa_damper_sch: system['CRAC_oa_damper_schedule'],
                        fan_location: 'DrawThrough',
                        fan_type: system['CRAC_fan_type'],
-                       cooling_type: system['CRAC_cooling_type'])
+                       cooling_type: system['CRAC_cooling_type'],
+                       supply_temp_sch: nil)
 
       when 'CRAH' # Large Data Center (standalone)
         # Retrieve the existing chilled water loop or add a new one if necessary.
@@ -311,7 +315,8 @@ class Standard
                                                   chiller_cooling_type: system['chiller_cooling_type'],
                                                   chiller_condenser_type: system['chiller_condenser_type'],
                                                   chiller_compressor_type: system['chiller_compressor_type'],
-                                                  condenser_water_loop: condenser_water_loop)
+                                                  condenser_water_loop: condenser_water_loop,
+                                                  waterside_economizer: system['waterside_economizer'])
         end
         model_add_crah(model,
                        thermal_zones,
@@ -319,7 +324,8 @@ class Standard
                        chilled_water_loop: chilled_water_loop,
                        hvac_op_sch: system['operation_schedule'],
                        oa_damper_sch: system['oa_damper_schedule'],
-                       return_plenum: nil)
+                       return_plenum: nil,
+                       supply_temp_sch: nil)
 
       when 'SAC'
         model_add_split_ac(model,

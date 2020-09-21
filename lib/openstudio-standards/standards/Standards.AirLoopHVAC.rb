@@ -109,7 +109,7 @@ class Standard
       # to per-area values only so DCV performance is only
       # based on the subset of zones that required DCV.
       air_loop_hvac.thermalZones.sort.each do |zone|
-        if thermal_zone_demand_control_ventilation_required?(zone, climate_zone)
+        unless thermal_zone_demand_control_ventilation_required?(zone, climate_zone)
           thermal_zone_convert_oa_req_to_per_area(zone)
         end
       end
@@ -151,7 +151,7 @@ class Standard
     # Zones that require DCV preserve both per-area and per-person OA reqs.
     # Other zones have OA reqs converted to per-area values only so that DCV
     air_loop_hvac.thermalZones.sort.each do |zone|
-      if thermal_zone_demand_control_ventilation_required?(zone, climate_zone)
+      unless thermal_zone_demand_control_ventilation_required?(zone, climate_zone)
         thermal_zone_convert_oa_req_to_per_area(zone)
       end
     end
@@ -402,6 +402,8 @@ class Standard
     # in Table 6.5.3.1.1B
     # perhaps need to extend AirLoopHVAC data model
     has_fully_ducted_return_and_or_exhaust_air_systems = false
+    has_MERV_9_through_12 = false
+    has_MERV_13_through_15 = false
 
     # Calculate Fan Power Limitation Pressure Drop Adjustment (in wc)
     fan_pwr_adjustment_in_wc = 0
@@ -411,6 +413,20 @@ class Standard
       adj_in_wc = 0.5
       fan_pwr_adjustment_in_wc += adj_in_wc
       OpenStudio.logFree(OpenStudio::Info, 'openstudio.standards.AirLoopHVAC', "--Added #{adj_in_wc} in wc for Fully ducted return and/or exhaust air systems")
+    end
+
+    # MERV 9 through 12
+    if has_MERV_9_through_12
+      adj_in_wc = 0.5
+      fan_pwr_adjustment_in_wc += adj_in_wc
+      OpenStudio.logFree(OpenStudio::Info, 'openstudio.standards.AirLoopHVAC', "--Added #{adj_in_wc} in wc for Particulate Filtration Credit: MERV 9 through 12")
+    end
+
+    # MERV 13 through 15
+    if has_MERV_13_through_15
+      adj_in_wc = 0.9
+      fan_pwr_adjustment_in_wc += adj_in_wc
+      OpenStudio.logFree(OpenStudio::Info, 'openstudio.standards.AirLoopHVAC', "--Added #{adj_in_wc} in wc for Particulate Filtration Credit: MERV 13 through 15")
     end
 
     # Convert the pressure drop adjustment to brake horsepower (bhp)
@@ -463,7 +479,7 @@ class Standard
           fan_pwr_limit_type = 'variable volume'
         end
       elsif comp.to_AirLoopHVACUnitarySystem.is_initialized
-        fan = comp.to_AirLoopHVACUnitarySystem.get.supplyFan
+        fan = comp.to_AirLoopHVACUnitarySystem.get.supplyFan.get
         if fan.to_FanConstantVolume.is_initialized || comp.to_FanOnOff.is_initialized
           fan_pwr_limit_type = 'constant volume'
         elsif fan.to_FanVariableVolume.is_initialized
@@ -482,9 +498,17 @@ class Standard
     # Calculate the Allowable Fan System brake horsepower per Table G3.1.2.9
     allowable_fan_bhp = 0
     if fan_pwr_limit_type == 'constant volume'
-      allowable_fan_bhp = dsn_air_flow_cfm * 0.00094 + fan_pwr_adjustment_bhp
+      if dsn_air_flow_cfm > 0 
+        allowable_fan_bhp = dsn_air_flow_cfm * 0.00094 + fan_pwr_adjustment_bhp
+      else
+        allowable_fan_bhp = 0.00094
+      end
     elsif fan_pwr_limit_type == 'variable volume'
-      allowable_fan_bhp = dsn_air_flow_cfm * 0.0013 + fan_pwr_adjustment_bhp
+      if dsn_air_flow_cfm > 0 
+        allowable_fan_bhp = dsn_air_flow_cfm * 0.0013 + fan_pwr_adjustment_bhp
+      else
+        allowable_fan_bhp = 0.0013
+      end
     end
     OpenStudio.logFree(OpenStudio::Info, 'openstudio.standards.AirLoopHVAC', "For #{air_loop_hvac.name}: Allowable brake horsepower = #{allowable_fan_bhp.round(2)}HP based on #{dsn_air_flow_cfm.round} cfm and #{fan_pwr_adjustment_bhp.round(2)} bhp of adjustment.")
 
@@ -498,7 +522,13 @@ class Standard
 
     floor_area_served_ft2 = OpenStudio.convert(floor_area_served_m2, 'm^2', 'ft^2').get
     cfm_per_ft2 = dsn_air_flow_cfm / floor_area_served_ft2
-    cfm_per_hp = dsn_air_flow_cfm / allowable_fan_bhp
+
+    if allowable_fan_bhp.zero?
+      cfm_per_hp = 0  
+      OpenStudio.logFree(OpenStudio::Warn, 'openstudio.standards.AirLoopHVAC', "AirLoopHVAC #{air_loop_hvac.name} has zero allowable fan bhp, probably due to zero design air flow cfm'.")
+    else  
+      cfm_per_hp = dsn_air_flow_cfm / allowable_fan_bhp
+    end
     OpenStudio.logFree(OpenStudio::Debug, 'openstudio.standards.AirLoopHVAC', "For #{air_loop_hvac.name}: area served = #{floor_area_served_ft2.round} ft^2.")
     OpenStudio.logFree(OpenStudio::Debug, 'openstudio.standards.AirLoopHVAC', "For #{air_loop_hvac.name}: flow per area = #{cfm_per_ft2.round} cfm/ft^2.")
     OpenStudio.logFree(OpenStudio::Debug, 'openstudio.standards.AirLoopHVAC', "For #{air_loop_hvac.name}: flow per hp = #{cfm_per_hp.round} cfm/hp.")
@@ -848,7 +878,7 @@ class Standard
     }
     econ_limits = model_find_object(standards_data['economizers'], search_criteria)
     if econ_limits.nil?
-      OpenStudio.logFree(OpenStudio::Warn, 'openstudio.standards.AirLoopHVAC', "Cannot find economizer limits for #{template}, #{climate_zone}, assuming no economizer required.")
+      OpenStudio.logFree(OpenStudio::Warn, 'openstudio.standards.AirLoopHVAC', "Cannot find economizer limits for template '#{template}' and climate zone '#{climate_zone}', assuming no economizer required.")
       return economizer_required
     end
 
@@ -985,53 +1015,12 @@ class Standard
     when 'NoEconomizer'
       return [nil, nil, nil]
     when 'FixedDryBulb'
-      case climate_zone
-      when 'ASHRAE 169-2006-0B',
-          'ASHRAE 169-2006-1B',
-          'ASHRAE 169-2006-2B',
-          'ASHRAE 169-2006-3B',
-          'ASHRAE 169-2006-3C',
-          'ASHRAE 169-2006-4B',
-          'ASHRAE 169-2006-4C',
-          'ASHRAE 169-2006-5B',
-          'ASHRAE 169-2006-5C',
-          'ASHRAE 169-2006-6B',
-          'ASHRAE 169-2006-7B',
-          'ASHRAE 169-2006-8A',
-          'ASHRAE 169-2006-8B',
-          'ASHRAE 169-2013-0B',
-          'ASHRAE 169-2013-1B',
-          'ASHRAE 169-2013-2B',
-          'ASHRAE 169-2013-3B',
-          'ASHRAE 169-2013-3C',
-          'ASHRAE 169-2013-4B',
-          'ASHRAE 169-2013-4C',
-          'ASHRAE 169-2013-5B',
-          'ASHRAE 169-2013-5C',
-          'ASHRAE 169-2013-6B',
-          'ASHRAE 169-2013-7B',
-          'ASHRAE 169-2013-8A',
-          'ASHRAE 169-2013-8B'
-        drybulb_limit_f = 75
-      when 'ASHRAE 169-2006-5A',
-          'ASHRAE 169-2006-6A',
-          'ASHRAE 169-2006-7A',
-          'ASHRAE 169-2013-5A',
-          'ASHRAE 169-2013-6A',
-          'ASHRAE 169-2013-7A'
-        drybulb_limit_f = 70
-      when 'ASHRAE 169-2006-0A',
-          'ASHRAE 169-2006-1A',
-          'ASHRAE 169-2006-2A',
-          'ASHRAE 169-2006-3A',
-          'ASHRAE 169-2006-4A',
-          'ASHRAE 169-2013-0A',
-          'ASHRAE 169-2013-1A',
-          'ASHRAE 169-2013-2A',
-          'ASHRAE 169-2013-3A',
-          'ASHRAE 169-2013-4A'
-        drybulb_limit_f = 65
-      end
+      search_criteria = {
+          'template' => template,
+          'climate_zone' => climate_zone
+      }
+      econ_limits = model_find_object(standards_data['economizers'], search_criteria)
+      drybulb_limit_f = econ_limits['fixed_dry_bulb_high_limit_shutoff_temp']
     when 'FixedEnthalpy'
       enthalpy_limit_btu_per_lb = 28
     when 'FixedDewPointAndDryBulb'
@@ -2159,6 +2148,7 @@ class Standard
 
     # Enable DCV in the controller mechanical ventilation
     controller_mv.setDemandControlledVentilation(true)
+    OpenStudio.logFree(OpenStudio::Info, 'openstudio.standards.AirLoopHVAC', "Enabled DCV for air loop: #{air_loop_hvac.name}.")
 
     return true
   end
