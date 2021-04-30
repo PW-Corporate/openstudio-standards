@@ -160,10 +160,10 @@ templates.each do |template|
           upgrade_r_value_si = OpenStudio.convert(target_r_value_ip,"ft^2*h*R/Btu","m^2*K/W").get
           # Add as the default
           type_data['Default'] = default.name.get.to_s
-          r_val_data['Default'] = "#{target_r_value_ip.round(0)} || #{upgrade_r_value_si.round(0)}"
+          r_val_data['Default'] = "#{target_r_value_ip.round(0)} | #{upgrade_r_value_si.round(0)}"
           # Add to the options
           type_data['Options'] << default.name.get.to_s
-          r_val_data['Options'] << "#{target_r_value_ip.round(0)} || #{upgrade_r_value_si.round(0)}"
+          r_val_data['Options'] << "#{target_r_value_ip.round(0)} | #{upgrade_r_value_si.round(0)}"
 
           # Make four incrementally better constructions
           r_val_ip_increases = case intended_surface_type
@@ -181,7 +181,7 @@ templates.each do |template|
             upgrade_r_value_si = OpenStudio.convert(upgrade_r_value_ip,"ft^2*h*R/Btu","m^2*K/W").get
             # Add to the options
             type_data['Options'] << upgrade.name.get.to_s
-            r_val_data['Options'] << "#{upgrade_r_value_ip.round(0)} || #{upgrade_r_value_si.round(0)}"
+            r_val_data['Options'] << "#{upgrade_r_value_ip.round(0)} | #{upgrade_r_value_si.round(0)}"
           end
 
           # Store the outputs

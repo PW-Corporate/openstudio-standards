@@ -60,13 +60,13 @@ templates.each do |template|
       lpd = data['lighting_per_area'].to_f
 
       # Default
-      st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} || #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(2)}"
+      st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} | #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(2)}"
 
       # Options
       lpd_multipliers = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5]
       lpd_options = []
       lpd_multipliers.each do |lpd_mult|
-        lpd_options << "#{(lpd * lpd_mult).round(2)} || #{OpenStudio.convert((lpd * lpd_mult),"m^2","ft^2").get.round(2)}"
+        lpd_options << "#{(lpd * lpd_mult).round(2)} | #{OpenStudio.convert((lpd * lpd_mult),"m^2","ft^2").get.round(2)}"
       end
       st_props['Lighting_Power_Density']['Options'] = lpd_options
     end
@@ -77,13 +77,13 @@ templates.each do |template|
       epd = data['electric_equipment_per_area'].to_f
 
       # Default
-      st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} || #{OpenStudio.convert((epd),"m^2","ft^2").get.round(2)}"
+      st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} | #{OpenStudio.convert((epd),"m^2","ft^2").get.round(2)}"
 
       # Options
       epd_multipliers = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5]
       epd_options = []
       epd_multipliers.each do |epd_mult|
-        epd_options << "#{(epd * epd_mult).round(2)} || #{OpenStudio.convert((epd * epd_mult),"m^2","ft^2").get.round(2)}"
+        epd_options << "#{(epd * epd_mult).round(2)} | #{OpenStudio.convert((epd * epd_mult),"m^2","ft^2").get.round(2)}"
       end
       st_props['Equipment_Power_Density']['Options'] = epd_options
     end
@@ -95,13 +95,13 @@ templates.each do |template|
 
     # Cooling Setpoint
     st_props['Cooling_Setpoint'] = {}
-    st_props['Cooling_Setpoint']['Default'] = 75
-    st_props['Cooling_Setpoint']['Options'] = [75]
+    st_props['Cooling_Setpoint']['Default'] = "75 | 24.9"
+    st_props['Cooling_Setpoint']['Options'] = ["75 | 24.9"]
 
     # Heating Setpoint
     st_props['Heating_Setpoint'] = {}
-    st_props['Heating_Setpoint']['Default'] = 70
-    st_props['Heating_Setpoint']['Options'] = [70]
+    st_props['Heating_Setpoint']['Default'] = "70 | 21.1"
+    st_props['Heating_Setpoint']['Options'] = ["70 | 21.1"]
 
     # Save properties to hash
     inputs[template_speed][building_type_speed][space_type_speed] = st_props
