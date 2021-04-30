@@ -77,7 +77,7 @@ templates.each do |template|
       epd = data['electric_equipment_per_area'].to_f
 
       # Default
-      st_props['Equipment_Power_Density']['Default'] = epd.round(2)
+      st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} || #{OpenStudio.convert((epd),"m^2","ft^2").get.round(2)}"
 
       # Options
       epd_multipliers = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5]
