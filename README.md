@@ -17,8 +17,8 @@ Data generated:
 # Consisting of:
 
 A. construction_inputs_new.json
-B. space_loads_inputs_new.json
-C. other_inputs_new.json
+B. space_loads_inputs_new.json - Uses InputJSONData_SpaceLoads.csv
+C. other_inputs_new.json - Uses InputJSONData.xlsx
 
 Which are combined to form: inputs_new.json
 
