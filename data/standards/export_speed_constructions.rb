@@ -343,6 +343,16 @@ File.open("#{__dir__}/construction_costs.csv", 'r') do |f|
   csv.each do |row|
     name = row['construction_name']
     cost = 10.7639 * row['cost ($/ft2)'].to_f
+    # binding.pry
+
+    # model.getConstructions.each do |construction|
+
+    #   if construction.get.name.to_s.split('|')[0] == name
+
+
+    #   end
+
+    # end
 
     construction = model.getConstructionByName(name)
     if construction.empty?

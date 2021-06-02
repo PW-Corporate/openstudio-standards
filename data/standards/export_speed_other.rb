@@ -41,7 +41,13 @@ def process_column(all_data, cell_data, option_row, j, num_rows, indent,key = ni
   puts "#{indent}#{option}"
 
   if option == 'Default'
-    cell_data[option] = all_data[option_row + 1][j]
+    #binding.pry
+    if key == "Overhang_Depth" || key == "Fin_Depth"
+      cell_data[option] = all_data[option_row + 1][j].to_i.to_s + '|' + (all_data[option_row + 1][j]*0.3048).to_i.to_s
+    else
+      cell_data[option] = all_data[option_row + 1][j]
+    end
+
   elsif option == 'Options'
     options = []
     ((option_row+1)...num_rows).each do |i|
@@ -135,7 +141,7 @@ end
 
 # additional data
 
-#other_data['Project_Information']['Units'] = { "Default"=>"IP", "Options"=>["IP"] }
+other_data['Project_Information']['Units'] = { "Default"=>"IP", "Options"=>["IP","SI"] }
 
 # Inputs JSON
 File.open(File.join(base_path, 'other_inputs_new.json'), 'w') do |f|
