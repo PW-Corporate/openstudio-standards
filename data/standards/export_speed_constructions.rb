@@ -148,7 +148,8 @@ templates.each do |template|
           # Make the default construction
           default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
           # Prepend "Typical" for the default construction
-          default_name = "#{typical_prefix}#{default.name}"
+          #binding.pry
+          default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
             default.setName(default_name)
@@ -193,7 +194,7 @@ templates.each do |template|
           # Make the default construction
           default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
           # Prepend "Typical" for the default construction
-          default_name = "#{typical_prefix}#{default.name}"
+          default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
             default.setName(default_name)
@@ -222,7 +223,7 @@ templates.each do |template|
           props['convert_to_simple_glazing'] = 'yes'
           default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
           # Prepend "Typical" for the default construction
-          default_name = "#{typical_prefix}#{default.name}"
+          default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
             default.setName(default_name)
