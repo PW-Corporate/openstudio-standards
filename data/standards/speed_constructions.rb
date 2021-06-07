@@ -246,7 +246,7 @@ module SpeedConstructions
 
       # Convert U-Value to R-Value for naming
       target_r_value_ip = 1.0 / target_u_value_ip.to_f
-
+      ### Should be round 1 maybe?
       target_r_value_si = OpenStudio.convert(target_r_value_ip.round(0),"ft^2*h*R/Btu","m^2*K/W").get
 
       target_u_value_si = 1 / target_r_value_si
