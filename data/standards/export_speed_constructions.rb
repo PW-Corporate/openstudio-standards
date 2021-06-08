@@ -2,6 +2,7 @@ require 'openstudio'
 require 'openstudio-standards'
 require 'json'
 require_relative 'speed_constructions'
+require 'pry-nav'
 
 # Standards to export
 templates = ['90.1-2007', '90.1-2010', '90.1-2013']
@@ -156,15 +157,18 @@ templates.each do |template|
           else
             default = model.getConstructionByName(default_name).get
           end
+
+
           # Get the R-value
           target_r_value_ip = 1.0 / props['assembly_maximum_u_value'].to_f
           upgrade_r_value_si = OpenStudio.convert(target_r_value_ip,"ft^2*h*R/Btu","m^2*K/W").get
           # Add as the default
+
           type_data['Default'] = default.name.get.to_s
-          r_val_data['Default'] = "#{target_r_value_ip.round(0)} | #{upgrade_r_value_si.round(0)}"
+          r_val_data['Default'] = "#{target_r_value_ip.round(0)} | #{upgrade_r_value_si.round(1)}"
           # Add to the options
           type_data['Options'] << default.name.get.to_s
-          r_val_data['Options'] << "#{target_r_value_ip.round(0)} | #{upgrade_r_value_si.round(0)}"
+          r_val_data['Options'] << "#{target_r_value_ip.round(0)} | #{upgrade_r_value_si.round(1)}"
 
           # Make four incrementally better constructions
           r_val_ip_increases = case intended_surface_type
@@ -173,7 +177,8 @@ templates.each do |template|
                                when 'ExteriorRoof'
                                  [10.0, 15.0, 20.0, 25.0]
                                end
-
+          
+                               
           r_val_ip_increases.each do |r_val_increase_ip|
             upgraded_props = SpeedConstructions.upgrade_opaque_construction_properties(props, r_val_increase_ip)
             upgrade = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone)
@@ -182,7 +187,7 @@ templates.each do |template|
             upgrade_r_value_si = OpenStudio.convert(upgrade_r_value_ip,"ft^2*h*R/Btu","m^2*K/W").get
             # Add to the options
             type_data['Options'] << upgrade.name.get.to_s
-            r_val_data['Options'] << "#{upgrade_r_value_ip.round(0)} | #{upgrade_r_value_si.round(0)}"
+            r_val_data['Options'] << "#{upgrade_r_value_ip.round(0)} | #{upgrade_r_value_si.round(1)}"
           end
 
           # Store the outputs
@@ -480,6 +485,7 @@ constructions.keys.each do |energy_code_key|
             next unless options
             options.each do |construction_name|
               is_duplicate = construction_names.include?(construction_name)
+
               construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, is_duplicate]
 
               # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
