@@ -55,4 +55,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'roo', '2.7.1'
   spec.add_development_dependency 'openstudio-api-stubs'
   spec.add_development_dependency 'pry-nav'
+  spec.add_development_dependency 'git'
 end
