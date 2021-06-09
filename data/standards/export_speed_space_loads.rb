@@ -90,7 +90,7 @@ templates.each do |template|
 
     # Outside Air
     st_props['Outside_Air'] = {}
-    st_props['Outside_Air']['Default'] = 'Code'
+    st_props['Outside_Air']['Default'] = '30% Better'
     st_props['Outside_Air']['Options'] = ['Code', '30% Better', '40% Better', '50% Better']
 
     # Cooling Setpoint
