@@ -178,7 +178,7 @@ templates.each do |template|
                                  [10.0, 15.0, 20.0, 25.0]
                                end
           
-                               
+
           r_val_ip_increases.each do |r_val_increase_ip|
             upgraded_props = SpeedConstructions.upgrade_opaque_construction_properties(props, r_val_increase_ip)
             upgrade = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone)
@@ -454,7 +454,7 @@ model.save(SpeedConstructions.construction_lib_path, true)
 # Save CSV that can be used to fill in cost data for next run
 construction_names = {}
 construction_csv = []
-construction_csv << ['energy_code', 'climate_zone', 'surface_type', 'assembly_type', 'construction_name', 'is_duplicate']
+construction_csv << ['energy_code', 'climate_zone', 'surface_type', 'assembly_type', 'construction_name', 'ip name' , 'si name','r value ip','r value si','is_duplicate']
 constructions = inputs['Constructions']
 constructions.keys.each do |energy_code_key|
   energy_code = constructions[energy_code_key]
@@ -463,12 +463,16 @@ constructions.keys.each do |energy_code_key|
     climate_zone.keys.each do |surface_type_key|
       surface_type = climate_zone[surface_type_key]
       surface_type.keys.each do |assembly_or_type_key|
+        #binding.pry
         if /.*_Type/.match(assembly_or_type_key)
+          ### This is ONLY for e.g Slab_Type, Int_Wall_Type ,Floor_Type
           type = surface_type[assembly_or_type_key]
+          # If assembly_or_type_key contains Type 
           options = type['Options']
           next unless options
           options.each do |construction_name|
             is_duplicate = construction_names.include?(construction_name)
+
             construction_csv << [energy_code_key, climate_zone_key, surface_type_key, '', construction_name, is_duplicate]
 
             # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
@@ -479,14 +483,35 @@ constructions.keys.each do |energy_code_key|
         else
           assembly_type = surface_type[assembly_or_type_key]
           assembly_type.keys.each do |type_key|
-            next unless /.*_Type/.match(type_key)
+            ##  
+            ## Attic and Other
+
+            next unless /.*_Type/.match(type_key) ## Exclude the R_values here
             type = assembly_type[type_key]
             options = type['Options']
+            puts type
             next unless options
             options.each do |construction_name|
               is_duplicate = construction_names.include?(construction_name)
 
-              construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, is_duplicate]
+              ip_name = construction_name.split('|')[0]
+
+              si_name = construction_name.split('|')[1]
+              
+              puts construction_name
+              puts type
+              #binding.pry
+              if surface_type_key != "Exterior_Window"
+
+                ip_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('|')[0].rstrip
+
+                si_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('|')[1].strip
+
+                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , ip_rvalue , si_rvalue ,is_duplicate]
+
+              else
+                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , "NaN" , "NaN" ,is_duplicate]
+              end
 
               # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
               construction_names[construction_name] = true
