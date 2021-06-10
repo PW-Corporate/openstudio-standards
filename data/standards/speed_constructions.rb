@@ -201,7 +201,7 @@ module SpeedConstructions
     data = std.model_find_object(std.standards_data['constructions'], 'name' => construction_name)
     unless data
       puts("WARNING Cannot find data for construction: #{construction_name}, will not be created.")
-      return OpenStudio::Model::OptionalConstruction.new
+      return [OpenStudio::Model::OptionalConstruction.new]
     end
 
     # Create a new SPEED name for the contruction
@@ -216,7 +216,9 @@ module SpeedConstructions
       target_u_value_ip = construction_props['assembly_maximum_u_value']
       target_f_factor_ip = construction_props['assembly_maximum_f_factor']
       target_c_factor_ip = construction_props['assembly_maximum_c_factor']
-      target_shgc = construction_props['assembly_maximum_solar_heat_gain_coefficient'].to_f
+
+      ### 1. ROUND 1 round SHGC values
+      target_shgc = construction_props['assembly_maximum_solar_heat_gain_coefficient'].to_f.round(2)
 
       # If the minimum VT to SHGC ratio is included in the construction properties,
       # set the VT using this ratio.
@@ -226,12 +228,13 @@ module SpeedConstructions
       # which results in very low VTs that are only found in windows
       # with reflective metal films.  These window types are not
       # representative of typical design practice.
+
       target_vt = nil
       if construction_props['intended_surface_type'] == 'ExteriorWindow'
         if construction_props['assembly_minimum_vt_shgc']
           target_vt = target_shgc * construction_props['assembly_minimum_vt_shgc'].to_f
         else
-          target_vt = target_shgc * 1.1
+          target_vt = (target_shgc * 1.1)
         end
       end
 
@@ -245,23 +248,30 @@ module SpeedConstructions
       end
 
       # Convert U-Value to R-Value for naming
-      target_r_value_ip = 1.0 / target_u_value_ip.to_f
+      
+      target_r_value_ip = (1.0 / target_u_value_ip.to_f)
       ### Should be round 1 maybe?
-      target_r_value_si = OpenStudio.convert(target_r_value_ip.round(0),"ft^2*h*R/Btu","m^2*K/W").get
+      target_r_value_si = OpenStudio.convert(target_r_value_ip,"ft^2*h*R/Btu","m^2*K/W").get.round(1)
 
+      target_r_value_ip = target_r_value_ip.round
+
+      ### target u value is just for windows
       target_u_value_si = 1 / target_r_value_si
 
       # Construction names differ between windows and opaque constructions
       if construction_props['intended_surface_type'] == 'ExteriorWindow'
         construction_name = "#{speed_const_type} #{speed_climate_zone}" # Leave ExteriorWindow out of the name
+
+        ### We can round window uvalues here as target_u_value_ip does not need to be anywhere else
+         ### 2. ROUND 2 round VT values
         if target_vt
-          construction_name = "#{construction_name} U-#{target_u_value_ip.to_f.round(2)} SHGC-#{target_shgc.round(2)} VT-#{target_vt.round(2)} |#{construction_name} U-#{target_u_value_si.to_f.round(2)} SHGC-#{target_shgc.round(2)} VT-#{target_vt.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)} |#{construction_name} U-#{target_u_value_si.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}"
         else
-          construction_name = "#{construction_name} U-#{target_u_value_ip.to_f.round(2)} SHGC-#{target_shgc.round(2)} |#{construction_name} U-#{target_u_value_si.to_f.round(2)} SHGC-#{target_shgc.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} |#{construction_name} U-#{target_u_value_si.round(2)} SHGC-#{target_shgc}"
         end
       elsif target_u_value_ip
         
-        construction_name = "#{construction_name} R-#{target_r_value_ip.round(0)} |#{construction_name} R-#{target_r_value_si.round(1)}"
+        construction_name = "#{construction_name} R-#{target_r_value_ip} |#{construction_name} R-#{target_r_value_si}"
       end
     end
 
@@ -270,7 +280,10 @@ module SpeedConstructions
     existing_constructions.each do |existing_construction|
       if existing_construction.name.get.to_s == construction_name
         # puts("INFO Reusing #{construction_name}, already in model")
-        return existing_construction
+
+        #if !target_r_value_ip.nil? and !target_r_value_si.nil? then binding.pry end
+
+        return [existing_construction,target_r_value_ip,target_r_value_si]
       end
     end
 
@@ -336,9 +349,10 @@ module SpeedConstructions
       end
     end
 
-    # puts("INFO Added construction #{construction.name}.")
+    #if target_r_value_ip == nil then binding.pry end
 
-    return construction
+    # puts("INFO Added construction #{construction.name}.")
+    return [construction, target_r_value_ip ,target_r_value_si]
   end
 
   # Sets the U-value of a construction to a specified value
