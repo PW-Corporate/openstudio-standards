@@ -158,6 +158,8 @@ module SpeedConstructions
       material = OpenStudio::Model::SimpleGlazing.new(model)
       material.setName(material_name)
 
+      #binding.pry
+
       material.setUFactor(OpenStudio.convert(data['u_factor'].to_f, 'Btu/hr*ft^2*R', 'W/m^2*K').get)
       material.setSolarHeatGainCoefficient(data['solar_heat_gain_coefficient'].to_f)
       material.setVisibleTransmittance(data['visible_transmittance'].to_f)
@@ -165,6 +167,8 @@ module SpeedConstructions
     elsif material_type == 'StandardGlazing'
       material = OpenStudio::Model::StandardGlazing.new(model)
       material.setName(material_name)
+
+      #binding.pry
 
       material.setOpticalDataType(data['optical_data_type'].to_s)
       material.setThickness(OpenStudio.convert(data['thickness'].to_f, 'in', 'm').get)
@@ -309,6 +313,9 @@ module SpeedConstructions
       layers << material
     else
       data['materials'].each do |material_name|
+
+        #binding.pry
+
         material = model_add_material(std, model, material_name)
         if material
           layers << material
@@ -921,12 +928,14 @@ module SpeedConstructions
 
       # Get the R-Value from the name
       name = const.name.get.to_s
-      matches = name.match(/.*(R-\d*).*/)
-      if matches.nil?
+      # always remember America first ! IP is first
+      matches_ip = name.split('|')[0].match(/.*(R-\d*).*/)
+      if matches_ip.nil?
         puts "ERROR For #{name}, could not find properties in name of construction, cannot compare to model inputs."
         next
       end
-      name_r_ip = matches[1].gsub('R-','').to_f
+
+      name_r_ip = matches_ip[1].gsub('R-','').to_f
       # puts name
       # puts ".... from name R IP = #{name_r_ip}"
 
