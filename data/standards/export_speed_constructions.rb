@@ -175,9 +175,6 @@ templates.each do |template|
                                  [10.0, 15.0, 20.0, 25.0]
                                end
 
-          
-
-
           r_val_ip_increases.each do |r_val_increase_ip|
             upgraded_props = SpeedConstructions.upgrade_opaque_construction_properties(props, r_val_increase_ip)
             upgrade_construction , upgrade_r_value_ip, upgrade_r_value_si = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone)
@@ -389,7 +386,7 @@ constructions.keys.each do |energy_code_key|
           options.each do |construction_name|
             is_duplicate = construction_names.include?(construction_name)
 
-            construction_csv << [energy_code_key, climate_zone_key, surface_type_key, '', construction_name, is_duplicate]
+            construction_csv << [energy_code_key, climate_zone_key, surface_type_key, '', construction_name, "NA" ,"NA", "NA" , "NA" ,is_duplicate]
 
             # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
             construction_names[construction_name] = true

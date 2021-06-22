@@ -831,10 +831,12 @@ module SpeedConstructions
 
       # Get the properties from the name
       name = const.name.get.to_s
-      matches = name.match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
-      name_u_ip = matches[1].gsub('U-','').to_f
-      name_shgc = matches[2].gsub('SHGC-','').to_f
-      name_vt = matches[3].gsub('VT-','').to_f
+      # Remember America first! Ip value is first split
+      matches_ip = name.split('|')[0].match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
+
+      name_u_ip = matches_ip[1].gsub('U-','').to_f
+      name_shgc = matches_ip[2].gsub('SHGC-','').to_f
+      name_vt = matches_ip[3].gsub('VT-','').to_f
       # puts name
       # puts ".... from name U = #{name_u_ip}"
       # puts ".... from name SHGC = #{name_shgc}"
