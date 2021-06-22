@@ -52,7 +52,7 @@ templates.each do |template|
           'standards_construction_type' => 'Metal framing (curtainwall/storefront)',
           'building_category' => building_category
       }
-      correct_props = std.model_find_object(std.standards_data['construction_properties'], search_criteria)
+      correct_props = std.model_find_object(std.standards_data['construction_properties'], **search_criteria)
 
       # Modify the props for all Metal framing (all other) to match Metal framing (curtainwall/storefront)
       const_props.each do |p|
@@ -96,7 +96,7 @@ templates.each do |template|
         'intended_surface_type' => intended_surface_type,
         'building_category' => building_category
       }
-      const_props = std.model_find_objects(std.standards_data['construction_properties'], search_criteria)
+      const_props = std.model_find_objects(std.standards_data['construction_properties'], **search_criteria)
 
       # Get unique set of standards construction types (mass, wood-framed, etc.) for this surface type
       standards_construction_types = []
@@ -132,7 +132,7 @@ templates.each do |template|
           'standards_construction_type' => standards_construction_type,
           'building_category' => building_category
         }
-        props = std.model_find_object(std.standards_data['construction_properties'], search_criteria)
+        props = std.model_find_object(std.standards_data['construction_properties'], **search_criteria)
 
         # Make sure that a construction is specified
         if props['construction'].nil?
@@ -347,120 +347,30 @@ File.open("#{__dir__}/construction_inputs_new.json", 'w') do |f|
   f.write(JSON.pretty_generate(inputs, {:indent => "    "}))
 end
 
+# Save CSV that can be used to fill in cost data for next run
+
+construction_costs = {}
+
 # Read Construction Costs
 options = { :headers => true }
 File.open("#{__dir__}/construction_costs.csv", 'r') do |f|
   csv = CSV.parse(f.read, options)
   m2_per_ft2 = 10.7639
-  csv.each do |row|
-    name = row['construction_name']
-    cost = 10.7639 * row['cost ($/ft2)'].to_f
-    # binding.pry
 
-    # model.getConstructions.each do |construction|
+  csv.each do |construction_cost_row|
 
-    #   if construction.get.name.to_s.split('|')[0] == name
-
-
-    #   end
-
-    # end
-
-    construction = model.getConstructionByName(name)
-    if construction.empty?
-      puts "Warning: Cannot find construction '#{name}' to apply costs"
-      next
-    end
-
-    construction = construction.get
-
-    if construction.lifeCycleCosts.size > 1
-      puts "Warning: Construction '#{name}' has multiple existing costs, removing"
-      construction.removeLifeCycleCosts
-    end
-
-    if construction.lifeCycleCosts.size == 1
-      existing_lcc = construction.lifeCycleCosts[0]
-
-      old_name = existing_lcc.nameString
-      old_category = existing_lcc.category
-      old_cost = existing_lcc.cost
-      old_cost_units = existing_lcc.costUnits
-      old_start_of_costs = existing_lcc.startOfCosts
-      old_repeat_period_years = existing_lcc.repeatPeriodYears
-
-      existing_lcc.setName("LCC_MAT - #{name}")
-      existing_lcc.setCategory('Construction')
-      existing_lcc.setCost(cost)
-      existing_lcc.setCostUnits('CostPerArea')
-      existing_lcc.setStartOfCosts('ServicePeriod')
-      existing_lcc.setRepeatPeriodYears(20)
-
-      new_name = existing_lcc.nameString
-      new_category = existing_lcc.category
-      new_cost = existing_lcc.cost
-      new_cost_units = existing_lcc.costUnits
-      new_start_of_costs = existing_lcc.startOfCosts
-      new_repeat_period_years = existing_lcc.repeatPeriodYears
-
-      diff = []
-      diff << "name: #{old_name} -> #{new_name}" if old_name != new_name
-      diff << "category: #{old_category} -> #{new_category}" if old_category != new_category
-      diff << "cost: #{old_cost} -> #{new_cost}" if old_cost != new_cost
-      diff << "cost_units: #{old_cost_units} -> #{new_cost_units}" if old_cost_units != new_cost_units
-      diff << "start_of_costs: #{old_start_of_costs} -> #{new_start_of_costs}" if old_start_of_costs != new_start_of_costs
-      diff << "repeat_period_years: #{old_repeat_period_years} -> #{new_repeat_period_years}" if old_repeat_period_years != new_repeat_period_years
-
-      if !diff.empty?
-        puts "Warning: Construction '#{name}' cost changed - #{diff.join(',')}"
-      end
-
-    else
-      lcc = OpenStudio::Model::LifeCycleCost.new(construction)
-      lcc.setName("LCC_MAT - #{name}")
-      lcc.setCategory('Construction')
-      lcc.setCost(cost)
-      lcc.setCostUnits('CostPerArea')
-      lcc.setStartOfCosts('ServicePeriod')
-      lcc.setRepeatPeriodYears(20)
-    end
-
+    construction_costs[construction_cost_row['construction_name_ip'].to_s] = 10.7639 * construction_cost_row['cost ($/ft2)'].to_f
+  
   end
+  
 end
 
-# check that every construction has one cost associated
-model.getConstructions.each do |construction|
-  if construction.lifeCycleCosts.size != 1
+### Hash of constructions and their ip and si names comes in handy
+construction_ip_si_names = {}
 
-    # don't add default costs to these constructions
-    next if construction.nameString.match(/Typical Interior Floor Reversed/)
-
-    default_cost = 99
-
-    if construction.nameString.match(/ShadingDevices/)
-      default_cost = 1076.39104167097
-    end
-
-    puts "Warning: Construction '#{construction.nameString}' has #{construction.lifeCycleCosts.size} cost objects, expected 1.  Adding default cost of $#{default_cost}/m2"
-
-    construction.removeLifeCycleCosts
-    lcc = OpenStudio::Model::LifeCycleCost.new(construction)
-    lcc.setName("LCC_MAT - #{construction.nameString}")
-    lcc.setCategory('Construction')
-    lcc.setCost(default_cost)
-    lcc.setCostUnits('CostPerArea')
-    lcc.setStartOfCosts('ServicePeriod')
-    lcc.setRepeatPeriodYears(20)
-  end
-end
-
-# OSM library
-model.save(SpeedConstructions.construction_lib_path, true)
-
-# Save CSV that can be used to fill in cost data for next run
 construction_names = {}
 construction_csv = []
-construction_csv << ['energy_code', 'climate_zone', 'surface_type', 'assembly_type', 'construction_name', 'ip name' , 'si name','r value ip','r value si','is_duplicate','ip match','si match']
+construction_csv << ['energy_code', 'climate_zone', 'surface_type', 'assembly_type', 'construction_name', 'ip_name' , 'si_name','r value ip','r value si','is_duplicate','ip match','si match','cost data']
 constructions = inputs['Constructions']
 constructions.keys.each do |energy_code_key|
   energy_code = constructions[energy_code_key]
@@ -524,11 +434,27 @@ constructions.keys.each do |energy_code_key|
                 ip_match = (ip_name.split('-').last.to_f == ip_rvalue.to_f).to_s
 
                 si_match = (si_name.split('-').last.to_f == si_rvalue.to_f).to_s
+
+                construction_ip_si_names[construction_name] = {'ip_name' => ip_name,'si_name' => si_name}
+
+                cost_data = (construction_costs.include?(ip_name.rstrip))
             
-                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , ip_rvalue , si_rvalue ,is_duplicate,ip_match,si_match]
+                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , ip_rvalue , si_rvalue ,is_duplicate,ip_match,si_match,cost_data]
 
               else
-                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , "NaN" , "NaN" ,is_duplicate]
+
+                construction_ip_si_names[construction_name] = {'ip_name' => ip_name,'si_name' => si_name}
+
+                cost_data = (construction_costs.include?(ip_name.rstrip))
+
+                ## works but we dont need it
+                # ip_uvalue = ip_name.split('U-')[1].split(' ')[0]
+
+                # si_uvalue = si_name.split('U-')[1].split(' ')[0]
+
+                # binding.pry
+
+                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , "NA" , "NA" ,is_duplicate,"NA","NA",cost_data]
               end
 
               # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
@@ -542,6 +468,120 @@ constructions.keys.each do |energy_code_key|
     end
   end
 end
+
+
+
+# Iterate through constructions not construction costs that way we can find constructions which have no costs, we dont care about costs that have no construction
+construction_ip_si_names.each do |speed_construction|
+
+    #binding.pry
+    ### Item 5 is ip name
+
+    #binding.pry
+    # construction[:ip_name].to_s == construction_cost_row['construction_name_ip'].to_s
+    # Get first as find returns an array 
+
+    if construction_costs.include?(speed_construction[1]["ip_name"].rstrip)
+      ## we got the cost for the construction from construction_costs.csv
+      name = speed_construction[0]
+
+      cost = construction_costs[speed_construction[1]["ip_name"].rstrip]
+
+    else
+
+      puts "Could not find cost for #{speed_construction[0]} in construction_costs.csv cannot add construction costs will add default costs cost data flag will be set to false in construction list"
+      next
+    end
+
+    construction = model.getConstructionByName(name)
+    if construction.empty?
+      puts "XXX Warning: Cannot find construction '#{name}' to apply costs XXX"
+      next
+    end
+
+    construction = construction.get
+
+    if construction.lifeCycleCosts.size > 1
+      puts "Warning: Construction '#{name}' has multiple existing costs, removing"
+      construction.removeLifeCycleCosts
+    end
+
+    if construction.lifeCycleCosts.size == 1
+      existing_lcc = construction.lifeCycleCosts[0]
+
+      old_name = existing_lcc.nameString
+      old_category = existing_lcc.category
+      old_cost = existing_lcc.cost
+      old_cost_units = existing_lcc.costUnits
+      old_start_of_costs = existing_lcc.startOfCosts
+      old_repeat_period_years = existing_lcc.repeatPeriodYears
+
+      existing_lcc.setName("LCC_MAT - #{name}")
+      existing_lcc.setCategory('Construction')
+      existing_lcc.setCost(cost)
+      existing_lcc.setCostUnits('CostPerArea')
+      existing_lcc.setStartOfCosts('ServicePeriod')
+      existing_lcc.setRepeatPeriodYears(20)
+
+      new_name = existing_lcc.nameString
+      new_category = existing_lcc.category
+      new_cost = existing_lcc.cost
+      new_cost_units = existing_lcc.costUnits
+      new_start_of_costs = existing_lcc.startOfCosts
+      new_repeat_period_years = existing_lcc.repeatPeriodYears
+
+      diff = []
+      diff << "name: #{old_name} -> #{new_name}" if old_name != new_name
+      diff << "category: #{old_category} -> #{new_category}" if old_category != new_category
+      diff << "cost: #{old_cost} -> #{new_cost}" if old_cost != new_cost
+      diff << "cost_units: #{old_cost_units} -> #{new_cost_units}" if old_cost_units != new_cost_units
+      diff << "start_of_costs: #{old_start_of_costs} -> #{new_start_of_costs}" if old_start_of_costs != new_start_of_costs
+      diff << "repeat_period_years: #{old_repeat_period_years} -> #{new_repeat_period_years}" if old_repeat_period_years != new_repeat_period_years
+
+      if !diff.empty?
+        puts "Warning: Construction '#{name}' cost changed - #{diff.join(',')}"
+      end
+
+    else
+
+      lcc = OpenStudio::Model::LifeCycleCost.new(construction)
+      lcc.setName("LCC_MAT - #{name}")
+      lcc.setCategory('Construction')
+      lcc.setCost(cost)
+      lcc.setCostUnits('CostPerArea')
+      lcc.setStartOfCosts('ServicePeriod')
+      lcc.setRepeatPeriodYears(20)
+    end
+end
+
+# check that every construction has one cost associated
+model.getConstructions.each do |construction|
+  if construction.lifeCycleCosts.size != 1
+
+    # don't add default costs to these constructions
+    next if construction.nameString.match(/Typical Interior Floor Reversed/)
+
+    default_cost = 99
+
+    if construction.nameString.match(/ShadingDevices/)
+      default_cost = 1076.39104167097
+    end
+
+    puts "Warning: Construction '#{construction.nameString}' has #{construction.lifeCycleCosts.size} cost objects, expected 1.  Adding default cost of $#{default_cost}/m2"
+
+    construction.removeLifeCycleCosts
+    lcc = OpenStudio::Model::LifeCycleCost.new(construction)
+    lcc.setName("LCC_MAT - #{construction.nameString}")
+    lcc.setCategory('Construction')
+    lcc.setCost(default_cost)
+    lcc.setCostUnits('CostPerArea')
+    lcc.setStartOfCosts('ServicePeriod')
+    lcc.setRepeatPeriodYears(20)
+  end
+end
+
+# OSM library
+model.save(SpeedConstructions.construction_lib_path, true)
 
 # add hard coded constructions
 construction_csv << ['', '', '', '', 'Typical Interior Floor Reversed', false]
