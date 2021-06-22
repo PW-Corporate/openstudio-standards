@@ -148,7 +148,7 @@ templates.each do |template|
 
           # Make the default construction
           default, target_r_value_ip , target_r_value_si = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
-          # Prepend "Typical" for the default construction
+          # Prepend "Typical" for the default construction to si and ip name
 
           default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
@@ -197,7 +197,7 @@ templates.each do |template|
 
           # Make the default construction
           default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone).first
-          # Prepend "Typical" for the default construction
+          # Prepend "Typical" for the default construction to si and ip name
           default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
@@ -225,8 +225,9 @@ templates.each do |template|
 
           # Make the default construction, using SimpleGlazing
           props['convert_to_simple_glazing'] = 'yes'
+          # When window only returns construction as dont need ip and si value
           default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone).first
-          # Prepend "Typical" for the default construction
+          # Prepend "Typical" for the default construction to si and ip name
           default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get

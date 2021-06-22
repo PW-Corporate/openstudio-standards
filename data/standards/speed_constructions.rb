@@ -311,6 +311,7 @@ module SpeedConstructions
       material = OpenStudio::Model::SimpleGlazing.new(model)
       material.setName('Simple Glazing')
       layers << material
+
     else
       data['materials'].each do |material_name|
 
@@ -333,6 +334,7 @@ module SpeedConstructions
         # Handle Opaque and Fenestration Constructions differently
         if construction.isFenestration && construction_simple_glazing?(construction)
           # Set the U-Value, SHGC, and VT
+          ## TODO there are duplicate materials
           construction_set_glazing_u_value(construction, target_u_value_ip.to_f, data['intended_surface_type'], u_includes_int_film, u_includes_ext_film)
           construction_set_glazing_shgc(construction, target_shgc.to_f)
           if target_vt
