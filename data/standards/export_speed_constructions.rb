@@ -280,7 +280,7 @@ templates.each do |template|
     surf_type_data = {} # Hash to store data for JSON level
     method_data = {} # Hash to store data for JSON level
 
-    default = SpeedConstructions.model_add_construction(std, model, 'Typical Interior Wall').first
+    default = SpeedConstructions.model_add_construction(std, model, 'Typical Interior Floor').first
 
     method_data['Default'] = default.name.get.to_s
     method_data['Options'] = [default.name.get.to_s]
@@ -467,7 +467,9 @@ constructions.keys.each do |energy_code_key|
   end
 end
 
-
+puts "***"
+puts " *** Starting to check costs - can see in construction_list.csv ***"
+puts "***"
 
 # Iterate through constructions not construction costs that way we can find constructions which have no costs, we dont care about costs that have no construction
 construction_ip_si_names.each do |speed_construction|
