@@ -10,11 +10,6 @@ MAINTAINER Anton Szilasi ajszilasi@gmail.com
 WORKDIR /usr/local/src
 
 # Install bundler
-gem install bundle
-
-# Install the ruby gems
-RUN bundle install
-
-bundle update
+RUN gem install bundle
 
 CMD [ "/bin/bash" ]
