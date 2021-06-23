@@ -24,8 +24,22 @@ version_info = {}
 version_info['pw_openstudio_standards_git_sha'] = g.log.first.sha
 version_info['pw_openstudio_standards_describe'] = g.describe
 
-File.write(File.join(File.dirname(__FILE__),'construction_lib.osm'), '### Produced by : openstudio-standards describe' << g.describe << '\n\n', 0)
-File.write(File.join(File.dirname(__FILE__),'SpeedSchedules.osm'), '### Produced by : openstudio-standards describe' << g.describe << '\n\n', 0)
+# https://stackoverflow.com/questions/35958632/replace-a-specific-line-in-a-file-using-ruby
+
+### Appends g describe to end of both files
+File.open(File.join(File.dirname(__FILE__),'construction_lib.osm'),"a+") {|f|
+
+  f.write("\n")
+  f.write('### Produced by : openstudio-standards describe - ' << g.describe)
+  
+}
+
+File.open(File.join(File.dirname(__FILE__),'SpeedSchedules.osm'),"a+") {|f|
+
+  f.write("\n")
+  f.write('### Produced by : openstudio-standards describe - ' << g.describe)
+  
+}
 
 # combine inputs
 inputs = {}

@@ -1,7 +1,7 @@
 {
   "version_info": {
-    "pw_openstudio_standards_git_sha": "e4576f6f69b989888fe6521afa7971389458edce",
-    "pw_openstudio_standards_describe": "v0.2.11-75-ge4576f6f"
+    "pw_openstudio_standards_git_sha": "4051e3cb0b8b9309ccbee9d7662dbc1168e9f303",
+    "pw_openstudio_standards_describe": "v0.2.11-80-g4051e3cb"
   },
   "Project_Information": {
     "Primary_Building_Type": {
@@ -831,6 +831,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ1 R-29 |Typical Attic & Other Roof CZ1 R-5.2",
               "Options": [
+                "Typical Attic & Other Roof CZ1 R-29 |Typical Attic & Other Roof CZ1 R-5.2",
                 "Attic & Other Roof CZ1 R-39 |Attic & Other Roof CZ1 R-6.9",
                 "Attic & Other Roof CZ1 R-44 |Attic & Other Roof CZ1 R-7.8",
                 "Attic & Other Roof CZ1 R-49 |Attic & Other Roof CZ1 R-8.7",
@@ -840,6 +841,7 @@
             "Roof_R_Value": {
               "Default": "29 | 5.2",
               "Options": [
+                "29 | 5.2",
                 "39 | 6.9",
                 "44 | 7.8",
                 "49 | 8.7",
@@ -851,6 +853,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ1 R-16 |Typical IEAD Roof CZ1 R-2.8",
               "Options": [
+                "Typical IEAD Roof CZ1 R-16 |Typical IEAD Roof CZ1 R-2.8",
                 "IEAD Roof CZ1 R-26 |IEAD Roof CZ1 R-4.6",
                 "IEAD Roof CZ1 R-31 |IEAD Roof CZ1 R-5.4",
                 "IEAD Roof CZ1 R-36 |IEAD Roof CZ1 R-6.3",
@@ -860,6 +863,7 @@
             "Roof_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "26 | 4.6",
                 "31 | 5.4",
                 "36 | 6.3",
@@ -871,6 +875,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ1 R-15 |Typical Metal Roof CZ1 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ1 R-15 |Typical Metal Roof CZ1 R-2.7",
                 "Metal Roof CZ1 R-25 |Metal Roof CZ1 R-4.5",
                 "Metal Roof CZ1 R-30 |Metal Roof CZ1 R-5.4",
                 "Metal Roof CZ1 R-35 |Metal Roof CZ1 R-6.2",
@@ -880,6 +885,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -893,6 +899,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ1 R-2 |Typical Mass Wall CZ1 R-0.3",
               "Options": [
+                "Typical Mass Wall CZ1 R-2 |Typical Mass Wall CZ1 R-0.3",
                 "Mass Wall CZ1 R-7 |Mass Wall CZ1 R-1.2",
                 "Mass Wall CZ1 R-12 |Mass Wall CZ1 R-2.1",
                 "Mass Wall CZ1 R-17 |Mass Wall CZ1 R-2.9",
@@ -902,6 +909,7 @@
             "Wall_R_Value": {
               "Default": "2 | 0.3",
               "Options": [
+                "2 | 0.3",
                 "7 | 1.2",
                 "12 | 2.1",
                 "17 | 2.9",
@@ -913,6 +921,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ1 R-9 |Typical Metal Wall CZ1 R-1.6",
               "Options": [
+                "Typical Metal Wall CZ1 R-9 |Typical Metal Wall CZ1 R-1.6",
                 "Metal Wall CZ1 R-14 |Metal Wall CZ1 R-2.4",
                 "Metal Wall CZ1 R-19 |Metal Wall CZ1 R-3.3",
                 "Metal Wall CZ1 R-24 |Metal Wall CZ1 R-4.2",
@@ -922,6 +931,7 @@
             "Wall_R_Value": {
               "Default": "9 | 1.6",
               "Options": [
+                "9 | 1.6",
                 "14 | 2.4",
                 "19 | 3.3",
                 "24 | 4.2",
@@ -933,6 +943,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ1 R-8 |Typical Steel Framed Wall CZ1 R-1.4",
               "Options": [
+                "Typical Steel Framed Wall CZ1 R-8 |Typical Steel Framed Wall CZ1 R-1.4",
                 "Steel Framed Wall CZ1 R-13 |Steel Framed Wall CZ1 R-2.3",
                 "Steel Framed Wall CZ1 R-18 |Steel Framed Wall CZ1 R-3.2",
                 "Steel Framed Wall CZ1 R-23 |Steel Framed Wall CZ1 R-4.1",
@@ -942,6 +953,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -953,6 +965,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ1 R-11 |Typical Wood Framed Wall CZ1 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ1 R-11 |Typical Wood Framed Wall CZ1 R-2.0",
                 "Wood Framed Wall CZ1 R-16 |Wood Framed Wall CZ1 R-2.9",
                 "Wood Framed Wall CZ1 R-21 |Wood Framed Wall CZ1 R-3.7",
                 "Wood Framed Wall CZ1 R-26 |Wood Framed Wall CZ1 R-4.6",
@@ -962,6 +975,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -1026,9 +1040,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -1039,6 +1053,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ2 R-37 |Typical Attic & Other Roof CZ2 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ2 R-37 |Typical Attic & Other Roof CZ2 R-6.5",
                 "Attic & Other Roof CZ2 R-47 |Attic & Other Roof CZ2 R-8.3",
                 "Attic & Other Roof CZ2 R-52 |Attic & Other Roof CZ2 R-9.2",
                 "Attic & Other Roof CZ2 R-57 |Attic & Other Roof CZ2 R-10.0",
@@ -1048,6 +1063,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -1059,6 +1075,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ2 R-21 |Typical IEAD Roof CZ2 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ2 R-21 |Typical IEAD Roof CZ2 R-3.7",
                 "IEAD Roof CZ2 R-31 |IEAD Roof CZ2 R-5.4",
                 "IEAD Roof CZ2 R-36 |IEAD Roof CZ2 R-6.3",
                 "IEAD Roof CZ2 R-41 |IEAD Roof CZ2 R-7.2",
@@ -1068,6 +1085,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -1079,6 +1097,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ2 R-15 |Typical Metal Roof CZ2 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ2 R-15 |Typical Metal Roof CZ2 R-2.7",
                 "Metal Roof CZ2 R-25 |Metal Roof CZ2 R-4.5",
                 "Metal Roof CZ2 R-30 |Metal Roof CZ2 R-5.4",
                 "Metal Roof CZ2 R-35 |Metal Roof CZ2 R-6.2",
@@ -1088,6 +1107,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -1101,6 +1121,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ2 R-7 |Typical Mass Wall CZ2 R-1.2",
               "Options": [
+                "Typical Mass Wall CZ2 R-7 |Typical Mass Wall CZ2 R-1.2",
                 "Mass Wall CZ2 R-12 |Mass Wall CZ2 R-2.0",
                 "Mass Wall CZ2 R-17 |Mass Wall CZ2 R-2.9",
                 "Mass Wall CZ2 R-22 |Mass Wall CZ2 R-3.8",
@@ -1110,6 +1131,7 @@
             "Wall_R_Value": {
               "Default": "7 | 1.2",
               "Options": [
+                "7 | 1.2",
                 "12 | 2.0",
                 "17 | 2.9",
                 "22 | 3.8",
@@ -1121,6 +1143,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ2 R-9 |Typical Metal Wall CZ2 R-1.6",
               "Options": [
+                "Typical Metal Wall CZ2 R-9 |Typical Metal Wall CZ2 R-1.6",
                 "Metal Wall CZ2 R-14 |Metal Wall CZ2 R-2.4",
                 "Metal Wall CZ2 R-19 |Metal Wall CZ2 R-3.3",
                 "Metal Wall CZ2 R-24 |Metal Wall CZ2 R-4.2",
@@ -1130,6 +1153,7 @@
             "Wall_R_Value": {
               "Default": "9 | 1.6",
               "Options": [
+                "9 | 1.6",
                 "14 | 2.4",
                 "19 | 3.3",
                 "24 | 4.2",
@@ -1141,6 +1165,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ2 R-8 |Typical Steel Framed Wall CZ2 R-1.4",
               "Options": [
+                "Typical Steel Framed Wall CZ2 R-8 |Typical Steel Framed Wall CZ2 R-1.4",
                 "Steel Framed Wall CZ2 R-13 |Steel Framed Wall CZ2 R-2.3",
                 "Steel Framed Wall CZ2 R-18 |Steel Framed Wall CZ2 R-3.2",
                 "Steel Framed Wall CZ2 R-23 |Steel Framed Wall CZ2 R-4.1",
@@ -1150,6 +1175,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -1161,6 +1187,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ2 R-11 |Typical Wood Framed Wall CZ2 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ2 R-11 |Typical Wood Framed Wall CZ2 R-2.0",
                 "Wood Framed Wall CZ2 R-16 |Wood Framed Wall CZ2 R-2.9",
                 "Wood Framed Wall CZ2 R-21 |Wood Framed Wall CZ2 R-3.7",
                 "Wood Framed Wall CZ2 R-26 |Wood Framed Wall CZ2 R-4.6",
@@ -1170,6 +1197,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -1234,9 +1262,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -1247,6 +1275,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ3 R-37 |Typical Attic & Other Roof CZ3 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ3 R-37 |Typical Attic & Other Roof CZ3 R-6.5",
                 "Attic & Other Roof CZ3 R-47 |Attic & Other Roof CZ3 R-8.3",
                 "Attic & Other Roof CZ3 R-52 |Attic & Other Roof CZ3 R-9.2",
                 "Attic & Other Roof CZ3 R-57 |Attic & Other Roof CZ3 R-10.0",
@@ -1256,6 +1285,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -1267,6 +1297,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ3 R-21 |Typical IEAD Roof CZ3 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ3 R-21 |Typical IEAD Roof CZ3 R-3.7",
                 "IEAD Roof CZ3 R-31 |IEAD Roof CZ3 R-5.4",
                 "IEAD Roof CZ3 R-36 |IEAD Roof CZ3 R-6.3",
                 "IEAD Roof CZ3 R-41 |IEAD Roof CZ3 R-7.2",
@@ -1276,6 +1307,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -1287,6 +1319,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ3 R-15 |Typical Metal Roof CZ3 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ3 R-15 |Typical Metal Roof CZ3 R-2.7",
                 "Metal Roof CZ3 R-25 |Metal Roof CZ3 R-4.5",
                 "Metal Roof CZ3 R-30 |Metal Roof CZ3 R-5.4",
                 "Metal Roof CZ3 R-35 |Metal Roof CZ3 R-6.2",
@@ -1296,6 +1329,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -1309,6 +1343,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ3 R-8 |Typical Mass Wall CZ3 R-1.4",
               "Options": [
+                "Typical Mass Wall CZ3 R-8 |Typical Mass Wall CZ3 R-1.4",
                 "Mass Wall CZ3 R-13 |Mass Wall CZ3 R-2.3",
                 "Mass Wall CZ3 R-18 |Mass Wall CZ3 R-3.2",
                 "Mass Wall CZ3 R-23 |Mass Wall CZ3 R-4.1",
@@ -1318,6 +1353,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -1329,6 +1365,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ3 R-9 |Typical Metal Wall CZ3 R-1.6",
               "Options": [
+                "Typical Metal Wall CZ3 R-9 |Typical Metal Wall CZ3 R-1.6",
                 "Metal Wall CZ3 R-14 |Metal Wall CZ3 R-2.4",
                 "Metal Wall CZ3 R-19 |Metal Wall CZ3 R-3.3",
                 "Metal Wall CZ3 R-24 |Metal Wall CZ3 R-4.2",
@@ -1338,6 +1375,7 @@
             "Wall_R_Value": {
               "Default": "9 | 1.6",
               "Options": [
+                "9 | 1.6",
                 "14 | 2.4",
                 "19 | 3.3",
                 "24 | 4.2",
@@ -1349,6 +1387,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ3 R-12 |Typical Steel Framed Wall CZ3 R-2.1",
               "Options": [
+                "Typical Steel Framed Wall CZ3 R-12 |Typical Steel Framed Wall CZ3 R-2.1",
                 "Steel Framed Wall CZ3 R-17 |Steel Framed Wall CZ3 R-3.0",
                 "Steel Framed Wall CZ3 R-22 |Steel Framed Wall CZ3 R-3.9",
                 "Steel Framed Wall CZ3 R-27 |Steel Framed Wall CZ3 R-4.7",
@@ -1358,6 +1397,7 @@
             "Wall_R_Value": {
               "Default": "12 | 2.1",
               "Options": [
+                "12 | 2.1",
                 "17 | 3.0",
                 "22 | 3.9",
                 "27 | 4.7",
@@ -1369,6 +1409,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ3 R-11 |Typical Wood Framed Wall CZ3 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ3 R-11 |Typical Wood Framed Wall CZ3 R-2.0",
                 "Wood Framed Wall CZ3 R-16 |Wood Framed Wall CZ3 R-2.9",
                 "Wood Framed Wall CZ3 R-21 |Wood Framed Wall CZ3 R-3.7",
                 "Wood Framed Wall CZ3 R-26 |Wood Framed Wall CZ3 R-4.6",
@@ -1378,6 +1419,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -1442,9 +1484,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -1455,6 +1497,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ4 R-37 |Typical Attic & Other Roof CZ4 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ4 R-37 |Typical Attic & Other Roof CZ4 R-6.5",
                 "Attic & Other Roof CZ4 R-47 |Attic & Other Roof CZ4 R-8.3",
                 "Attic & Other Roof CZ4 R-52 |Attic & Other Roof CZ4 R-9.2",
                 "Attic & Other Roof CZ4 R-57 |Attic & Other Roof CZ4 R-10.0",
@@ -1464,6 +1507,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -1475,6 +1519,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ4 R-21 |Typical IEAD Roof CZ4 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ4 R-21 |Typical IEAD Roof CZ4 R-3.7",
                 "IEAD Roof CZ4 R-31 |IEAD Roof CZ4 R-5.4",
                 "IEAD Roof CZ4 R-36 |IEAD Roof CZ4 R-6.3",
                 "IEAD Roof CZ4 R-41 |IEAD Roof CZ4 R-7.2",
@@ -1484,6 +1529,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -1495,6 +1541,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ4 R-15 |Typical Metal Roof CZ4 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ4 R-15 |Typical Metal Roof CZ4 R-2.7",
                 "Metal Roof CZ4 R-25 |Metal Roof CZ4 R-4.5",
                 "Metal Roof CZ4 R-30 |Metal Roof CZ4 R-5.4",
                 "Metal Roof CZ4 R-35 |Metal Roof CZ4 R-6.2",
@@ -1504,6 +1551,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -1517,6 +1565,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ4 R-10 |Typical Mass Wall CZ4 R-1.7",
               "Options": [
+                "Typical Mass Wall CZ4 R-10 |Typical Mass Wall CZ4 R-1.7",
                 "Mass Wall CZ4 R-15 |Mass Wall CZ4 R-2.6",
                 "Mass Wall CZ4 R-20 |Mass Wall CZ4 R-3.5",
                 "Mass Wall CZ4 R-25 |Mass Wall CZ4 R-4.3",
@@ -1526,6 +1575,7 @@
             "Wall_R_Value": {
               "Default": "10 | 1.7",
               "Options": [
+                "10 | 1.7",
                 "15 | 2.6",
                 "20 | 3.5",
                 "25 | 4.3",
@@ -1537,6 +1587,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ4 R-9 |Typical Metal Wall CZ4 R-1.6",
               "Options": [
+                "Typical Metal Wall CZ4 R-9 |Typical Metal Wall CZ4 R-1.6",
                 "Metal Wall CZ4 R-14 |Metal Wall CZ4 R-2.4",
                 "Metal Wall CZ4 R-19 |Metal Wall CZ4 R-3.3",
                 "Metal Wall CZ4 R-24 |Metal Wall CZ4 R-4.2",
@@ -1546,6 +1597,7 @@
             "Wall_R_Value": {
               "Default": "9 | 1.6",
               "Options": [
+                "9 | 1.6",
                 "14 | 2.4",
                 "19 | 3.3",
                 "24 | 4.2",
@@ -1557,6 +1609,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ4 R-16 |Typical Steel Framed Wall CZ4 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ4 R-16 |Typical Steel Framed Wall CZ4 R-2.8",
                 "Steel Framed Wall CZ4 R-21 |Steel Framed Wall CZ4 R-3.6",
                 "Steel Framed Wall CZ4 R-26 |Steel Framed Wall CZ4 R-4.5",
                 "Steel Framed Wall CZ4 R-31 |Steel Framed Wall CZ4 R-5.4",
@@ -1566,6 +1619,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -1577,6 +1631,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ4 R-11 |Typical Wood Framed Wall CZ4 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ4 R-11 |Typical Wood Framed Wall CZ4 R-2.0",
                 "Wood Framed Wall CZ4 R-16 |Wood Framed Wall CZ4 R-2.9",
                 "Wood Framed Wall CZ4 R-21 |Wood Framed Wall CZ4 R-3.7",
                 "Wood Framed Wall CZ4 R-26 |Wood Framed Wall CZ4 R-4.6",
@@ -1586,6 +1641,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -1650,9 +1706,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -1663,6 +1719,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ5 R-37 |Typical Attic & Other Roof CZ5 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ5 R-37 |Typical Attic & Other Roof CZ5 R-6.5",
                 "Attic & Other Roof CZ5 R-47 |Attic & Other Roof CZ5 R-8.3",
                 "Attic & Other Roof CZ5 R-52 |Attic & Other Roof CZ5 R-9.2",
                 "Attic & Other Roof CZ5 R-57 |Attic & Other Roof CZ5 R-10.0",
@@ -1672,6 +1729,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -1683,6 +1741,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ5 R-21 |Typical IEAD Roof CZ5 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ5 R-21 |Typical IEAD Roof CZ5 R-3.7",
                 "IEAD Roof CZ5 R-31 |IEAD Roof CZ5 R-5.4",
                 "IEAD Roof CZ5 R-36 |IEAD Roof CZ5 R-6.3",
                 "IEAD Roof CZ5 R-41 |IEAD Roof CZ5 R-7.2",
@@ -1692,6 +1751,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -1703,6 +1763,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ5 R-15 |Typical Metal Roof CZ5 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ5 R-15 |Typical Metal Roof CZ5 R-2.7",
                 "Metal Roof CZ5 R-25 |Metal Roof CZ5 R-4.5",
                 "Metal Roof CZ5 R-30 |Metal Roof CZ5 R-5.4",
                 "Metal Roof CZ5 R-35 |Metal Roof CZ5 R-6.2",
@@ -1712,6 +1773,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -1725,6 +1787,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ5 R-11 |Typical Mass Wall CZ5 R-2.0",
               "Options": [
+                "Typical Mass Wall CZ5 R-11 |Typical Mass Wall CZ5 R-2.0",
                 "Mass Wall CZ5 R-16 |Mass Wall CZ5 R-2.8",
                 "Mass Wall CZ5 R-21 |Mass Wall CZ5 R-3.7",
                 "Mass Wall CZ5 R-26 |Mass Wall CZ5 R-4.6",
@@ -1734,6 +1797,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.8",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -1745,6 +1809,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ5 R-9 |Typical Metal Wall CZ5 R-1.6",
               "Options": [
+                "Typical Metal Wall CZ5 R-9 |Typical Metal Wall CZ5 R-1.6",
                 "Metal Wall CZ5 R-14 |Metal Wall CZ5 R-2.4",
                 "Metal Wall CZ5 R-19 |Metal Wall CZ5 R-3.3",
                 "Metal Wall CZ5 R-24 |Metal Wall CZ5 R-4.2",
@@ -1754,6 +1819,7 @@
             "Wall_R_Value": {
               "Default": "9 | 1.6",
               "Options": [
+                "9 | 1.6",
                 "14 | 2.4",
                 "19 | 3.3",
                 "24 | 4.2",
@@ -1765,6 +1831,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ5 R-16 |Typical Steel Framed Wall CZ5 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ5 R-16 |Typical Steel Framed Wall CZ5 R-2.8",
                 "Steel Framed Wall CZ5 R-21 |Steel Framed Wall CZ5 R-3.6",
                 "Steel Framed Wall CZ5 R-26 |Steel Framed Wall CZ5 R-4.5",
                 "Steel Framed Wall CZ5 R-31 |Steel Framed Wall CZ5 R-5.4",
@@ -1774,6 +1841,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -1785,6 +1853,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ5 R-16 |Typical Wood Framed Wall CZ5 R-2.8",
               "Options": [
+                "Typical Wood Framed Wall CZ5 R-16 |Typical Wood Framed Wall CZ5 R-2.8",
                 "Wood Framed Wall CZ5 R-21 |Wood Framed Wall CZ5 R-3.6",
                 "Wood Framed Wall CZ5 R-26 |Wood Framed Wall CZ5 R-4.5",
                 "Wood Framed Wall CZ5 R-31 |Wood Framed Wall CZ5 R-5.4",
@@ -1794,6 +1863,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -1858,9 +1928,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -1871,6 +1941,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ6 R-37 |Typical Attic & Other Roof CZ6 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ6 R-37 |Typical Attic & Other Roof CZ6 R-6.5",
                 "Attic & Other Roof CZ6 R-47 |Attic & Other Roof CZ6 R-8.3",
                 "Attic & Other Roof CZ6 R-52 |Attic & Other Roof CZ6 R-9.2",
                 "Attic & Other Roof CZ6 R-57 |Attic & Other Roof CZ6 R-10.0",
@@ -1880,6 +1951,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -1891,6 +1963,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ6 R-21 |Typical IEAD Roof CZ6 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ6 R-21 |Typical IEAD Roof CZ6 R-3.7",
                 "IEAD Roof CZ6 R-31 |IEAD Roof CZ6 R-5.4",
                 "IEAD Roof CZ6 R-36 |IEAD Roof CZ6 R-6.3",
                 "IEAD Roof CZ6 R-41 |IEAD Roof CZ6 R-7.2",
@@ -1900,6 +1973,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -1911,6 +1985,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ6 R-15 |Typical Metal Roof CZ6 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ6 R-15 |Typical Metal Roof CZ6 R-2.7",
                 "Metal Roof CZ6 R-25 |Metal Roof CZ6 R-4.5",
                 "Metal Roof CZ6 R-30 |Metal Roof CZ6 R-5.4",
                 "Metal Roof CZ6 R-35 |Metal Roof CZ6 R-6.2",
@@ -1920,6 +1995,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -1933,6 +2009,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ6 R-13 |Typical Mass Wall CZ6 R-2.2",
               "Options": [
+                "Typical Mass Wall CZ6 R-13 |Typical Mass Wall CZ6 R-2.2",
                 "Mass Wall CZ6 R-18 |Mass Wall CZ6 R-3.1",
                 "Mass Wall CZ6 R-23 |Mass Wall CZ6 R-4.0",
                 "Mass Wall CZ6 R-28 |Mass Wall CZ6 R-4.8",
@@ -1942,6 +2019,7 @@
             "Wall_R_Value": {
               "Default": "13 | 2.2",
               "Options": [
+                "13 | 2.2",
                 "18 | 3.1",
                 "23 | 4.0",
                 "28 | 4.8",
@@ -1953,6 +2031,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ6 R-9 |Typical Metal Wall CZ6 R-1.6",
               "Options": [
+                "Typical Metal Wall CZ6 R-9 |Typical Metal Wall CZ6 R-1.6",
                 "Metal Wall CZ6 R-14 |Metal Wall CZ6 R-2.4",
                 "Metal Wall CZ6 R-19 |Metal Wall CZ6 R-3.3",
                 "Metal Wall CZ6 R-24 |Metal Wall CZ6 R-4.2",
@@ -1962,6 +2041,7 @@
             "Wall_R_Value": {
               "Default": "9 | 1.6",
               "Options": [
+                "9 | 1.6",
                 "14 | 2.4",
                 "19 | 3.3",
                 "24 | 4.2",
@@ -1973,6 +2053,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ6 R-16 |Typical Steel Framed Wall CZ6 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ6 R-16 |Typical Steel Framed Wall CZ6 R-2.8",
                 "Steel Framed Wall CZ6 R-21 |Steel Framed Wall CZ6 R-3.6",
                 "Steel Framed Wall CZ6 R-26 |Steel Framed Wall CZ6 R-4.5",
                 "Steel Framed Wall CZ6 R-31 |Steel Framed Wall CZ6 R-5.4",
@@ -1982,6 +2063,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -1993,6 +2075,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ6 R-20 |Typical Wood Framed Wall CZ6 R-3.5",
               "Options": [
+                "Typical Wood Framed Wall CZ6 R-20 |Typical Wood Framed Wall CZ6 R-3.5",
                 "Wood Framed Wall CZ6 R-25 |Wood Framed Wall CZ6 R-4.3",
                 "Wood Framed Wall CZ6 R-30 |Wood Framed Wall CZ6 R-5.2",
                 "Wood Framed Wall CZ6 R-35 |Wood Framed Wall CZ6 R-6.1",
@@ -2002,6 +2085,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.3",
                 "30 | 5.2",
                 "35 | 6.1",
@@ -2066,9 +2150,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -2079,6 +2163,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ7 R-37 |Typical Attic & Other Roof CZ7 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ7 R-37 |Typical Attic & Other Roof CZ7 R-6.5",
                 "Attic & Other Roof CZ7 R-47 |Attic & Other Roof CZ7 R-8.3",
                 "Attic & Other Roof CZ7 R-52 |Attic & Other Roof CZ7 R-9.2",
                 "Attic & Other Roof CZ7 R-57 |Attic & Other Roof CZ7 R-10.0",
@@ -2088,6 +2173,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -2099,6 +2185,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ7 R-21 |Typical IEAD Roof CZ7 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ7 R-21 |Typical IEAD Roof CZ7 R-3.7",
                 "IEAD Roof CZ7 R-31 |IEAD Roof CZ7 R-5.4",
                 "IEAD Roof CZ7 R-36 |IEAD Roof CZ7 R-6.3",
                 "IEAD Roof CZ7 R-41 |IEAD Roof CZ7 R-7.2",
@@ -2108,6 +2195,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -2119,6 +2207,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ7 R-15 |Typical Metal Roof CZ7 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ7 R-15 |Typical Metal Roof CZ7 R-2.7",
                 "Metal Roof CZ7 R-25 |Metal Roof CZ7 R-4.5",
                 "Metal Roof CZ7 R-30 |Metal Roof CZ7 R-5.4",
                 "Metal Roof CZ7 R-35 |Metal Roof CZ7 R-6.2",
@@ -2128,6 +2217,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -2141,6 +2231,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ7 R-14 |Typical Mass Wall CZ7 R-2.5",
               "Options": [
+                "Typical Mass Wall CZ7 R-14 |Typical Mass Wall CZ7 R-2.5",
                 "Mass Wall CZ7 R-19 |Mass Wall CZ7 R-3.4",
                 "Mass Wall CZ7 R-24 |Mass Wall CZ7 R-4.2",
                 "Mass Wall CZ7 R-29 |Mass Wall CZ7 R-5.1",
@@ -2150,6 +2241,7 @@
             "Wall_R_Value": {
               "Default": "14 | 2.5",
               "Options": [
+                "14 | 2.5",
                 "19 | 3.4",
                 "24 | 4.2",
                 "29 | 5.1",
@@ -2161,6 +2253,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ7 R-18 |Typical Metal Wall CZ7 R-3.1",
               "Options": [
+                "Typical Metal Wall CZ7 R-18 |Typical Metal Wall CZ7 R-3.1",
                 "Metal Wall CZ7 R-23 |Metal Wall CZ7 R-4.0",
                 "Metal Wall CZ7 R-28 |Metal Wall CZ7 R-4.9",
                 "Metal Wall CZ7 R-33 |Metal Wall CZ7 R-5.7",
@@ -2170,6 +2263,7 @@
             "Wall_R_Value": {
               "Default": "18 | 3.1",
               "Options": [
+                "18 | 3.1",
                 "23 | 4.0",
                 "28 | 4.9",
                 "33 | 5.7",
@@ -2181,6 +2275,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ7 R-16 |Typical Steel Framed Wall CZ7 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ7 R-16 |Typical Steel Framed Wall CZ7 R-2.8",
                 "Steel Framed Wall CZ7 R-21 |Steel Framed Wall CZ7 R-3.6",
                 "Steel Framed Wall CZ7 R-26 |Steel Framed Wall CZ7 R-4.5",
                 "Steel Framed Wall CZ7 R-31 |Steel Framed Wall CZ7 R-5.4",
@@ -2190,6 +2285,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -2201,6 +2297,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ7 R-20 |Typical Wood Framed Wall CZ7 R-3.5",
               "Options": [
+                "Typical Wood Framed Wall CZ7 R-20 |Typical Wood Framed Wall CZ7 R-3.5",
                 "Wood Framed Wall CZ7 R-25 |Wood Framed Wall CZ7 R-4.3",
                 "Wood Framed Wall CZ7 R-30 |Wood Framed Wall CZ7 R-5.2",
                 "Wood Framed Wall CZ7 R-35 |Wood Framed Wall CZ7 R-6.1",
@@ -2210,6 +2307,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.3",
                 "30 | 5.2",
                 "35 | 6.1",
@@ -2274,9 +2372,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -2287,6 +2385,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ8 R-48 |Typical Attic & Other Roof CZ8 R-8.4",
               "Options": [
+                "Typical Attic & Other Roof CZ8 R-48 |Typical Attic & Other Roof CZ8 R-8.4",
                 "Attic & Other Roof CZ8 R-58 |Attic & Other Roof CZ8 R-10.1",
                 "Attic & Other Roof CZ8 R-63 |Attic & Other Roof CZ8 R-11.0",
                 "Attic & Other Roof CZ8 R-68 |Attic & Other Roof CZ8 R-11.9",
@@ -2296,6 +2395,7 @@
             "Roof_R_Value": {
               "Default": "48 | 8.4",
               "Options": [
+                "48 | 8.4",
                 "58 | 10.1",
                 "63 | 11.0",
                 "68 | 11.9",
@@ -2307,6 +2407,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ8 R-21 |Typical IEAD Roof CZ8 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ8 R-21 |Typical IEAD Roof CZ8 R-3.7",
                 "IEAD Roof CZ8 R-31 |IEAD Roof CZ8 R-5.4",
                 "IEAD Roof CZ8 R-36 |IEAD Roof CZ8 R-6.3",
                 "IEAD Roof CZ8 R-41 |IEAD Roof CZ8 R-7.2",
@@ -2316,6 +2417,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -2327,6 +2429,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ8 R-20 |Typical Metal Roof CZ8 R-3.6",
               "Options": [
+                "Typical Metal Roof CZ8 R-20 |Typical Metal Roof CZ8 R-3.6",
                 "Metal Roof CZ8 R-30 |Metal Roof CZ8 R-5.4",
                 "Metal Roof CZ8 R-35 |Metal Roof CZ8 R-6.2",
                 "Metal Roof CZ8 R-40 |Metal Roof CZ8 R-7.1",
@@ -2336,6 +2439,7 @@
             "Roof_R_Value": {
               "Default": "20 | 3.6",
               "Options": [
+                "20 | 3.6",
                 "30 | 5.4",
                 "35 | 6.2",
                 "40 | 7.1",
@@ -2349,6 +2453,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ8 R-14 |Typical Mass Wall CZ8 R-2.5",
               "Options": [
+                "Typical Mass Wall CZ8 R-14 |Typical Mass Wall CZ8 R-2.5",
                 "Mass Wall CZ8 R-19 |Mass Wall CZ8 R-3.4",
                 "Mass Wall CZ8 R-24 |Mass Wall CZ8 R-4.2",
                 "Mass Wall CZ8 R-29 |Mass Wall CZ8 R-5.1",
@@ -2358,6 +2463,7 @@
             "Wall_R_Value": {
               "Default": "14 | 2.5",
               "Options": [
+                "14 | 2.5",
                 "19 | 3.4",
                 "24 | 4.2",
                 "29 | 5.1",
@@ -2369,6 +2475,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ8 R-18 |Typical Metal Wall CZ8 R-3.1",
               "Options": [
+                "Typical Metal Wall CZ8 R-18 |Typical Metal Wall CZ8 R-3.1",
                 "Metal Wall CZ8 R-23 |Metal Wall CZ8 R-4.0",
                 "Metal Wall CZ8 R-28 |Metal Wall CZ8 R-4.9",
                 "Metal Wall CZ8 R-33 |Metal Wall CZ8 R-5.7",
@@ -2378,6 +2485,7 @@
             "Wall_R_Value": {
               "Default": "18 | 3.1",
               "Options": [
+                "18 | 3.1",
                 "23 | 4.0",
                 "28 | 4.9",
                 "33 | 5.7",
@@ -2389,6 +2497,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ8 R-16 |Typical Steel Framed Wall CZ8 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ8 R-16 |Typical Steel Framed Wall CZ8 R-2.8",
                 "Steel Framed Wall CZ8 R-21 |Steel Framed Wall CZ8 R-3.6",
                 "Steel Framed Wall CZ8 R-26 |Steel Framed Wall CZ8 R-4.5",
                 "Steel Framed Wall CZ8 R-31 |Steel Framed Wall CZ8 R-5.4",
@@ -2398,6 +2507,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -2409,6 +2519,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ8 R-28 |Typical Wood Framed Wall CZ8 R-4.9",
               "Options": [
+                "Typical Wood Framed Wall CZ8 R-28 |Typical Wood Framed Wall CZ8 R-4.9",
                 "Wood Framed Wall CZ8 R-33 |Wood Framed Wall CZ8 R-5.8",
                 "Wood Framed Wall CZ8 R-38 |Wood Framed Wall CZ8 R-6.7",
                 "Wood Framed Wall CZ8 R-43 |Wood Framed Wall CZ8 R-7.5",
@@ -2418,6 +2529,7 @@
             "Wall_R_Value": {
               "Default": "28 | 4.9",
               "Options": [
+                "28 | 4.9",
                 "33 | 5.8",
                 "38 | 6.7",
                 "43 | 7.5",
@@ -2482,9 +2594,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -2497,6 +2609,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ1 R-29 |Typical Attic & Other Roof CZ1 R-5.2",
               "Options": [
+                "Typical Attic & Other Roof CZ1 R-29 |Typical Attic & Other Roof CZ1 R-5.2",
                 "Attic & Other Roof CZ1 R-39 |Attic & Other Roof CZ1 R-6.9",
                 "Attic & Other Roof CZ1 R-44 |Attic & Other Roof CZ1 R-7.8",
                 "Attic & Other Roof CZ1 R-49 |Attic & Other Roof CZ1 R-8.7",
@@ -2506,6 +2619,7 @@
             "Roof_R_Value": {
               "Default": "29 | 5.2",
               "Options": [
+                "29 | 5.2",
                 "39 | 6.9",
                 "44 | 7.8",
                 "49 | 8.7",
@@ -2517,6 +2631,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ1 R-16 |Typical IEAD Roof CZ1 R-2.8",
               "Options": [
+                "Typical IEAD Roof CZ1 R-16 |Typical IEAD Roof CZ1 R-2.8",
                 "IEAD Roof CZ1 R-26 |IEAD Roof CZ1 R-4.6",
                 "IEAD Roof CZ1 R-31 |IEAD Roof CZ1 R-5.4",
                 "IEAD Roof CZ1 R-36 |IEAD Roof CZ1 R-6.3",
@@ -2526,6 +2641,7 @@
             "Roof_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "26 | 4.6",
                 "31 | 5.4",
                 "36 | 6.3",
@@ -2537,6 +2653,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ1 R-15 |Typical Metal Roof CZ1 R-2.7",
               "Options": [
+                "Typical Metal Roof CZ1 R-15 |Typical Metal Roof CZ1 R-2.7",
                 "Metal Roof CZ1 R-25 |Metal Roof CZ1 R-4.5",
                 "Metal Roof CZ1 R-30 |Metal Roof CZ1 R-5.4",
                 "Metal Roof CZ1 R-35 |Metal Roof CZ1 R-6.2",
@@ -2546,6 +2663,7 @@
             "Roof_R_Value": {
               "Default": "15 | 2.7",
               "Options": [
+                "15 | 2.7",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -2559,6 +2677,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ1 R-2 |Typical Mass Wall CZ1 R-0.3",
               "Options": [
+                "Typical Mass Wall CZ1 R-2 |Typical Mass Wall CZ1 R-0.3",
                 "Mass Wall CZ1 R-7 |Mass Wall CZ1 R-1.2",
                 "Mass Wall CZ1 R-12 |Mass Wall CZ1 R-2.1",
                 "Mass Wall CZ1 R-17 |Mass Wall CZ1 R-2.9",
@@ -2568,6 +2687,7 @@
             "Wall_R_Value": {
               "Default": "2 | 0.3",
               "Options": [
+                "2 | 0.3",
                 "7 | 1.2",
                 "12 | 2.1",
                 "17 | 2.9",
@@ -2579,6 +2699,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ1 R-11 |Typical Metal Wall CZ1 R-1.9",
               "Options": [
+                "Typical Metal Wall CZ1 R-11 |Typical Metal Wall CZ1 R-1.9",
                 "Metal Wall CZ1 R-16 |Metal Wall CZ1 R-2.8",
                 "Metal Wall CZ1 R-21 |Metal Wall CZ1 R-3.7",
                 "Metal Wall CZ1 R-26 |Metal Wall CZ1 R-4.5",
@@ -2588,6 +2709,7 @@
             "Wall_R_Value": {
               "Default": "11 | 1.9",
               "Options": [
+                "11 | 1.9",
                 "16 | 2.8",
                 "21 | 3.7",
                 "26 | 4.5",
@@ -2599,6 +2721,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ1 R-8 |Typical Steel Framed Wall CZ1 R-1.4",
               "Options": [
+                "Typical Steel Framed Wall CZ1 R-8 |Typical Steel Framed Wall CZ1 R-1.4",
                 "Steel Framed Wall CZ1 R-13 |Steel Framed Wall CZ1 R-2.3",
                 "Steel Framed Wall CZ1 R-18 |Steel Framed Wall CZ1 R-3.2",
                 "Steel Framed Wall CZ1 R-23 |Steel Framed Wall CZ1 R-4.1",
@@ -2608,6 +2731,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -2619,6 +2743,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ1 R-11 |Typical Wood Framed Wall CZ1 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ1 R-11 |Typical Wood Framed Wall CZ1 R-2.0",
                 "Wood Framed Wall CZ1 R-16 |Wood Framed Wall CZ1 R-2.9",
                 "Wood Framed Wall CZ1 R-21 |Wood Framed Wall CZ1 R-3.7",
                 "Wood Framed Wall CZ1 R-26 |Wood Framed Wall CZ1 R-4.6",
@@ -2628,6 +2753,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -2692,9 +2818,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -2705,6 +2831,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ2 R-37 |Typical Attic & Other Roof CZ2 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ2 R-37 |Typical Attic & Other Roof CZ2 R-6.5",
                 "Attic & Other Roof CZ2 R-47 |Attic & Other Roof CZ2 R-8.3",
                 "Attic & Other Roof CZ2 R-52 |Attic & Other Roof CZ2 R-9.2",
                 "Attic & Other Roof CZ2 R-57 |Attic & Other Roof CZ2 R-10.0",
@@ -2714,6 +2841,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -2725,6 +2853,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ2 R-21 |Typical IEAD Roof CZ2 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ2 R-21 |Typical IEAD Roof CZ2 R-3.7",
                 "IEAD Roof CZ2 R-31 |IEAD Roof CZ2 R-5.4",
                 "IEAD Roof CZ2 R-36 |IEAD Roof CZ2 R-6.3",
                 "IEAD Roof CZ2 R-41 |IEAD Roof CZ2 R-7.2",
@@ -2734,6 +2863,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -2745,6 +2875,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ2 R-18 |Typical Metal Roof CZ2 R-3.2",
               "Options": [
+                "Typical Metal Roof CZ2 R-18 |Typical Metal Roof CZ2 R-3.2",
                 "Metal Roof CZ2 R-28 |Metal Roof CZ2 R-5.0",
                 "Metal Roof CZ2 R-33 |Metal Roof CZ2 R-5.8",
                 "Metal Roof CZ2 R-38 |Metal Roof CZ2 R-6.7",
@@ -2754,6 +2885,7 @@
             "Roof_R_Value": {
               "Default": "18 | 3.2",
               "Options": [
+                "18 | 3.2",
                 "28 | 5.0",
                 "33 | 5.8",
                 "38 | 6.7",
@@ -2767,6 +2899,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ2 R-7 |Typical Mass Wall CZ2 R-1.2",
               "Options": [
+                "Typical Mass Wall CZ2 R-7 |Typical Mass Wall CZ2 R-1.2",
                 "Mass Wall CZ2 R-12 |Mass Wall CZ2 R-2.0",
                 "Mass Wall CZ2 R-17 |Mass Wall CZ2 R-2.9",
                 "Mass Wall CZ2 R-22 |Mass Wall CZ2 R-3.8",
@@ -2776,6 +2909,7 @@
             "Wall_R_Value": {
               "Default": "7 | 1.2",
               "Options": [
+                "7 | 1.2",
                 "12 | 2.0",
                 "17 | 2.9",
                 "22 | 3.8",
@@ -2787,6 +2921,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ2 R-11 |Typical Metal Wall CZ2 R-1.9",
               "Options": [
+                "Typical Metal Wall CZ2 R-11 |Typical Metal Wall CZ2 R-1.9",
                 "Metal Wall CZ2 R-16 |Metal Wall CZ2 R-2.8",
                 "Metal Wall CZ2 R-21 |Metal Wall CZ2 R-3.7",
                 "Metal Wall CZ2 R-26 |Metal Wall CZ2 R-4.5",
@@ -2796,6 +2931,7 @@
             "Wall_R_Value": {
               "Default": "11 | 1.9",
               "Options": [
+                "11 | 1.9",
                 "16 | 2.8",
                 "21 | 3.7",
                 "26 | 4.5",
@@ -2807,6 +2943,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ2 R-8 |Typical Steel Framed Wall CZ2 R-1.4",
               "Options": [
+                "Typical Steel Framed Wall CZ2 R-8 |Typical Steel Framed Wall CZ2 R-1.4",
                 "Steel Framed Wall CZ2 R-13 |Steel Framed Wall CZ2 R-2.3",
                 "Steel Framed Wall CZ2 R-18 |Steel Framed Wall CZ2 R-3.2",
                 "Steel Framed Wall CZ2 R-23 |Steel Framed Wall CZ2 R-4.1",
@@ -2816,6 +2953,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -2827,6 +2965,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ2 R-11 |Typical Wood Framed Wall CZ2 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ2 R-11 |Typical Wood Framed Wall CZ2 R-2.0",
                 "Wood Framed Wall CZ2 R-16 |Wood Framed Wall CZ2 R-2.9",
                 "Wood Framed Wall CZ2 R-21 |Wood Framed Wall CZ2 R-3.7",
                 "Wood Framed Wall CZ2 R-26 |Wood Framed Wall CZ2 R-4.6",
@@ -2836,6 +2975,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -2900,9 +3040,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -2913,6 +3053,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ3 R-37 |Typical Attic & Other Roof CZ3 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ3 R-37 |Typical Attic & Other Roof CZ3 R-6.5",
                 "Attic & Other Roof CZ3 R-47 |Attic & Other Roof CZ3 R-8.3",
                 "Attic & Other Roof CZ3 R-52 |Attic & Other Roof CZ3 R-9.2",
                 "Attic & Other Roof CZ3 R-57 |Attic & Other Roof CZ3 R-10.0",
@@ -2922,6 +3063,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -2933,6 +3075,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ3 R-21 |Typical IEAD Roof CZ3 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ3 R-21 |Typical IEAD Roof CZ3 R-3.7",
                 "IEAD Roof CZ3 R-31 |IEAD Roof CZ3 R-5.4",
                 "IEAD Roof CZ3 R-36 |IEAD Roof CZ3 R-6.3",
                 "IEAD Roof CZ3 R-41 |IEAD Roof CZ3 R-7.2",
@@ -2942,6 +3085,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -2953,6 +3097,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ3 R-18 |Typical Metal Roof CZ3 R-3.2",
               "Options": [
+                "Typical Metal Roof CZ3 R-18 |Typical Metal Roof CZ3 R-3.2",
                 "Metal Roof CZ3 R-28 |Metal Roof CZ3 R-5.0",
                 "Metal Roof CZ3 R-33 |Metal Roof CZ3 R-5.8",
                 "Metal Roof CZ3 R-38 |Metal Roof CZ3 R-6.7",
@@ -2962,6 +3107,7 @@
             "Roof_R_Value": {
               "Default": "18 | 3.2",
               "Options": [
+                "18 | 3.2",
                 "28 | 5.0",
                 "33 | 5.8",
                 "38 | 6.7",
@@ -2975,6 +3121,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ3 R-8 |Typical Mass Wall CZ3 R-1.4",
               "Options": [
+                "Typical Mass Wall CZ3 R-8 |Typical Mass Wall CZ3 R-1.4",
                 "Mass Wall CZ3 R-13 |Mass Wall CZ3 R-2.3",
                 "Mass Wall CZ3 R-18 |Mass Wall CZ3 R-3.2",
                 "Mass Wall CZ3 R-23 |Mass Wall CZ3 R-4.1",
@@ -2984,6 +3131,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -2995,6 +3143,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ3 R-12 |Typical Metal Wall CZ3 R-2.1",
               "Options": [
+                "Typical Metal Wall CZ3 R-12 |Typical Metal Wall CZ3 R-2.1",
                 "Metal Wall CZ3 R-17 |Metal Wall CZ3 R-3.0",
                 "Metal Wall CZ3 R-22 |Metal Wall CZ3 R-3.9",
                 "Metal Wall CZ3 R-27 |Metal Wall CZ3 R-4.7",
@@ -3004,6 +3153,7 @@
             "Wall_R_Value": {
               "Default": "12 | 2.1",
               "Options": [
+                "12 | 2.1",
                 "17 | 3.0",
                 "22 | 3.9",
                 "27 | 4.7",
@@ -3015,6 +3165,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ3 R-12 |Typical Steel Framed Wall CZ3 R-2.1",
               "Options": [
+                "Typical Steel Framed Wall CZ3 R-12 |Typical Steel Framed Wall CZ3 R-2.1",
                 "Steel Framed Wall CZ3 R-17 |Steel Framed Wall CZ3 R-3.0",
                 "Steel Framed Wall CZ3 R-22 |Steel Framed Wall CZ3 R-3.9",
                 "Steel Framed Wall CZ3 R-27 |Steel Framed Wall CZ3 R-4.7",
@@ -3024,6 +3175,7 @@
             "Wall_R_Value": {
               "Default": "12 | 2.1",
               "Options": [
+                "12 | 2.1",
                 "17 | 3.0",
                 "22 | 3.9",
                 "27 | 4.7",
@@ -3035,6 +3187,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ3 R-11 |Typical Wood Framed Wall CZ3 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ3 R-11 |Typical Wood Framed Wall CZ3 R-2.0",
                 "Wood Framed Wall CZ3 R-16 |Wood Framed Wall CZ3 R-2.9",
                 "Wood Framed Wall CZ3 R-21 |Wood Framed Wall CZ3 R-3.7",
                 "Wood Framed Wall CZ3 R-26 |Wood Framed Wall CZ3 R-4.6",
@@ -3044,6 +3197,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -3108,9 +3262,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -3121,6 +3275,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ4 R-37 |Typical Attic & Other Roof CZ4 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ4 R-37 |Typical Attic & Other Roof CZ4 R-6.5",
                 "Attic & Other Roof CZ4 R-47 |Attic & Other Roof CZ4 R-8.3",
                 "Attic & Other Roof CZ4 R-52 |Attic & Other Roof CZ4 R-9.2",
                 "Attic & Other Roof CZ4 R-57 |Attic & Other Roof CZ4 R-10.0",
@@ -3130,6 +3285,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -3141,6 +3297,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ4 R-21 |Typical IEAD Roof CZ4 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ4 R-21 |Typical IEAD Roof CZ4 R-3.7",
                 "IEAD Roof CZ4 R-31 |IEAD Roof CZ4 R-5.4",
                 "IEAD Roof CZ4 R-36 |IEAD Roof CZ4 R-6.3",
                 "IEAD Roof CZ4 R-41 |IEAD Roof CZ4 R-7.2",
@@ -3150,6 +3307,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -3161,6 +3319,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ4 R-18 |Typical Metal Roof CZ4 R-3.2",
               "Options": [
+                "Typical Metal Roof CZ4 R-18 |Typical Metal Roof CZ4 R-3.2",
                 "Metal Roof CZ4 R-28 |Metal Roof CZ4 R-5.0",
                 "Metal Roof CZ4 R-33 |Metal Roof CZ4 R-5.8",
                 "Metal Roof CZ4 R-38 |Metal Roof CZ4 R-6.7",
@@ -3170,6 +3329,7 @@
             "Roof_R_Value": {
               "Default": "18 | 3.2",
               "Options": [
+                "18 | 3.2",
                 "28 | 5.0",
                 "33 | 5.8",
                 "38 | 6.7",
@@ -3183,6 +3343,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ4 R-10 |Typical Mass Wall CZ4 R-1.7",
               "Options": [
+                "Typical Mass Wall CZ4 R-10 |Typical Mass Wall CZ4 R-1.7",
                 "Mass Wall CZ4 R-15 |Mass Wall CZ4 R-2.6",
                 "Mass Wall CZ4 R-20 |Mass Wall CZ4 R-3.5",
                 "Mass Wall CZ4 R-25 |Mass Wall CZ4 R-4.3",
@@ -3192,6 +3353,7 @@
             "Wall_R_Value": {
               "Default": "10 | 1.7",
               "Options": [
+                "10 | 1.7",
                 "15 | 2.6",
                 "20 | 3.5",
                 "25 | 4.3",
@@ -3203,6 +3365,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ4 R-12 |Typical Metal Wall CZ4 R-2.1",
               "Options": [
+                "Typical Metal Wall CZ4 R-12 |Typical Metal Wall CZ4 R-2.1",
                 "Metal Wall CZ4 R-17 |Metal Wall CZ4 R-3.0",
                 "Metal Wall CZ4 R-22 |Metal Wall CZ4 R-3.9",
                 "Metal Wall CZ4 R-27 |Metal Wall CZ4 R-4.7",
@@ -3212,6 +3375,7 @@
             "Wall_R_Value": {
               "Default": "12 | 2.1",
               "Options": [
+                "12 | 2.1",
                 "17 | 3.0",
                 "22 | 3.9",
                 "27 | 4.7",
@@ -3223,6 +3387,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ4 R-16 |Typical Steel Framed Wall CZ4 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ4 R-16 |Typical Steel Framed Wall CZ4 R-2.8",
                 "Steel Framed Wall CZ4 R-21 |Steel Framed Wall CZ4 R-3.6",
                 "Steel Framed Wall CZ4 R-26 |Steel Framed Wall CZ4 R-4.5",
                 "Steel Framed Wall CZ4 R-31 |Steel Framed Wall CZ4 R-5.4",
@@ -3232,6 +3397,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -3243,6 +3409,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ4 R-11 |Typical Wood Framed Wall CZ4 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ4 R-11 |Typical Wood Framed Wall CZ4 R-2.0",
                 "Wood Framed Wall CZ4 R-16 |Wood Framed Wall CZ4 R-2.9",
                 "Wood Framed Wall CZ4 R-21 |Wood Framed Wall CZ4 R-3.7",
                 "Wood Framed Wall CZ4 R-26 |Wood Framed Wall CZ4 R-4.6",
@@ -3252,6 +3419,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -3316,9 +3484,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -3329,6 +3497,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ5 R-37 |Typical Attic & Other Roof CZ5 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ5 R-37 |Typical Attic & Other Roof CZ5 R-6.5",
                 "Attic & Other Roof CZ5 R-47 |Attic & Other Roof CZ5 R-8.3",
                 "Attic & Other Roof CZ5 R-52 |Attic & Other Roof CZ5 R-9.2",
                 "Attic & Other Roof CZ5 R-57 |Attic & Other Roof CZ5 R-10.0",
@@ -3338,6 +3507,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -3349,6 +3519,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ5 R-21 |Typical IEAD Roof CZ5 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ5 R-21 |Typical IEAD Roof CZ5 R-3.7",
                 "IEAD Roof CZ5 R-31 |IEAD Roof CZ5 R-5.4",
                 "IEAD Roof CZ5 R-36 |IEAD Roof CZ5 R-6.3",
                 "IEAD Roof CZ5 R-41 |IEAD Roof CZ5 R-7.2",
@@ -3358,6 +3529,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -3369,6 +3541,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ5 R-18 |Typical Metal Roof CZ5 R-3.2",
               "Options": [
+                "Typical Metal Roof CZ5 R-18 |Typical Metal Roof CZ5 R-3.2",
                 "Metal Roof CZ5 R-28 |Metal Roof CZ5 R-5.0",
                 "Metal Roof CZ5 R-33 |Metal Roof CZ5 R-5.8",
                 "Metal Roof CZ5 R-38 |Metal Roof CZ5 R-6.7",
@@ -3378,6 +3551,7 @@
             "Roof_R_Value": {
               "Default": "18 | 3.2",
               "Options": [
+                "18 | 3.2",
                 "28 | 5.0",
                 "33 | 5.8",
                 "38 | 6.7",
@@ -3391,6 +3565,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ5 R-11 |Typical Mass Wall CZ5 R-2.0",
               "Options": [
+                "Typical Mass Wall CZ5 R-11 |Typical Mass Wall CZ5 R-2.0",
                 "Mass Wall CZ5 R-16 |Mass Wall CZ5 R-2.8",
                 "Mass Wall CZ5 R-21 |Mass Wall CZ5 R-3.7",
                 "Mass Wall CZ5 R-26 |Mass Wall CZ5 R-4.6",
@@ -3400,6 +3575,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.8",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -3411,6 +3587,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ5 R-14 |Typical Metal Wall CZ5 R-2.6",
               "Options": [
+                "Typical Metal Wall CZ5 R-14 |Typical Metal Wall CZ5 R-2.6",
                 "Metal Wall CZ5 R-19 |Metal Wall CZ5 R-3.4",
                 "Metal Wall CZ5 R-24 |Metal Wall CZ5 R-4.3",
                 "Metal Wall CZ5 R-29 |Metal Wall CZ5 R-5.2",
@@ -3420,6 +3597,7 @@
             "Wall_R_Value": {
               "Default": "14 | 2.6",
               "Options": [
+                "14 | 2.6",
                 "19 | 3.4",
                 "24 | 4.3",
                 "29 | 5.2",
@@ -3431,6 +3609,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ5 R-16 |Typical Steel Framed Wall CZ5 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ5 R-16 |Typical Steel Framed Wall CZ5 R-2.8",
                 "Steel Framed Wall CZ5 R-21 |Steel Framed Wall CZ5 R-3.6",
                 "Steel Framed Wall CZ5 R-26 |Steel Framed Wall CZ5 R-4.5",
                 "Steel Framed Wall CZ5 R-31 |Steel Framed Wall CZ5 R-5.4",
@@ -3440,6 +3619,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -3451,6 +3631,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ5 R-16 |Typical Wood Framed Wall CZ5 R-2.8",
               "Options": [
+                "Typical Wood Framed Wall CZ5 R-16 |Typical Wood Framed Wall CZ5 R-2.8",
                 "Wood Framed Wall CZ5 R-21 |Wood Framed Wall CZ5 R-3.6",
                 "Wood Framed Wall CZ5 R-26 |Wood Framed Wall CZ5 R-4.5",
                 "Wood Framed Wall CZ5 R-31 |Wood Framed Wall CZ5 R-5.4",
@@ -3460,6 +3641,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -3524,9 +3706,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -3537,6 +3719,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ6 R-37 |Typical Attic & Other Roof CZ6 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ6 R-37 |Typical Attic & Other Roof CZ6 R-6.5",
                 "Attic & Other Roof CZ6 R-47 |Attic & Other Roof CZ6 R-8.3",
                 "Attic & Other Roof CZ6 R-52 |Attic & Other Roof CZ6 R-9.2",
                 "Attic & Other Roof CZ6 R-57 |Attic & Other Roof CZ6 R-10.0",
@@ -3546,6 +3729,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -3557,6 +3741,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ6 R-21 |Typical IEAD Roof CZ6 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ6 R-21 |Typical IEAD Roof CZ6 R-3.7",
                 "IEAD Roof CZ6 R-31 |IEAD Roof CZ6 R-5.4",
                 "IEAD Roof CZ6 R-36 |IEAD Roof CZ6 R-6.3",
                 "IEAD Roof CZ6 R-41 |IEAD Roof CZ6 R-7.2",
@@ -3566,6 +3751,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -3577,6 +3763,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ6 R-20 |Typical Metal Roof CZ6 R-3.6",
               "Options": [
+                "Typical Metal Roof CZ6 R-20 |Typical Metal Roof CZ6 R-3.6",
                 "Metal Roof CZ6 R-30 |Metal Roof CZ6 R-5.4",
                 "Metal Roof CZ6 R-35 |Metal Roof CZ6 R-6.2",
                 "Metal Roof CZ6 R-40 |Metal Roof CZ6 R-7.1",
@@ -3586,6 +3773,7 @@
             "Roof_R_Value": {
               "Default": "20 | 3.6",
               "Options": [
+                "20 | 3.6",
                 "30 | 5.4",
                 "35 | 6.2",
                 "40 | 7.1",
@@ -3599,6 +3787,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ6 R-13 |Typical Mass Wall CZ6 R-2.2",
               "Options": [
+                "Typical Mass Wall CZ6 R-13 |Typical Mass Wall CZ6 R-2.2",
                 "Mass Wall CZ6 R-18 |Mass Wall CZ6 R-3.1",
                 "Mass Wall CZ6 R-23 |Mass Wall CZ6 R-4.0",
                 "Mass Wall CZ6 R-28 |Mass Wall CZ6 R-4.8",
@@ -3608,6 +3797,7 @@
             "Wall_R_Value": {
               "Default": "13 | 2.2",
               "Options": [
+                "13 | 2.2",
                 "18 | 3.1",
                 "23 | 4.0",
                 "28 | 4.8",
@@ -3619,6 +3809,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ6 R-14 |Typical Metal Wall CZ6 R-2.6",
               "Options": [
+                "Typical Metal Wall CZ6 R-14 |Typical Metal Wall CZ6 R-2.6",
                 "Metal Wall CZ6 R-19 |Metal Wall CZ6 R-3.4",
                 "Metal Wall CZ6 R-24 |Metal Wall CZ6 R-4.3",
                 "Metal Wall CZ6 R-29 |Metal Wall CZ6 R-5.2",
@@ -3628,6 +3819,7 @@
             "Wall_R_Value": {
               "Default": "14 | 2.6",
               "Options": [
+                "14 | 2.6",
                 "19 | 3.4",
                 "24 | 4.3",
                 "29 | 5.2",
@@ -3639,6 +3831,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ6 R-16 |Typical Steel Framed Wall CZ6 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ6 R-16 |Typical Steel Framed Wall CZ6 R-2.8",
                 "Steel Framed Wall CZ6 R-21 |Steel Framed Wall CZ6 R-3.6",
                 "Steel Framed Wall CZ6 R-26 |Steel Framed Wall CZ6 R-4.5",
                 "Steel Framed Wall CZ6 R-31 |Steel Framed Wall CZ6 R-5.4",
@@ -3648,6 +3841,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -3659,6 +3853,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ6 R-20 |Typical Wood Framed Wall CZ6 R-3.5",
               "Options": [
+                "Typical Wood Framed Wall CZ6 R-20 |Typical Wood Framed Wall CZ6 R-3.5",
                 "Wood Framed Wall CZ6 R-25 |Wood Framed Wall CZ6 R-4.3",
                 "Wood Framed Wall CZ6 R-30 |Wood Framed Wall CZ6 R-5.2",
                 "Wood Framed Wall CZ6 R-35 |Wood Framed Wall CZ6 R-6.1",
@@ -3668,6 +3863,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.3",
                 "30 | 5.2",
                 "35 | 6.1",
@@ -3732,9 +3928,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -3745,6 +3941,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ7 R-37 |Typical Attic & Other Roof CZ7 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ7 R-37 |Typical Attic & Other Roof CZ7 R-6.5",
                 "Attic & Other Roof CZ7 R-47 |Attic & Other Roof CZ7 R-8.3",
                 "Attic & Other Roof CZ7 R-52 |Attic & Other Roof CZ7 R-9.2",
                 "Attic & Other Roof CZ7 R-57 |Attic & Other Roof CZ7 R-10.0",
@@ -3754,6 +3951,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -3765,6 +3963,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ7 R-21 |Typical IEAD Roof CZ7 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ7 R-21 |Typical IEAD Roof CZ7 R-3.7",
                 "IEAD Roof CZ7 R-31 |IEAD Roof CZ7 R-5.4",
                 "IEAD Roof CZ7 R-36 |IEAD Roof CZ7 R-6.3",
                 "IEAD Roof CZ7 R-41 |IEAD Roof CZ7 R-7.2",
@@ -3774,6 +3973,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -3785,6 +3985,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ7 R-20 |Typical Metal Roof CZ7 R-3.6",
               "Options": [
+                "Typical Metal Roof CZ7 R-20 |Typical Metal Roof CZ7 R-3.6",
                 "Metal Roof CZ7 R-30 |Metal Roof CZ7 R-5.4",
                 "Metal Roof CZ7 R-35 |Metal Roof CZ7 R-6.2",
                 "Metal Roof CZ7 R-40 |Metal Roof CZ7 R-7.1",
@@ -3794,6 +3995,7 @@
             "Roof_R_Value": {
               "Default": "20 | 3.6",
               "Options": [
+                "20 | 3.6",
                 "30 | 5.4",
                 "35 | 6.2",
                 "40 | 7.1",
@@ -3807,6 +4009,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ7 R-14 |Typical Mass Wall CZ7 R-2.5",
               "Options": [
+                "Typical Mass Wall CZ7 R-14 |Typical Mass Wall CZ7 R-2.5",
                 "Mass Wall CZ7 R-19 |Mass Wall CZ7 R-3.4",
                 "Mass Wall CZ7 R-24 |Mass Wall CZ7 R-4.2",
                 "Mass Wall CZ7 R-29 |Mass Wall CZ7 R-5.1",
@@ -3816,6 +4019,7 @@
             "Wall_R_Value": {
               "Default": "14 | 2.5",
               "Options": [
+                "14 | 2.5",
                 "19 | 3.4",
                 "24 | 4.2",
                 "29 | 5.1",
@@ -3827,6 +4031,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ7 R-18 |Typical Metal Wall CZ7 R-3.1",
               "Options": [
+                "Typical Metal Wall CZ7 R-18 |Typical Metal Wall CZ7 R-3.1",
                 "Metal Wall CZ7 R-23 |Metal Wall CZ7 R-4.0",
                 "Metal Wall CZ7 R-28 |Metal Wall CZ7 R-4.9",
                 "Metal Wall CZ7 R-33 |Metal Wall CZ7 R-5.7",
@@ -3836,6 +4041,7 @@
             "Wall_R_Value": {
               "Default": "18 | 3.1",
               "Options": [
+                "18 | 3.1",
                 "23 | 4.0",
                 "28 | 4.9",
                 "33 | 5.7",
@@ -3847,6 +4053,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ7 R-16 |Typical Steel Framed Wall CZ7 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ7 R-16 |Typical Steel Framed Wall CZ7 R-2.8",
                 "Steel Framed Wall CZ7 R-21 |Steel Framed Wall CZ7 R-3.6",
                 "Steel Framed Wall CZ7 R-26 |Steel Framed Wall CZ7 R-4.5",
                 "Steel Framed Wall CZ7 R-31 |Steel Framed Wall CZ7 R-5.4",
@@ -3856,6 +4063,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -3867,6 +4075,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ7 R-20 |Typical Wood Framed Wall CZ7 R-3.5",
               "Options": [
+                "Typical Wood Framed Wall CZ7 R-20 |Typical Wood Framed Wall CZ7 R-3.5",
                 "Wood Framed Wall CZ7 R-25 |Wood Framed Wall CZ7 R-4.3",
                 "Wood Framed Wall CZ7 R-30 |Wood Framed Wall CZ7 R-5.2",
                 "Wood Framed Wall CZ7 R-35 |Wood Framed Wall CZ7 R-6.1",
@@ -3876,6 +4085,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.3",
                 "30 | 5.2",
                 "35 | 6.1",
@@ -3940,9 +4150,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -3953,6 +4163,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ8 R-48 |Typical Attic & Other Roof CZ8 R-8.4",
               "Options": [
+                "Typical Attic & Other Roof CZ8 R-48 |Typical Attic & Other Roof CZ8 R-8.4",
                 "Attic & Other Roof CZ8 R-58 |Attic & Other Roof CZ8 R-10.1",
                 "Attic & Other Roof CZ8 R-63 |Attic & Other Roof CZ8 R-11.0",
                 "Attic & Other Roof CZ8 R-68 |Attic & Other Roof CZ8 R-11.9",
@@ -3962,6 +4173,7 @@
             "Roof_R_Value": {
               "Default": "48 | 8.4",
               "Options": [
+                "48 | 8.4",
                 "58 | 10.1",
                 "63 | 11.0",
                 "68 | 11.9",
@@ -3973,6 +4185,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ8 R-21 |Typical IEAD Roof CZ8 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ8 R-21 |Typical IEAD Roof CZ8 R-3.7",
                 "IEAD Roof CZ8 R-31 |IEAD Roof CZ8 R-5.4",
                 "IEAD Roof CZ8 R-36 |IEAD Roof CZ8 R-6.3",
                 "IEAD Roof CZ8 R-41 |IEAD Roof CZ8 R-7.2",
@@ -3982,6 +4195,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -3993,6 +4207,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ8 R-29 |Typical Metal Roof CZ8 R-5.0",
               "Options": [
+                "Typical Metal Roof CZ8 R-29 |Typical Metal Roof CZ8 R-5.0",
                 "Metal Roof CZ8 R-39 |Metal Roof CZ8 R-6.8",
                 "Metal Roof CZ8 R-44 |Metal Roof CZ8 R-7.7",
                 "Metal Roof CZ8 R-49 |Metal Roof CZ8 R-8.6",
@@ -4002,6 +4217,7 @@
             "Roof_R_Value": {
               "Default": "29 | 5.0",
               "Options": [
+                "29 | 5.0",
                 "39 | 6.8",
                 "44 | 7.7",
                 "49 | 8.6",
@@ -4015,6 +4231,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ8 R-14 |Typical Mass Wall CZ8 R-2.5",
               "Options": [
+                "Typical Mass Wall CZ8 R-14 |Typical Mass Wall CZ8 R-2.5",
                 "Mass Wall CZ8 R-19 |Mass Wall CZ8 R-3.4",
                 "Mass Wall CZ8 R-24 |Mass Wall CZ8 R-4.2",
                 "Mass Wall CZ8 R-29 |Mass Wall CZ8 R-5.1",
@@ -4024,6 +4241,7 @@
             "Wall_R_Value": {
               "Default": "14 | 2.5",
               "Options": [
+                "14 | 2.5",
                 "19 | 3.4",
                 "24 | 4.2",
                 "29 | 5.1",
@@ -4035,6 +4253,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ8 R-18 |Typical Metal Wall CZ8 R-3.1",
               "Options": [
+                "Typical Metal Wall CZ8 R-18 |Typical Metal Wall CZ8 R-3.1",
                 "Metal Wall CZ8 R-23 |Metal Wall CZ8 R-4.0",
                 "Metal Wall CZ8 R-28 |Metal Wall CZ8 R-4.9",
                 "Metal Wall CZ8 R-33 |Metal Wall CZ8 R-5.7",
@@ -4044,6 +4263,7 @@
             "Wall_R_Value": {
               "Default": "18 | 3.1",
               "Options": [
+                "18 | 3.1",
                 "23 | 4.0",
                 "28 | 4.9",
                 "33 | 5.7",
@@ -4055,6 +4275,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ8 R-16 |Typical Steel Framed Wall CZ8 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ8 R-16 |Typical Steel Framed Wall CZ8 R-2.8",
                 "Steel Framed Wall CZ8 R-21 |Steel Framed Wall CZ8 R-3.6",
                 "Steel Framed Wall CZ8 R-26 |Steel Framed Wall CZ8 R-4.5",
                 "Steel Framed Wall CZ8 R-31 |Steel Framed Wall CZ8 R-5.4",
@@ -4064,6 +4285,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -4075,6 +4297,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ8 R-28 |Typical Wood Framed Wall CZ8 R-4.9",
               "Options": [
+                "Typical Wood Framed Wall CZ8 R-28 |Typical Wood Framed Wall CZ8 R-4.9",
                 "Wood Framed Wall CZ8 R-33 |Wood Framed Wall CZ8 R-5.8",
                 "Wood Framed Wall CZ8 R-38 |Wood Framed Wall CZ8 R-6.7",
                 "Wood Framed Wall CZ8 R-43 |Wood Framed Wall CZ8 R-7.5",
@@ -4084,6 +4307,7 @@
             "Wall_R_Value": {
               "Default": "28 | 4.9",
               "Options": [
+                "28 | 4.9",
                 "33 | 5.8",
                 "38 | 6.7",
                 "43 | 7.5",
@@ -4148,9 +4372,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -4163,6 +4387,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ1 R-37 |Typical Attic & Other Roof CZ1 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ1 R-37 |Typical Attic & Other Roof CZ1 R-6.5",
                 "Attic & Other Roof CZ1 R-47 |Attic & Other Roof CZ1 R-8.3",
                 "Attic & Other Roof CZ1 R-52 |Attic & Other Roof CZ1 R-9.2",
                 "Attic & Other Roof CZ1 R-57 |Attic & Other Roof CZ1 R-10.0",
@@ -4172,6 +4397,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -4183,6 +4409,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ1 R-21 |Typical IEAD Roof CZ1 R-3.7",
               "Options": [
+                "Typical IEAD Roof CZ1 R-21 |Typical IEAD Roof CZ1 R-3.7",
                 "IEAD Roof CZ1 R-31 |IEAD Roof CZ1 R-5.4",
                 "IEAD Roof CZ1 R-36 |IEAD Roof CZ1 R-6.3",
                 "IEAD Roof CZ1 R-41 |IEAD Roof CZ1 R-7.2",
@@ -4192,6 +4419,7 @@
             "Roof_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -4203,6 +4431,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ1 R-24 |Typical Metal Roof CZ1 R-4.3",
               "Options": [
+                "Typical Metal Roof CZ1 R-24 |Typical Metal Roof CZ1 R-4.3",
                 "Metal Roof CZ1 R-34 |Metal Roof CZ1 R-6.1",
                 "Metal Roof CZ1 R-39 |Metal Roof CZ1 R-6.9",
                 "Metal Roof CZ1 R-44 |Metal Roof CZ1 R-7.8",
@@ -4212,6 +4441,7 @@
             "Roof_R_Value": {
               "Default": "24 | 4.3",
               "Options": [
+                "24 | 4.3",
                 "34 | 6.1",
                 "39 | 6.9",
                 "44 | 7.8",
@@ -4225,6 +4455,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ1 R-2 |Typical Mass Wall CZ1 R-0.3",
               "Options": [
+                "Typical Mass Wall CZ1 R-2 |Typical Mass Wall CZ1 R-0.3",
                 "Mass Wall CZ1 R-7 |Mass Wall CZ1 R-1.2",
                 "Mass Wall CZ1 R-12 |Mass Wall CZ1 R-2.1",
                 "Mass Wall CZ1 R-17 |Mass Wall CZ1 R-2.9",
@@ -4234,6 +4465,7 @@
             "Wall_R_Value": {
               "Default": "2 | 0.3",
               "Options": [
+                "2 | 0.3",
                 "7 | 1.2",
                 "12 | 2.1",
                 "17 | 2.9",
@@ -4245,6 +4477,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ1 R-11 |Typical Metal Wall CZ1 R-1.9",
               "Options": [
+                "Typical Metal Wall CZ1 R-11 |Typical Metal Wall CZ1 R-1.9",
                 "Metal Wall CZ1 R-16 |Metal Wall CZ1 R-2.8",
                 "Metal Wall CZ1 R-21 |Metal Wall CZ1 R-3.6",
                 "Metal Wall CZ1 R-26 |Metal Wall CZ1 R-4.5",
@@ -4254,6 +4487,7 @@
             "Wall_R_Value": {
               "Default": "11 | 1.9",
               "Options": [
+                "11 | 1.9",
                 "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
@@ -4265,6 +4499,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ1 R-8 |Typical Steel Framed Wall CZ1 R-1.4",
               "Options": [
+                "Typical Steel Framed Wall CZ1 R-8 |Typical Steel Framed Wall CZ1 R-1.4",
                 "Steel Framed Wall CZ1 R-13 |Steel Framed Wall CZ1 R-2.3",
                 "Steel Framed Wall CZ1 R-18 |Steel Framed Wall CZ1 R-3.2",
                 "Steel Framed Wall CZ1 R-23 |Steel Framed Wall CZ1 R-4.1",
@@ -4274,6 +4509,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -4285,6 +4521,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ1 R-11 |Typical Wood Framed Wall CZ1 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ1 R-11 |Typical Wood Framed Wall CZ1 R-2.0",
                 "Wood Framed Wall CZ1 R-16 |Wood Framed Wall CZ1 R-2.9",
                 "Wood Framed Wall CZ1 R-21 |Wood Framed Wall CZ1 R-3.7",
                 "Wood Framed Wall CZ1 R-26 |Wood Framed Wall CZ1 R-4.6",
@@ -4294,6 +4531,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -4358,9 +4596,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -4371,6 +4609,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ2 R-37 |Typical Attic & Other Roof CZ2 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ2 R-37 |Typical Attic & Other Roof CZ2 R-6.5",
                 "Attic & Other Roof CZ2 R-47 |Attic & Other Roof CZ2 R-8.3",
                 "Attic & Other Roof CZ2 R-52 |Attic & Other Roof CZ2 R-9.2",
                 "Attic & Other Roof CZ2 R-57 |Attic & Other Roof CZ2 R-10.0",
@@ -4380,6 +4619,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -4391,6 +4631,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ2 R-26 |Typical IEAD Roof CZ2 R-4.5",
               "Options": [
+                "Typical IEAD Roof CZ2 R-26 |Typical IEAD Roof CZ2 R-4.5",
                 "IEAD Roof CZ2 R-36 |IEAD Roof CZ2 R-6.3",
                 "IEAD Roof CZ2 R-41 |IEAD Roof CZ2 R-7.2",
                 "IEAD Roof CZ2 R-46 |IEAD Roof CZ2 R-8.0",
@@ -4400,6 +4641,7 @@
             "Roof_R_Value": {
               "Default": "26 | 4.5",
               "Options": [
+                "26 | 4.5",
                 "36 | 6.3",
                 "41 | 7.2",
                 "46 | 8.0",
@@ -4411,6 +4653,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ2 R-24 |Typical Metal Roof CZ2 R-4.3",
               "Options": [
+                "Typical Metal Roof CZ2 R-24 |Typical Metal Roof CZ2 R-4.3",
                 "Metal Roof CZ2 R-34 |Metal Roof CZ2 R-6.1",
                 "Metal Roof CZ2 R-39 |Metal Roof CZ2 R-6.9",
                 "Metal Roof CZ2 R-44 |Metal Roof CZ2 R-7.8",
@@ -4420,6 +4663,7 @@
             "Roof_R_Value": {
               "Default": "24 | 4.3",
               "Options": [
+                "24 | 4.3",
                 "34 | 6.1",
                 "39 | 6.9",
                 "44 | 7.8",
@@ -4433,6 +4677,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ2 R-7 |Typical Mass Wall CZ2 R-1.2",
               "Options": [
+                "Typical Mass Wall CZ2 R-7 |Typical Mass Wall CZ2 R-1.2",
                 "Mass Wall CZ2 R-12 |Mass Wall CZ2 R-2.0",
                 "Mass Wall CZ2 R-17 |Mass Wall CZ2 R-2.9",
                 "Mass Wall CZ2 R-22 |Mass Wall CZ2 R-3.8",
@@ -4442,6 +4687,7 @@
             "Wall_R_Value": {
               "Default": "7 | 1.2",
               "Options": [
+                "7 | 1.2",
                 "12 | 2.0",
                 "17 | 2.9",
                 "22 | 3.8",
@@ -4453,6 +4699,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ2 R-11 |Typical Metal Wall CZ2 R-1.9",
               "Options": [
+                "Typical Metal Wall CZ2 R-11 |Typical Metal Wall CZ2 R-1.9",
                 "Metal Wall CZ2 R-16 |Metal Wall CZ2 R-2.8",
                 "Metal Wall CZ2 R-21 |Metal Wall CZ2 R-3.6",
                 "Metal Wall CZ2 R-26 |Metal Wall CZ2 R-4.5",
@@ -4462,6 +4709,7 @@
             "Wall_R_Value": {
               "Default": "11 | 1.9",
               "Options": [
+                "11 | 1.9",
                 "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
@@ -4473,6 +4721,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ2 R-12 |Typical Steel Framed Wall CZ2 R-2.1",
               "Options": [
+                "Typical Steel Framed Wall CZ2 R-12 |Typical Steel Framed Wall CZ2 R-2.1",
                 "Steel Framed Wall CZ2 R-17 |Steel Framed Wall CZ2 R-3.0",
                 "Steel Framed Wall CZ2 R-22 |Steel Framed Wall CZ2 R-3.9",
                 "Steel Framed Wall CZ2 R-27 |Steel Framed Wall CZ2 R-4.7",
@@ -4482,6 +4731,7 @@
             "Wall_R_Value": {
               "Default": "12 | 2.1",
               "Options": [
+                "12 | 2.1",
                 "17 | 3.0",
                 "22 | 3.9",
                 "27 | 4.7",
@@ -4493,6 +4743,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ2 R-11 |Typical Wood Framed Wall CZ2 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ2 R-11 |Typical Wood Framed Wall CZ2 R-2.0",
                 "Wood Framed Wall CZ2 R-16 |Wood Framed Wall CZ2 R-2.9",
                 "Wood Framed Wall CZ2 R-21 |Wood Framed Wall CZ2 R-3.7",
                 "Wood Framed Wall CZ2 R-26 |Wood Framed Wall CZ2 R-4.6",
@@ -4502,6 +4753,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -4566,9 +4818,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -4579,6 +4831,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ3 R-37 |Typical Attic & Other Roof CZ3 R-6.5",
               "Options": [
+                "Typical Attic & Other Roof CZ3 R-37 |Typical Attic & Other Roof CZ3 R-6.5",
                 "Attic & Other Roof CZ3 R-47 |Attic & Other Roof CZ3 R-8.3",
                 "Attic & Other Roof CZ3 R-52 |Attic & Other Roof CZ3 R-9.2",
                 "Attic & Other Roof CZ3 R-57 |Attic & Other Roof CZ3 R-10.0",
@@ -4588,6 +4841,7 @@
             "Roof_R_Value": {
               "Default": "37 | 6.5",
               "Options": [
+                "37 | 6.5",
                 "47 | 8.3",
                 "52 | 9.2",
                 "57 | 10.0",
@@ -4599,6 +4853,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ3 R-26 |Typical IEAD Roof CZ3 R-4.5",
               "Options": [
+                "Typical IEAD Roof CZ3 R-26 |Typical IEAD Roof CZ3 R-4.5",
                 "IEAD Roof CZ3 R-36 |IEAD Roof CZ3 R-6.3",
                 "IEAD Roof CZ3 R-41 |IEAD Roof CZ3 R-7.2",
                 "IEAD Roof CZ3 R-46 |IEAD Roof CZ3 R-8.0",
@@ -4608,6 +4863,7 @@
             "Roof_R_Value": {
               "Default": "26 | 4.5",
               "Options": [
+                "26 | 4.5",
                 "36 | 6.3",
                 "41 | 7.2",
                 "46 | 8.0",
@@ -4619,6 +4875,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ3 R-24 |Typical Metal Roof CZ3 R-4.3",
               "Options": [
+                "Typical Metal Roof CZ3 R-24 |Typical Metal Roof CZ3 R-4.3",
                 "Metal Roof CZ3 R-34 |Metal Roof CZ3 R-6.1",
                 "Metal Roof CZ3 R-39 |Metal Roof CZ3 R-6.9",
                 "Metal Roof CZ3 R-44 |Metal Roof CZ3 R-7.8",
@@ -4628,6 +4885,7 @@
             "Roof_R_Value": {
               "Default": "24 | 4.3",
               "Options": [
+                "24 | 4.3",
                 "34 | 6.1",
                 "39 | 6.9",
                 "44 | 7.8",
@@ -4641,6 +4899,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ3 R-8 |Typical Mass Wall CZ3 R-1.4",
               "Options": [
+                "Typical Mass Wall CZ3 R-8 |Typical Mass Wall CZ3 R-1.4",
                 "Mass Wall CZ3 R-13 |Mass Wall CZ3 R-2.3",
                 "Mass Wall CZ3 R-18 |Mass Wall CZ3 R-3.2",
                 "Mass Wall CZ3 R-23 |Mass Wall CZ3 R-4.1",
@@ -4650,6 +4909,7 @@
             "Wall_R_Value": {
               "Default": "8 | 1.4",
               "Options": [
+                "8 | 1.4",
                 "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.1",
@@ -4661,6 +4921,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ3 R-11 |Typical Metal Wall CZ3 R-1.9",
               "Options": [
+                "Typical Metal Wall CZ3 R-11 |Typical Metal Wall CZ3 R-1.9",
                 "Metal Wall CZ3 R-16 |Metal Wall CZ3 R-2.8",
                 "Metal Wall CZ3 R-21 |Metal Wall CZ3 R-3.6",
                 "Metal Wall CZ3 R-26 |Metal Wall CZ3 R-4.5",
@@ -4670,6 +4931,7 @@
             "Wall_R_Value": {
               "Default": "11 | 1.9",
               "Options": [
+                "11 | 1.9",
                 "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
@@ -4681,6 +4943,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ3 R-13 |Typical Steel Framed Wall CZ3 R-2.3",
               "Options": [
+                "Typical Steel Framed Wall CZ3 R-13 |Typical Steel Framed Wall CZ3 R-2.3",
                 "Steel Framed Wall CZ3 R-18 |Steel Framed Wall CZ3 R-3.2",
                 "Steel Framed Wall CZ3 R-23 |Steel Framed Wall CZ3 R-4.0",
                 "Steel Framed Wall CZ3 R-28 |Steel Framed Wall CZ3 R-4.9",
@@ -4690,6 +4953,7 @@
             "Wall_R_Value": {
               "Default": "13 | 2.3",
               "Options": [
+                "13 | 2.3",
                 "18 | 3.2",
                 "23 | 4.0",
                 "28 | 4.9",
@@ -4701,6 +4965,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ3 R-11 |Typical Wood Framed Wall CZ3 R-2.0",
               "Options": [
+                "Typical Wood Framed Wall CZ3 R-11 |Typical Wood Framed Wall CZ3 R-2.0",
                 "Wood Framed Wall CZ3 R-16 |Wood Framed Wall CZ3 R-2.9",
                 "Wood Framed Wall CZ3 R-21 |Wood Framed Wall CZ3 R-3.7",
                 "Wood Framed Wall CZ3 R-26 |Wood Framed Wall CZ3 R-4.6",
@@ -4710,6 +4975,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.9",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -4774,9 +5040,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -4787,6 +5053,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ4 R-48 |Typical Attic & Other Roof CZ4 R-8.4",
               "Options": [
+                "Typical Attic & Other Roof CZ4 R-48 |Typical Attic & Other Roof CZ4 R-8.4",
                 "Attic & Other Roof CZ4 R-58 |Attic & Other Roof CZ4 R-10.1",
                 "Attic & Other Roof CZ4 R-63 |Attic & Other Roof CZ4 R-11.0",
                 "Attic & Other Roof CZ4 R-68 |Attic & Other Roof CZ4 R-11.9",
@@ -4796,6 +5063,7 @@
             "Roof_R_Value": {
               "Default": "48 | 8.4",
               "Options": [
+                "48 | 8.4",
                 "58 | 10.1",
                 "63 | 11.0",
                 "68 | 11.9",
@@ -4807,6 +5075,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ4 R-31 |Typical IEAD Roof CZ4 R-5.5",
               "Options": [
+                "Typical IEAD Roof CZ4 R-31 |Typical IEAD Roof CZ4 R-5.5",
                 "IEAD Roof CZ4 R-41 |IEAD Roof CZ4 R-7.3",
                 "IEAD Roof CZ4 R-46 |IEAD Roof CZ4 R-8.1",
                 "IEAD Roof CZ4 R-51 |IEAD Roof CZ4 R-9.0",
@@ -4816,6 +5085,7 @@
             "Roof_R_Value": {
               "Default": "31 | 5.5",
               "Options": [
+                "31 | 5.5",
                 "41 | 7.3",
                 "46 | 8.1",
                 "51 | 9.0",
@@ -4827,6 +5097,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ4 R-27 |Typical Metal Roof CZ4 R-4.8",
               "Options": [
+                "Typical Metal Roof CZ4 R-27 |Typical Metal Roof CZ4 R-4.8",
                 "Metal Roof CZ4 R-37 |Metal Roof CZ4 R-6.5",
                 "Metal Roof CZ4 R-42 |Metal Roof CZ4 R-7.4",
                 "Metal Roof CZ4 R-47 |Metal Roof CZ4 R-8.3",
@@ -4836,6 +5107,7 @@
             "Roof_R_Value": {
               "Default": "27 | 4.8",
               "Options": [
+                "27 | 4.8",
                 "37 | 6.5",
                 "42 | 7.4",
                 "47 | 8.3",
@@ -4849,6 +5121,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ4 R-10 |Typical Mass Wall CZ4 R-1.7",
               "Options": [
+                "Typical Mass Wall CZ4 R-10 |Typical Mass Wall CZ4 R-1.7",
                 "Mass Wall CZ4 R-15 |Mass Wall CZ4 R-2.6",
                 "Mass Wall CZ4 R-20 |Mass Wall CZ4 R-3.5",
                 "Mass Wall CZ4 R-25 |Mass Wall CZ4 R-4.3",
@@ -4858,6 +5131,7 @@
             "Wall_R_Value": {
               "Default": "10 | 1.7",
               "Options": [
+                "10 | 1.7",
                 "15 | 2.6",
                 "20 | 3.5",
                 "25 | 4.3",
@@ -4869,6 +5143,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ4 R-17 |Typical Metal Wall CZ4 R-2.9",
               "Options": [
+                "Typical Metal Wall CZ4 R-17 |Typical Metal Wall CZ4 R-2.9",
                 "Metal Wall CZ4 R-22 |Metal Wall CZ4 R-3.8",
                 "Metal Wall CZ4 R-27 |Metal Wall CZ4 R-4.7",
                 "Metal Wall CZ4 R-32 |Metal Wall CZ4 R-5.6",
@@ -4878,6 +5153,7 @@
             "Wall_R_Value": {
               "Default": "17 | 2.9",
               "Options": [
+                "17 | 2.9",
                 "22 | 3.8",
                 "27 | 4.7",
                 "32 | 5.6",
@@ -4889,6 +5165,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ4 R-16 |Typical Steel Framed Wall CZ4 R-2.8",
               "Options": [
+                "Typical Steel Framed Wall CZ4 R-16 |Typical Steel Framed Wall CZ4 R-2.8",
                 "Steel Framed Wall CZ4 R-21 |Steel Framed Wall CZ4 R-3.6",
                 "Steel Framed Wall CZ4 R-26 |Steel Framed Wall CZ4 R-4.5",
                 "Steel Framed Wall CZ4 R-31 |Steel Framed Wall CZ4 R-5.4",
@@ -4898,6 +5175,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -4909,6 +5187,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ4 R-16 |Typical Wood Framed Wall CZ4 R-2.8",
               "Options": [
+                "Typical Wood Framed Wall CZ4 R-16 |Typical Wood Framed Wall CZ4 R-2.8",
                 "Wood Framed Wall CZ4 R-21 |Wood Framed Wall CZ4 R-3.6",
                 "Wood Framed Wall CZ4 R-26 |Wood Framed Wall CZ4 R-4.5",
                 "Wood Framed Wall CZ4 R-31 |Wood Framed Wall CZ4 R-5.4",
@@ -4918,6 +5197,7 @@
             "Wall_R_Value": {
               "Default": "16 | 2.8",
               "Options": [
+                "16 | 2.8",
                 "21 | 3.6",
                 "26 | 4.5",
                 "31 | 5.4",
@@ -4982,9 +5262,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -4995,6 +5275,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ5 R-48 |Typical Attic & Other Roof CZ5 R-8.4",
               "Options": [
+                "Typical Attic & Other Roof CZ5 R-48 |Typical Attic & Other Roof CZ5 R-8.4",
                 "Attic & Other Roof CZ5 R-58 |Attic & Other Roof CZ5 R-10.1",
                 "Attic & Other Roof CZ5 R-63 |Attic & Other Roof CZ5 R-11.0",
                 "Attic & Other Roof CZ5 R-68 |Attic & Other Roof CZ5 R-11.9",
@@ -5004,6 +5285,7 @@
             "Roof_R_Value": {
               "Default": "48 | 8.4",
               "Options": [
+                "48 | 8.4",
                 "58 | 10.1",
                 "63 | 11.0",
                 "68 | 11.9",
@@ -5015,6 +5297,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ5 R-31 |Typical IEAD Roof CZ5 R-5.5",
               "Options": [
+                "Typical IEAD Roof CZ5 R-31 |Typical IEAD Roof CZ5 R-5.5",
                 "IEAD Roof CZ5 R-41 |IEAD Roof CZ5 R-7.3",
                 "IEAD Roof CZ5 R-46 |IEAD Roof CZ5 R-8.1",
                 "IEAD Roof CZ5 R-51 |IEAD Roof CZ5 R-9.0",
@@ -5024,6 +5307,7 @@
             "Roof_R_Value": {
               "Default": "31 | 5.5",
               "Options": [
+                "31 | 5.5",
                 "41 | 7.3",
                 "46 | 8.1",
                 "51 | 9.0",
@@ -5035,6 +5319,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ5 R-27 |Typical Metal Roof CZ5 R-4.8",
               "Options": [
+                "Typical Metal Roof CZ5 R-27 |Typical Metal Roof CZ5 R-4.8",
                 "Metal Roof CZ5 R-37 |Metal Roof CZ5 R-6.5",
                 "Metal Roof CZ5 R-42 |Metal Roof CZ5 R-7.4",
                 "Metal Roof CZ5 R-47 |Metal Roof CZ5 R-8.3",
@@ -5044,6 +5329,7 @@
             "Roof_R_Value": {
               "Default": "27 | 4.8",
               "Options": [
+                "27 | 4.8",
                 "37 | 6.5",
                 "42 | 7.4",
                 "47 | 8.3",
@@ -5057,6 +5343,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ5 R-11 |Typical Mass Wall CZ5 R-2.0",
               "Options": [
+                "Typical Mass Wall CZ5 R-11 |Typical Mass Wall CZ5 R-2.0",
                 "Mass Wall CZ5 R-16 |Mass Wall CZ5 R-2.8",
                 "Mass Wall CZ5 R-21 |Mass Wall CZ5 R-3.7",
                 "Mass Wall CZ5 R-26 |Mass Wall CZ5 R-4.6",
@@ -5066,6 +5353,7 @@
             "Wall_R_Value": {
               "Default": "11 | 2.0",
               "Options": [
+                "11 | 2.0",
                 "16 | 2.8",
                 "21 | 3.7",
                 "26 | 4.6",
@@ -5077,6 +5365,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ5 R-20 |Typical Metal Wall CZ5 R-3.5",
               "Options": [
+                "Typical Metal Wall CZ5 R-20 |Typical Metal Wall CZ5 R-3.5",
                 "Metal Wall CZ5 R-25 |Metal Wall CZ5 R-4.4",
                 "Metal Wall CZ5 R-30 |Metal Wall CZ5 R-5.3",
                 "Metal Wall CZ5 R-35 |Metal Wall CZ5 R-6.2",
@@ -5086,6 +5375,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.4",
                 "30 | 5.3",
                 "35 | 6.2",
@@ -5097,6 +5387,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ5 R-18 |Typical Steel Framed Wall CZ5 R-3.2",
               "Options": [
+                "Typical Steel Framed Wall CZ5 R-18 |Typical Steel Framed Wall CZ5 R-3.2",
                 "Steel Framed Wall CZ5 R-23 |Steel Framed Wall CZ5 R-4.1",
                 "Steel Framed Wall CZ5 R-28 |Steel Framed Wall CZ5 R-5.0",
                 "Steel Framed Wall CZ5 R-33 |Steel Framed Wall CZ5 R-5.8",
@@ -5106,6 +5397,7 @@
             "Wall_R_Value": {
               "Default": "18 | 3.2",
               "Options": [
+                "18 | 3.2",
                 "23 | 4.1",
                 "28 | 5.0",
                 "33 | 5.8",
@@ -5117,6 +5409,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ5 R-20 |Typical Wood Framed Wall CZ5 R-3.5",
               "Options": [
+                "Typical Wood Framed Wall CZ5 R-20 |Typical Wood Framed Wall CZ5 R-3.5",
                 "Wood Framed Wall CZ5 R-25 |Wood Framed Wall CZ5 R-4.3",
                 "Wood Framed Wall CZ5 R-30 |Wood Framed Wall CZ5 R-5.2",
                 "Wood Framed Wall CZ5 R-35 |Wood Framed Wall CZ5 R-6.1",
@@ -5126,6 +5419,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.3",
                 "30 | 5.2",
                 "35 | 6.1",
@@ -5190,9 +5484,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -5203,6 +5497,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ6 R-48 |Typical Attic & Other Roof CZ6 R-8.4",
               "Options": [
+                "Typical Attic & Other Roof CZ6 R-48 |Typical Attic & Other Roof CZ6 R-8.4",
                 "Attic & Other Roof CZ6 R-58 |Attic & Other Roof CZ6 R-10.1",
                 "Attic & Other Roof CZ6 R-63 |Attic & Other Roof CZ6 R-11.0",
                 "Attic & Other Roof CZ6 R-68 |Attic & Other Roof CZ6 R-11.9",
@@ -5212,6 +5507,7 @@
             "Roof_R_Value": {
               "Default": "48 | 8.4",
               "Options": [
+                "48 | 8.4",
                 "58 | 10.1",
                 "63 | 11.0",
                 "68 | 11.9",
@@ -5223,6 +5519,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ6 R-31 |Typical IEAD Roof CZ6 R-5.5",
               "Options": [
+                "Typical IEAD Roof CZ6 R-31 |Typical IEAD Roof CZ6 R-5.5",
                 "IEAD Roof CZ6 R-41 |IEAD Roof CZ6 R-7.3",
                 "IEAD Roof CZ6 R-46 |IEAD Roof CZ6 R-8.1",
                 "IEAD Roof CZ6 R-51 |IEAD Roof CZ6 R-9.0",
@@ -5232,6 +5529,7 @@
             "Roof_R_Value": {
               "Default": "31 | 5.5",
               "Options": [
+                "31 | 5.5",
                 "41 | 7.3",
                 "46 | 8.1",
                 "51 | 9.0",
@@ -5243,6 +5541,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ6 R-32 |Typical Metal Roof CZ6 R-5.7",
               "Options": [
+                "Typical Metal Roof CZ6 R-32 |Typical Metal Roof CZ6 R-5.7",
                 "Metal Roof CZ6 R-42 |Metal Roof CZ6 R-7.4",
                 "Metal Roof CZ6 R-47 |Metal Roof CZ6 R-8.3",
                 "Metal Roof CZ6 R-52 |Metal Roof CZ6 R-9.2",
@@ -5252,6 +5551,7 @@
             "Roof_R_Value": {
               "Default": "32 | 5.7",
               "Options": [
+                "32 | 5.7",
                 "42 | 7.4",
                 "47 | 8.3",
                 "52 | 9.2",
@@ -5265,6 +5565,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ6 R-13 |Typical Mass Wall CZ6 R-2.2",
               "Options": [
+                "Typical Mass Wall CZ6 R-13 |Typical Mass Wall CZ6 R-2.2",
                 "Mass Wall CZ6 R-18 |Mass Wall CZ6 R-3.1",
                 "Mass Wall CZ6 R-23 |Mass Wall CZ6 R-4.0",
                 "Mass Wall CZ6 R-28 |Mass Wall CZ6 R-4.8",
@@ -5274,6 +5575,7 @@
             "Wall_R_Value": {
               "Default": "13 | 2.2",
               "Options": [
+                "13 | 2.2",
                 "18 | 3.1",
                 "23 | 4.0",
                 "28 | 4.8",
@@ -5285,6 +5587,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ6 R-20 |Typical Metal Wall CZ6 R-3.5",
               "Options": [
+                "Typical Metal Wall CZ6 R-20 |Typical Metal Wall CZ6 R-3.5",
                 "Metal Wall CZ6 R-25 |Metal Wall CZ6 R-4.4",
                 "Metal Wall CZ6 R-30 |Metal Wall CZ6 R-5.3",
                 "Metal Wall CZ6 R-35 |Metal Wall CZ6 R-6.2",
@@ -5294,6 +5597,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.4",
                 "30 | 5.3",
                 "35 | 6.2",
@@ -5305,6 +5609,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ6 R-20 |Typical Steel Framed Wall CZ6 R-3.6",
               "Options": [
+                "Typical Steel Framed Wall CZ6 R-20 |Typical Steel Framed Wall CZ6 R-3.6",
                 "Steel Framed Wall CZ6 R-25 |Steel Framed Wall CZ6 R-4.5",
                 "Steel Framed Wall CZ6 R-30 |Steel Framed Wall CZ6 R-5.4",
                 "Steel Framed Wall CZ6 R-35 |Steel Framed Wall CZ6 R-6.2",
@@ -5314,6 +5619,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.6",
               "Options": [
+                "20 | 3.6",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -5325,6 +5631,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ6 R-20 |Typical Wood Framed Wall CZ6 R-3.5",
               "Options": [
+                "Typical Wood Framed Wall CZ6 R-20 |Typical Wood Framed Wall CZ6 R-3.5",
                 "Wood Framed Wall CZ6 R-25 |Wood Framed Wall CZ6 R-4.3",
                 "Wood Framed Wall CZ6 R-30 |Wood Framed Wall CZ6 R-5.2",
                 "Wood Framed Wall CZ6 R-35 |Wood Framed Wall CZ6 R-6.1",
@@ -5334,6 +5641,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.3",
                 "30 | 5.2",
                 "35 | 6.1",
@@ -5398,9 +5706,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -5411,6 +5719,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ7 R-59 |Typical Attic & Other Roof CZ7 R-10.4",
               "Options": [
+                "Typical Attic & Other Roof CZ7 R-59 |Typical Attic & Other Roof CZ7 R-10.4",
                 "Attic & Other Roof CZ7 R-69 |Attic & Other Roof CZ7 R-12.1",
                 "Attic & Other Roof CZ7 R-74 |Attic & Other Roof CZ7 R-13.0",
                 "Attic & Other Roof CZ7 R-79 |Attic & Other Roof CZ7 R-13.9",
@@ -5420,6 +5729,7 @@
             "Roof_R_Value": {
               "Default": "59 | 10.4",
               "Options": [
+                "59 | 10.4",
                 "69 | 12.1",
                 "74 | 13.0",
                 "79 | 13.9",
@@ -5431,6 +5741,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ7 R-36 |Typical IEAD Roof CZ7 R-6.3",
               "Options": [
+                "Typical IEAD Roof CZ7 R-36 |Typical IEAD Roof CZ7 R-6.3",
                 "IEAD Roof CZ7 R-46 |IEAD Roof CZ7 R-8.1",
                 "IEAD Roof CZ7 R-51 |IEAD Roof CZ7 R-8.9",
                 "IEAD Roof CZ7 R-56 |IEAD Roof CZ7 R-9.8",
@@ -5440,6 +5751,7 @@
             "Roof_R_Value": {
               "Default": "36 | 6.3",
               "Options": [
+                "36 | 6.3",
                 "46 | 8.1",
                 "51 | 8.9",
                 "56 | 9.8",
@@ -5451,6 +5763,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ7 R-34 |Typical Metal Roof CZ7 R-6.1",
               "Options": [
+                "Typical Metal Roof CZ7 R-34 |Typical Metal Roof CZ7 R-6.1",
                 "Metal Roof CZ7 R-44 |Metal Roof CZ7 R-7.8",
                 "Metal Roof CZ7 R-49 |Metal Roof CZ7 R-8.7",
                 "Metal Roof CZ7 R-54 |Metal Roof CZ7 R-9.6",
@@ -5460,6 +5773,7 @@
             "Roof_R_Value": {
               "Default": "34 | 6.1",
               "Options": [
+                "34 | 6.1",
                 "44 | 7.8",
                 "49 | 8.7",
                 "54 | 9.6",
@@ -5473,6 +5787,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ7 R-14 |Typical Mass Wall CZ7 R-2.5",
               "Options": [
+                "Typical Mass Wall CZ7 R-14 |Typical Mass Wall CZ7 R-2.5",
                 "Mass Wall CZ7 R-19 |Mass Wall CZ7 R-3.4",
                 "Mass Wall CZ7 R-24 |Mass Wall CZ7 R-4.2",
                 "Mass Wall CZ7 R-29 |Mass Wall CZ7 R-5.1",
@@ -5482,6 +5797,7 @@
             "Wall_R_Value": {
               "Default": "14 | 2.5",
               "Options": [
+                "14 | 2.5",
                 "19 | 3.4",
                 "24 | 4.2",
                 "29 | 5.1",
@@ -5493,6 +5809,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ7 R-23 |Typical Metal Wall CZ7 R-4.0",
               "Options": [
+                "Typical Metal Wall CZ7 R-23 |Typical Metal Wall CZ7 R-4.0",
                 "Metal Wall CZ7 R-28 |Metal Wall CZ7 R-4.9",
                 "Metal Wall CZ7 R-33 |Metal Wall CZ7 R-5.8",
                 "Metal Wall CZ7 R-38 |Metal Wall CZ7 R-6.6",
@@ -5502,6 +5819,7 @@
             "Wall_R_Value": {
               "Default": "23 | 4.0",
               "Options": [
+                "23 | 4.0",
                 "28 | 4.9",
                 "33 | 5.8",
                 "38 | 6.6",
@@ -5513,6 +5831,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ7 R-20 |Typical Steel Framed Wall CZ7 R-3.6",
               "Options": [
+                "Typical Steel Framed Wall CZ7 R-20 |Typical Steel Framed Wall CZ7 R-3.6",
                 "Steel Framed Wall CZ7 R-25 |Steel Framed Wall CZ7 R-4.5",
                 "Steel Framed Wall CZ7 R-30 |Steel Framed Wall CZ7 R-5.4",
                 "Steel Framed Wall CZ7 R-35 |Steel Framed Wall CZ7 R-6.2",
@@ -5522,6 +5841,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.6",
               "Options": [
+                "20 | 3.6",
                 "25 | 4.5",
                 "30 | 5.4",
                 "35 | 6.2",
@@ -5533,6 +5853,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ7 R-20 |Typical Wood Framed Wall CZ7 R-3.5",
               "Options": [
+                "Typical Wood Framed Wall CZ7 R-20 |Typical Wood Framed Wall CZ7 R-3.5",
                 "Wood Framed Wall CZ7 R-25 |Wood Framed Wall CZ7 R-4.3",
                 "Wood Framed Wall CZ7 R-30 |Wood Framed Wall CZ7 R-5.2",
                 "Wood Framed Wall CZ7 R-35 |Wood Framed Wall CZ7 R-6.1",
@@ -5542,6 +5863,7 @@
             "Wall_R_Value": {
               "Default": "20 | 3.5",
               "Options": [
+                "20 | 3.5",
                 "25 | 4.3",
                 "30 | 5.2",
                 "35 | 6.1",
@@ -5606,9 +5928,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
@@ -5619,6 +5941,7 @@
             "Roof_Type": {
               "Default": "Typical Attic & Other Roof CZ8 R-59 |Typical Attic & Other Roof CZ8 R-10.4",
               "Options": [
+                "Typical Attic & Other Roof CZ8 R-59 |Typical Attic & Other Roof CZ8 R-10.4",
                 "Attic & Other Roof CZ8 R-69 |Attic & Other Roof CZ8 R-12.1",
                 "Attic & Other Roof CZ8 R-74 |Attic & Other Roof CZ8 R-13.0",
                 "Attic & Other Roof CZ8 R-79 |Attic & Other Roof CZ8 R-13.9",
@@ -5628,6 +5951,7 @@
             "Roof_R_Value": {
               "Default": "59 | 10.4",
               "Options": [
+                "59 | 10.4",
                 "69 | 12.1",
                 "74 | 13.0",
                 "79 | 13.9",
@@ -5639,6 +5963,7 @@
             "Roof_Type": {
               "Default": "Typical IEAD Roof CZ8 R-36 |Typical IEAD Roof CZ8 R-6.3",
               "Options": [
+                "Typical IEAD Roof CZ8 R-36 |Typical IEAD Roof CZ8 R-6.3",
                 "IEAD Roof CZ8 R-46 |IEAD Roof CZ8 R-8.1",
                 "IEAD Roof CZ8 R-51 |IEAD Roof CZ8 R-8.9",
                 "IEAD Roof CZ8 R-56 |IEAD Roof CZ8 R-9.8",
@@ -5648,6 +5973,7 @@
             "Roof_R_Value": {
               "Default": "36 | 6.3",
               "Options": [
+                "36 | 6.3",
                 "46 | 8.1",
                 "51 | 8.9",
                 "56 | 9.8",
@@ -5659,6 +5985,7 @@
             "Roof_Type": {
               "Default": "Typical Metal Roof CZ8 R-38 |Typical Metal Roof CZ8 R-6.8",
               "Options": [
+                "Typical Metal Roof CZ8 R-38 |Typical Metal Roof CZ8 R-6.8",
                 "Metal Roof CZ8 R-48 |Metal Roof CZ8 R-8.5",
                 "Metal Roof CZ8 R-53 |Metal Roof CZ8 R-9.4",
                 "Metal Roof CZ8 R-58 |Metal Roof CZ8 R-10.3",
@@ -5668,6 +5995,7 @@
             "Roof_R_Value": {
               "Default": "38 | 6.8",
               "Options": [
+                "38 | 6.8",
                 "48 | 8.5",
                 "53 | 9.4",
                 "58 | 10.3",
@@ -5681,6 +6009,7 @@
             "Wall_Type": {
               "Default": "Typical Mass Wall CZ8 R-21 |Typical Mass Wall CZ8 R-3.7",
               "Options": [
+                "Typical Mass Wall CZ8 R-21 |Typical Mass Wall CZ8 R-3.7",
                 "Mass Wall CZ8 R-26 |Mass Wall CZ8 R-4.5",
                 "Mass Wall CZ8 R-31 |Mass Wall CZ8 R-5.4",
                 "Mass Wall CZ8 R-36 |Mass Wall CZ8 R-6.3",
@@ -5690,6 +6019,7 @@
             "Wall_R_Value": {
               "Default": "21 | 3.7",
               "Options": [
+                "21 | 3.7",
                 "26 | 4.5",
                 "31 | 5.4",
                 "36 | 6.3",
@@ -5701,6 +6031,7 @@
             "Wall_Type": {
               "Default": "Typical Metal Wall CZ8 R-26 |Typical Metal Wall CZ8 R-4.5",
               "Options": [
+                "Typical Metal Wall CZ8 R-26 |Typical Metal Wall CZ8 R-4.5",
                 "Metal Wall CZ8 R-31 |Metal Wall CZ8 R-5.4",
                 "Metal Wall CZ8 R-36 |Metal Wall CZ8 R-6.3",
                 "Metal Wall CZ8 R-41 |Metal Wall CZ8 R-7.2",
@@ -5710,6 +6041,7 @@
             "Wall_R_Value": {
               "Default": "26 | 4.5",
               "Options": [
+                "26 | 4.5",
                 "31 | 5.4",
                 "36 | 6.3",
                 "41 | 7.2",
@@ -5721,6 +6053,7 @@
             "Wall_Type": {
               "Default": "Typical Steel Framed Wall CZ8 R-27 |Typical Steel Framed Wall CZ8 R-4.8",
               "Options": [
+                "Typical Steel Framed Wall CZ8 R-27 |Typical Steel Framed Wall CZ8 R-4.8",
                 "Steel Framed Wall CZ8 R-32 |Steel Framed Wall CZ8 R-5.6",
                 "Steel Framed Wall CZ8 R-37 |Steel Framed Wall CZ8 R-6.5",
                 "Steel Framed Wall CZ8 R-42 |Steel Framed Wall CZ8 R-7.4",
@@ -5730,6 +6063,7 @@
             "Wall_R_Value": {
               "Default": "27 | 4.8",
               "Options": [
+                "27 | 4.8",
                 "32 | 5.6",
                 "37 | 6.5",
                 "42 | 7.4",
@@ -5741,6 +6075,7 @@
             "Wall_Type": {
               "Default": "Typical Wood Framed Wall CZ8 R-31 |Typical Wood Framed Wall CZ8 R-5.5",
               "Options": [
+                "Typical Wood Framed Wall CZ8 R-31 |Typical Wood Framed Wall CZ8 R-5.5",
                 "Wood Framed Wall CZ8 R-36 |Wood Framed Wall CZ8 R-6.4",
                 "Wood Framed Wall CZ8 R-41 |Wood Framed Wall CZ8 R-7.3",
                 "Wood Framed Wall CZ8 R-46 |Wood Framed Wall CZ8 R-8.1",
@@ -5750,6 +6085,7 @@
             "Wall_R_Value": {
               "Default": "31 | 5.5",
               "Options": [
+                "31 | 5.5",
                 "36 | 6.4",
                 "41 | 7.3",
                 "46 | 8.1",
@@ -5814,9 +6150,9 @@
         },
         "Floors": {
           "Floor_Type": {
-            "Default": "Typical Interior Wall",
+            "Default": "Typical Interior Floor",
             "Options": [
-              "Typical Interior Wall"
+              "Typical Interior Floor"
             ]
           }
         }
