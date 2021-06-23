@@ -43,7 +43,7 @@ def process_column(all_data, cell_data, option_row, j, num_rows, indent,key = ni
   if option == 'Default'
     #binding.pry
     if key == "Overhang_Depth" || key == "Fin_Depth"
-      cell_data[option] = all_data[option_row + 1][j].to_i.to_s + '|' + (all_data[option_row + 1][j]*0.3048).to_i.to_s
+      cell_data[option] = all_data[option_row + 1][j].to_i.to_s + ' | ' + (all_data[option_row + 1][j]*0.3048).to_i.to_s
     else
       cell_data[option] = all_data[option_row + 1][j]
     end
@@ -57,7 +57,7 @@ def process_column(all_data, cell_data, option_row, j, num_rows, indent,key = ni
         
         if value
           #binding.pry
-          values = value.to_s + '|' + (value.to_f*0.3048).round(1).to_s
+          values = value == 0 ?  ' 0 | 0' : value.to_s + '|' + (value.to_f*0.3048).round(1).to_s
           #binding.pry
           options << values
         end

@@ -59,32 +59,50 @@ templates.each do |template|
       st_props['Lighting_Power_Density'] = {}
       lpd = data['lighting_per_area'].to_f
 
-      # Default
-      st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} | #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(2)}"
+      if lpd == 0
 
-      # Options
-      lpd_multipliers = [ 0.9, 0.8, 0.7, 0.6, 0.5]
-      lpd_options = [st_props['Lighting_Power_Density']['Default']]
-      lpd_multipliers.each do |lpd_mult|
-        lpd_options << "#{(lpd * lpd_mult).round(2)} | #{OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(2)}"
+        st_props['Lighting_Power_Density']['Default'] = "0 | 0"
+
+        lpd_options = [st_props['Lighting_Power_Density']['Default']]
+        
+      else
+        # Default
+        st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} | #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(2)}"
+
+        # Options
+        lpd_multipliers = [ 0.9, 0.8, 0.7, 0.6, 0.5]
+        lpd_options = [st_props['Lighting_Power_Density']['Default']]
+        lpd_multipliers.each do |lpd_mult|
+          lpd_options << "#{(lpd * lpd_mult).round(2)} | #{OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(2)}"
+        end
       end
+
       st_props['Lighting_Power_Density']['Options'] = lpd_options
     end
 
     # Equipment
     if spd_st['electric_equipment_per_area'] == 'x'
+
       st_props['Equipment_Power_Density'] = {}
       epd = data['electric_equipment_per_area'].to_f
 
-      # Default
-      st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} | #{OpenStudio.convert((epd),"m^2","ft^2").get.round(2)}"
+      if epd == 0
 
-      # Options
-      epd_multipliers = [0.9, 0.8, 0.7, 0.6, 0.5]
-      epd_options = [st_props['Equipment_Power_Density']['Default']]
-      epd_multipliers.each do |epd_mult|
-        epd_options << "#{(epd * epd_mult).round(2)} | #{OpenStudio.convert((epd.round(2) * epd_mult),"m^2","ft^2").get.round(2)}"
+        st_props['Equipment_Power_Density']['Default'] = "0 | 0"
+
+        epd_options = [st_props['Equipment_Power_Density']['Default']]
+      else
+              # Default
+        st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} | #{OpenStudio.convert((epd),"m^2","ft^2").get.round(2)}"
+
+        # Options
+        epd_multipliers = [0.9, 0.8, 0.7, 0.6, 0.5]
+        epd_options = [st_props['Equipment_Power_Density']['Default']]
+        epd_multipliers.each do |epd_mult|
+          epd_options << "#{(epd * epd_mult).round(2)} | #{OpenStudio.convert((epd.round(2) * epd_mult),"m^2","ft^2").get.round(2)}"
+        end
       end
+
       st_props['Equipment_Power_Density']['Options'] = epd_options
     end
 
