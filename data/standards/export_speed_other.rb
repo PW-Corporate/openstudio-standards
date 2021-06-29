@@ -57,7 +57,7 @@ def process_column(all_data, cell_data, option_row, j, num_rows, indent,key = ni
         
         if value
           #binding.pry
-          values = value == 0 ?  ' 0 | 0' : value.to_s + '|' + (value.to_f*0.3048).round(1).to_s
+          values = value == 0 ?  ' 0 | 0' : value.to_s + '~' + (value.to_f*0.3048).round(1).to_s
           #binding.pry
           options << values
         end

@@ -159,11 +159,11 @@ templates.each do |template|
           end
 
           type_data['Default'] = default.name.get.to_s
-          r_val_data['Default'] = "#{target_r_value_ip} | #{target_r_value_si}"
+          r_val_data['Default'] = "#{target_r_value_ip} ~ #{target_r_value_si}"
 
           type_data['Options'] << default.name.get.to_s
 
-          r_val_data['Options'] << "#{target_r_value_ip} | #{target_r_value_si}"
+          r_val_data['Options'] << "#{target_r_value_ip} ~ #{target_r_value_si}"
 
           # Add to the options
 
@@ -186,7 +186,7 @@ templates.each do |template|
             # Add to the options
             type_data['Options'] << upgrade_construction.name.get.to_s
 
-            r_val_data['Options'] << "#{upgrade_r_value_ip.to_s} | #{upgrade_r_value_si.to_s}"
+            r_val_data['Options'] << "#{upgrade_r_value_ip.to_s} ~ #{upgrade_r_value_si.to_s}"
           end
 
           # Store the outputs
@@ -410,18 +410,17 @@ constructions.keys.each do |energy_code_key|
 
               #binding.pry
 
-              ip_name = construction_name.split('|')[0]
+              ip_name = construction_name.split('~')[0]
 
-              si_name = construction_name.split('|')[1]
-              
-              #puts construction_name
-              #puts type
+              si_name = construction_name.split('~')[1]
+                            #puts construction_name
+              #puts type!
               #binding.pry
               if surface_type_key != "Exterior_Window"
+                #binding.pry
+                ip_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('~')[0].strip
 
-                ip_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('|')[0].strip
-
-                si_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('|')[1].strip
+                si_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('~')[1].strip
 
                 #si_rvalue.to_f
 

@@ -269,13 +269,13 @@ module SpeedConstructions
         ### We can round window uvalues here as target_u_value_ip does not need to be anywhere else
          ### 2. ROUND 2 round VT values
         if target_vt
-          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}|U-#{target_u_value_si.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}~U-#{target_u_value_si.round(2)}"
         else
-          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc}|U-#{target_u_value_si.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc}~U-#{target_u_value_si.round(2)}"
         end
       elsif target_u_value_ip
         
-        construction_name = "#{construction_name} R-#{target_r_value_ip} |R-#{target_r_value_si}"
+        construction_name = "#{construction_name} R-#{target_r_value_ip} ~R-#{target_r_value_si}"
       end
     end
 
@@ -834,7 +834,7 @@ module SpeedConstructions
       # Get the properties from the name
       name = const.name.get.to_s
       # Remember America first! Ip value is first split
-      matches_ip = name.split('|')[0].match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
+      matches_ip = name.split('~')[0].match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
 
       name_u_ip = matches_ip[1].gsub('U-','').to_f
       name_shgc = matches_ip[2].gsub('SHGC-','').to_f
@@ -933,7 +933,7 @@ module SpeedConstructions
       # Get the R-Value from the name
       name = const.name.get.to_s
       # always remember America first ! IP is first
-      matches_ip = name.split('|')[0].match(/.*(R-\d*).*/)
+      matches_ip = name.split('~')[0].match(/.*(R-\d*).*/)
       if matches_ip.nil?
         puts "ERROR For #{name}, could not find properties in name of construction, cannot compare to model inputs."
         next
