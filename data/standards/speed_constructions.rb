@@ -269,13 +269,13 @@ module SpeedConstructions
         ### We can round window uvalues here as target_u_value_ip does not need to be anywhere else
          ### 2. ROUND 2 round VT values
         if target_vt
-          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}!U-#{target_u_value_si.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}--U-#{target_u_value_si.round(2)}"
         else
-          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc}!U-#{target_u_value_si.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc}--U-#{target_u_value_si.round(2)}"
         end
       elsif target_u_value_ip
         
-        construction_name = "#{construction_name} R-#{target_r_value_ip} !R-#{target_r_value_si}"
+        construction_name = "#{construction_name} R-#{target_r_value_ip} --R-#{target_r_value_si}"
       end
     end
 
@@ -834,7 +834,7 @@ module SpeedConstructions
       # Get the properties from the name
       name = const.name.get.to_s
       # Remember America first! Ip value is first split
-      matches_ip = name.split('!')[0].match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
+      matches_ip = name.split('--')[0].match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
 
       name_u_ip = matches_ip[1].gsub('U-','').to_f
       name_shgc = matches_ip[2].gsub('SHGC-','').to_f
@@ -845,7 +845,7 @@ module SpeedConstructions
       # puts ".... from name VT = #{name_vt}"
 
       # Get the properties from the E+ output
-      binding.pry
+
       eplus_u_si = std.construction_calculated_u_factor(const) # W/m2-K
       eplus_u_ip = OpenStudio.convert(eplus_u_si, 'W/m^2*K', 'Btu/ft^2*hr*R').get.round(3)
       eplus_shgc = std.construction_calculated_solar_heat_gain_coefficient(const)
