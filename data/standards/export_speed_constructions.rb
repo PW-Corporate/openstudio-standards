@@ -52,7 +52,7 @@ templates.each do |template|
           'standards_construction_type' => 'Metal framing (curtainwall/storefront)',
           'building_category' => building_category
       }
-      correct_props = std.model_find_object(std.standards_data['construction_properties'], **search_criteria)
+      correct_props = std.model_find_object(std.standards_data['construction_properties'], search_criteria)
 
       # Modify the props for all Metal framing (all other) to match Metal framing (curtainwall/storefront)
       const_props.each do |p|
@@ -96,7 +96,7 @@ templates.each do |template|
         'intended_surface_type' => intended_surface_type,
         'building_category' => building_category
       }
-      const_props = std.model_find_objects(std.standards_data['construction_properties'], **search_criteria)
+      const_props = std.model_find_objects(std.standards_data['construction_properties'], search_criteria)
 
       # Get unique set of standards construction types (mass, wood-framed, etc.) for this surface type
       standards_construction_types = []
@@ -132,7 +132,7 @@ templates.each do |template|
           'standards_construction_type' => standards_construction_type,
           'building_category' => building_category
         }
-        props = std.model_find_object(std.standards_data['construction_properties'], **search_criteria)
+        props = std.model_find_object(std.standards_data['construction_properties'], search_criteria)
 
         # Make sure that a construction is specified
         if props['construction'].nil?
