@@ -269,13 +269,13 @@ module SpeedConstructions
         ### We can round window uvalues here as target_u_value_ip does not need to be anywhere else
          ### 2. ROUND 2 round VT values
         if target_vt
-          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}|U-#{target_u_value_si.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)} |#{construction_name} U-#{target_u_value_si.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}"
         else
-          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc}|U-#{target_u_value_si.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} |#{construction_name} U-#{target_u_value_si.round(2)} SHGC-#{target_shgc}"
         end
       elsif target_u_value_ip
         
-        construction_name = "#{construction_name} R-#{target_r_value_ip} |R-#{target_r_value_si}"
+        construction_name = "#{construction_name} R-#{target_r_value_ip} |#{construction_name} R-#{target_r_value_si}"
       end
     end
 
