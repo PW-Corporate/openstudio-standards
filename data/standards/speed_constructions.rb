@@ -255,6 +255,9 @@ module SpeedConstructions
       
       target_r_value_ip = (1.0 / target_u_value_ip.to_f)
       ### Should be round 1 maybe?
+        ### Round IP to integer, round SI to tenth
+        ## as per spec in visualization query logic
+
       target_r_value_si = OpenStudio.convert(target_r_value_ip,"ft^2*h*R/Btu","m^2*K/W").get.round(1)
 
       target_r_value_ip = target_r_value_ip.round

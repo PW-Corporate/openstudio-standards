@@ -66,14 +66,17 @@ templates.each do |template|
         lpd_options = [st_props['Lighting_Power_Density']['Default']]
         
       else
+        ### Round IP to hundredth, round SI to tenth
+        ## as per spec in visualization query logic
+
         # Default
-        st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} | #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(2)}"
+        st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} | #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(1)}"
 
         # Options
         lpd_multipliers = [ 0.9, 0.8, 0.7, 0.6, 0.5]
         lpd_options = [st_props['Lighting_Power_Density']['Default']]
         lpd_multipliers.each do |lpd_mult|
-          lpd_options << "#{(lpd * lpd_mult).round(2)} | #{OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(2)}"
+          lpd_options << "#{(lpd * lpd_mult).round(2)} | #{OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(1)}"
         end
       end
 
@@ -92,14 +95,15 @@ templates.each do |template|
 
         epd_options = [st_props['Equipment_Power_Density']['Default']]
       else
-              # Default
-        st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} | #{OpenStudio.convert((epd),"m^2","ft^2").get.round(2)}"
+        ### Round IP to hundredth, round SI to tenth
+        ## as per spec in visualization query logic
+        st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} | #{OpenStudio.convert((epd),"m^2","ft^2").get.round(1)}"
 
         # Options
         epd_multipliers = [0.9, 0.8, 0.7, 0.6, 0.5]
         epd_options = [st_props['Equipment_Power_Density']['Default']]
         epd_multipliers.each do |epd_mult|
-          epd_options << "#{(epd * epd_mult).round(2)} | #{OpenStudio.convert((epd.round(2) * epd_mult),"m^2","ft^2").get.round(2)}"
+          epd_options << "#{(epd * epd_mult).round(2)} | #{OpenStudio.convert((epd.round(2) * epd_mult),"m^2","ft^2").get.round(1)}"
         end
       end
 
