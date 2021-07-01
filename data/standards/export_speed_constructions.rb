@@ -145,10 +145,17 @@ templates.each do |template|
         when 'ExteriorRoof', 'ExteriorWall'
           type_data = {'Default' => '', 'Options' => []}
           r_val_data = {'Default' => '', 'Options' => []}
+          ### Check for duplicates
+          values_ip_check = []
+
+          values_si_check = []
 
           # Make the default construction
           default, target_r_value_ip , target_r_value_si = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
           # Prepend "Typical" for the default construction to si and ip name
+
+          values_ip_check.push(target_r_value_ip)
+          values_si_check.push(target_r_value_si)
 
           default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
@@ -185,6 +192,9 @@ templates.each do |template|
             #if upgrade_construction.name.get.to_s.include? 'Attic & Other Roof' then binding.pry end
             # Add to the options
             type_data['Options'] << upgrade_construction.name.get.to_s
+            #binding.pry
+            if values_ip_check.include? upgrade_r_value_ip then raise " #{upgrade_r_value_ip} ip is duplicate!!!" else  values_ip_check.push(upgrade_r_value_ip) end
+            if values_si_check.include? upgrade_r_value_si then raise " #{upgrade_r_value_si} si is duplicate!!!" else  values_si_check.push(upgrade_r_value_si) end
 
             r_val_data['Options'] << "#{upgrade_r_value_ip.to_s} | #{upgrade_r_value_si.to_s}"
           end
@@ -223,6 +233,10 @@ templates.each do |template|
         when 'ExteriorWindow'
           type_data = {'Default' => '', 'Options' => []}
 
+          ### Check for duplicates
+          values_ip_check = []
+          values_si_check = []
+
           # Make the default construction, using SimpleGlazing
           props['convert_to_simple_glazing'] = 'yes'
           # When window only returns construction as dont need ip and si value
@@ -240,6 +254,9 @@ templates.each do |template|
           # Add to the options
           type_data['Options'] << default.name.get.to_s
 
+          values_ip_check.push(default.name.get.split('|')[0])
+          values_si_check.push(default.name.get.split('|')[1])
+
           # Make four incrementally better constructions
           shgc_decreases = [0.1, 0.2, 0.3, 0.4]
           u_val_decreases = [0.2, 0.3, 0.4, 0.5]
@@ -251,6 +268,10 @@ templates.each do |template|
             upgrade = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone).first
             # Add to the options
             type_data['Options'] << upgrade.name.get.to_s
+            #binding.pry
+            if values_ip_check.include? upgrade.name.get.split('|')[0] then raise " #{upgrade.name.get.split('|')[0]} ip is duplicate!!!" else  values_ip_check.push(upgrade.name.get.split('|')[0]) end
+            if values_si_check.include? upgrade.name.get.split('|')[1] then raise " #{upgrade.name.get.split('|')[1]} si is duplicate!!!" else  values_si_check.push(upgrade.name.get.split('|')[1]) end
+
           end
 
           # Store the outputs

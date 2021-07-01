@@ -59,6 +59,10 @@ templates.each do |template|
       st_props['Lighting_Power_Density'] = {}
       lpd = data['lighting_per_area'].to_f
 
+      ### Check for duplicates
+      values_ip_check = []
+      values_si_check = []
+
       if lpd == 0
 
         st_props['Lighting_Power_Density']['Default'] = "0 | 0"
@@ -72,12 +76,19 @@ templates.each do |template|
         # Default
         st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} | #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(1)}"
 
+        values_ip_check.push(lpd.round(2))
+        values_si_check.push(OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(1))
+
         # Options
         lpd_multipliers = [ 0.9, 0.8, 0.7, 0.6, 0.5]
         lpd_options = [st_props['Lighting_Power_Density']['Default']]
         lpd_multipliers.each do |lpd_mult|
           lpd_options << "#{(lpd * lpd_mult).round(2)} | #{OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(1)}"
-        end
+          binding.pry
+          if values_ip_check.include? (lpd * lpd_mult).round(2) then raise " #{(lpd * lpd_mult).round(2)} ip is duplicate!!!" else values_ip_check.push((lpd * lpd_mult).round(2)) end
+          if values_si_check.include? OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(1) then raise " #{values_si_check} si is duplicate!!!" else OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(1) end
+        
+          end
       end
 
       st_props['Lighting_Power_Density']['Options'] = lpd_options
