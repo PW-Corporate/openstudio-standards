@@ -959,7 +959,7 @@
         "PTAC with Electric Baseboard Heating",
         "PTHP with Electric Auxiliary Heating",
         "PSZ-AC with Gas Heating",
-        "PSZ-HP with Gas Auxiliary Heating",
+        "PSZ-HP with Electric Auxiliary Heating",
         "Fan Coils with Water-Cooled Chiller and Boiler HW Heating",
         "Fan Coils with Air-Cooled Chiller and Boiler HW Heating",
         "VAV with Water-Cooled Chiller and Boiler HW Reheat",
