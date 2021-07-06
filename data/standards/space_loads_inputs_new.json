@@ -6827,6 +6827,865 @@
                         ]
                     }
                 }
+            },
+            "Lab": {
+                "Lab-Equipment_corridor": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.5,
+                        "Options": [
+                            0.5,
+                            0.45,
+                            0.4,
+                            0.35,
+                            0.3,
+                            0.25
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 15.0,
+                        "Options": [
+                            15.0,
+                            13.5,
+                            12.0,
+                            10.5,
+                            9.0,
+                            7.5
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Lab_fumehood": {
+                    "Lighting_Power_Density": {
+                        "Default": 1.4,
+                        "Options": [
+                            1.4,
+                            1.26,
+                            1.12,
+                            0.98,
+                            0.84,
+                            0.7
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 4.0,
+                        "Options": [
+                            4.0,
+                            3.6,
+                            3.2,
+                            2.8,
+                            2.4,
+                            2.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Office": {
+                    "Lighting_Power_Density": {
+                        "Default": 1.1,
+                        "Options": [
+                            1.1,
+                            0.99,
+                            0.88,
+                            0.77,
+                            0.66,
+                            0.55
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.96,
+                        "Options": [
+                            0.96,
+                            0.86,
+                            0.77,
+                            0.67,
+                            0.58,
+                            0.48
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Open": {
+                    "Lighting_Power_Density": {
+                        "Default": 1.4,
+                        "Options": [
+                            1.4,
+                            1.26,
+                            1.12,
+                            0.98,
+                            0.84,
+                            0.7
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 4.0,
+                        "Options": [
+                            4.0,
+                            3.6,
+                            3.2,
+                            2.8,
+                            2.4,
+                            2.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                }
+            },
+            "College": {
+                "College-Conference": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Corridor": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-ElevatorShaft": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-EnteranceLobby": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Lounge": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Office": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Restroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Utility": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 70.29,
+                        "Options": [
+                            70.29,
+                            63.26,
+                            56.23,
+                            49.2,
+                            42.17,
+                            35.15
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-ArtClassroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Classroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Laboratory": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-LectureHall": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-MediaCenter": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Stairs": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Storage": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                }
             }
         },
         "ASHRAE_90_1_2010": {
@@ -13656,6 +14515,865 @@
                         ]
                     }
                 }
+            },
+            "Lab": {
+                "Lab-Equipment_corridor": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.66,
+                        "Options": [
+                            0.66,
+                            0.59,
+                            0.53,
+                            0.46,
+                            0.4,
+                            0.33
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 15.0,
+                        "Options": [
+                            15.0,
+                            13.5,
+                            12.0,
+                            10.5,
+                            9.0,
+                            7.5
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Lab_fumehood": {
+                    "Lighting_Power_Density": {
+                        "Default": 1.81,
+                        "Options": [
+                            1.81,
+                            1.63,
+                            1.45,
+                            1.27,
+                            1.09,
+                            0.91
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 4.0,
+                        "Options": [
+                            4.0,
+                            3.6,
+                            3.2,
+                            2.8,
+                            2.4,
+                            2.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Office": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.98,
+                        "Options": [
+                            0.98,
+                            0.88,
+                            0.78,
+                            0.69,
+                            0.59,
+                            0.49
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.96,
+                        "Options": [
+                            0.96,
+                            0.86,
+                            0.77,
+                            0.67,
+                            0.58,
+                            0.48
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Open": {
+                    "Lighting_Power_Density": {
+                        "Default": 1.81,
+                        "Options": [
+                            1.81,
+                            1.63,
+                            1.45,
+                            1.27,
+                            1.09,
+                            0.91
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 4.0,
+                        "Options": [
+                            4.0,
+                            3.6,
+                            3.2,
+                            2.8,
+                            2.4,
+                            2.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                }
+            },
+            "College": {
+                "College-Conference": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Corridor": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-ElevatorShaft": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-EnteranceLobby": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Lounge": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Office": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Restroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Utility": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 70.29,
+                        "Options": [
+                            70.29,
+                            63.26,
+                            56.23,
+                            49.2,
+                            42.17,
+                            35.15
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-ArtClassroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Classroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Laboratory": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-LectureHall": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-MediaCenter": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Stairs": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Storage": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                }
             }
         },
         "ASHRAE_90_1_2013": {
@@ -20461,6 +22179,865 @@
                             0.17,
                             0.14,
                             0.12
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                }
+            },
+            "College": {
+                "College-Conference": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Corridor": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-ElevatorShaft": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-EnteranceLobby": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Lounge": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Office": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Restroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Utility": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 70.29,
+                        "Options": [
+                            70.29,
+                            63.26,
+                            56.23,
+                            49.2,
+                            42.17,
+                            35.15
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-ArtClassroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Classroom": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Laboratory": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-LectureHall": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-MediaCenter": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Stairs": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "College-Storage": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.0,
+                        "Options": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                }
+            },
+            "Lab": {
+                "Lab-Equipment_corridor": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.66,
+                        "Options": [
+                            0.66,
+                            0.59,
+                            0.53,
+                            0.46,
+                            0.4,
+                            0.33
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 15.0,
+                        "Options": [
+                            15.0,
+                            13.5,
+                            12.0,
+                            10.5,
+                            9.0,
+                            7.5
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Lab_fumehood": {
+                    "Lighting_Power_Density": {
+                        "Default": 1.81,
+                        "Options": [
+                            1.81,
+                            1.63,
+                            1.45,
+                            1.27,
+                            1.09,
+                            0.91
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 4.0,
+                        "Options": [
+                            4.0,
+                            3.6,
+                            3.2,
+                            2.8,
+                            2.4,
+                            2.0
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Office": {
+                    "Lighting_Power_Density": {
+                        "Default": 0.98,
+                        "Options": [
+                            0.98,
+                            0.88,
+                            0.78,
+                            0.69,
+                            0.59,
+                            0.49
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 0.96,
+                        "Options": [
+                            0.96,
+                            0.86,
+                            0.77,
+                            0.67,
+                            0.58,
+                            0.48
+                        ]
+                    },
+                    "Outside_Air": {
+                        "Default": "Code",
+                        "Options": [
+                            "Code",
+                            "30% Better",
+                            "40% Better",
+                            "50% Better"
+                        ]
+                    },
+                    "Cooling_Setpoint": {
+                        "Default": 75,
+                        "Options": [
+                            75
+                        ]
+                    },
+                    "Heating_Setpoint": {
+                        "Default": 70,
+                        "Options": [
+                            70
+                        ]
+                    }
+                },
+                "Lab-Open": {
+                    "Lighting_Power_Density": {
+                        "Default": 1.81,
+                        "Options": [
+                            1.81,
+                            1.63,
+                            1.45,
+                            1.27,
+                            1.09,
+                            0.91
+                        ]
+                    },
+                    "Equipment_Power_Density": {
+                        "Default": 4.0,
+                        "Options": [
+                            4.0,
+                            3.6,
+                            3.2,
+                            2.8,
+                            2.4,
+                            2.0
                         ]
                     },
                     "Outside_Air": {
