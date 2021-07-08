@@ -15,6 +15,11 @@ base_path = File.dirname(__FILE__)
 csv_path = File.join(base_path, 'InputJSONData_SpaceLoads.csv')
 speed_space_types = CSV.table(csv_path, header_converters: nil).map { |row| row.to_hash }
 
+no_lpd = String.new
+
+no_epd = String.new
+
+
 # Export space loads for each standard to JSON
 templates.each do |template|
   # Make a standard
@@ -49,7 +54,7 @@ templates.each do |template|
       'building_type' => spd_st['building_type'],
       'space_type' => spd_st['space_type']
     }
-    puts search_criteria
+    #puts search_criteria
     ### this is taking data from OpenStudio_Standards_space_types.json which is in IP??? Check
     ### Can we just convert to si?
     data = std.model_find_object(std.standards_data['space_types'], search_criteria)
@@ -58,8 +63,11 @@ templates.each do |template|
       next
     end
 
+
     # Hash to hold data for this space type
     st_props = {}
+
+    #if spd_st['space_type'] == "College -  Conference" then binding.pry end
 
     # Lighting
     if spd_st['lighting_per_area'] == 'x'
@@ -110,13 +118,31 @@ templates.each do |template|
     st_props['Heating_Setpoint']['Default'] = 70
     st_props['Heating_Setpoint']['Options'] = [70]
 
+    
+
+    if lpd_options.include? 0 then no_lpd << "speed space type #{space_type_speed} has zero in lpd options with ashrae space type #{spd_st['space_type']} \n" end
+    if epd_options.include? 0 then no_epd << "speed space type #{space_type_speed} has zero in epd options with ashrae space type #{spd_st['space_type']} \n" end
+
     # Save properties to hash
+    # if space_type_speed == 'College-Conference' then puts search_criteria ; puts st_props['Lighting_Power_Density']['Default'] end
     inputs[template_speed][building_type_speed][space_type_speed] = st_props
   end
 end
+puts "NO LPD"
+puts no_lpd
+puts "NO EPD"
+puts no_epd
 
 # Add the Space_Loads key as the top level of the hash
 inputs = {'Space_Loads' => inputs}
+
+puts " outputting college conference 2007"
+#binding.pry
+puts inputs['Space_Loads']['ASHRAE_90_1_2007']['College']['College-Conference']
+
+puts " outputting college College-Classroom 2007"
+puts inputs['Space_Loads']['ASHRAE_90_1_2007']['College']['College-Classroom']
+
 
 # Save results to disk
 File.open(File.join(base_path, 'space_loads_inputs_new.json'), 'w') do |f|
