@@ -5,7 +5,7 @@ require 'json'
 #require 'pry-nav'
 
 # Standards to export
-templates = ['90.1-2007', '90.1-2010', '90.1-2013','90.1-2016']
+templates = ['90.1-2007', '90.1-2010', '90.1-2013','90.1-2016','90.1-2019']
 
 # Store the results
 inputs = {}

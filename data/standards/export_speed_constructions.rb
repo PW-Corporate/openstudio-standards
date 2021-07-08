@@ -5,7 +5,7 @@ require_relative 'speed_constructions'
 require 'pry-nav'
 
 # Standards to export
-templates = ['90.1-2007', '90.1-2010', '90.1-2013','90.1-2016']
+templates = ['90.1-2007', '90.1-2010', '90.1-2013','90.1-2016','90.1-2019']
 
 # Surface types to export
 intended_surface_types = ['ExteriorRoof', 'ExteriorWall', 'GroundContactFloor', 'ExteriorWindow']
@@ -224,6 +224,8 @@ templates.each do |template|
           props['convert_to_simple_glazing'] = 'yes'
           default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
           # Prepend "Typical" for the default construction
+          if template == '90.1-2019' then binding.pry end
+
           default_name = "#{typical_prefix}#{default.name}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
