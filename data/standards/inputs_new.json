@@ -18,7 +18,9 @@
         "Outpatient",
         "Full_Service_Restaurant",
         "Quick_Service_Restaurant",
-        "Supermarket"
+        "Supermarket",
+        "College",
+        "Laboratory"
       ]
     },
     "Units": {
