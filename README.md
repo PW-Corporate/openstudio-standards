@@ -17,6 +17,8 @@ Install Ruby and OpenStudio as described below for either OpenStudio 3.0.0 or 2.
 
 Edit `./data/standards/OpenStudio_Standards.xslx`.
 
+Note for Schedules: When pulling SPEED Schedules from dropbox make sure that all tabs EXCEPT Schedules are deleted and the schedules tab is named Schedules
+
 Run the commands:
 ```
 bundle update
