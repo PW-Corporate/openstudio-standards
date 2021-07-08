@@ -150,6 +150,27 @@ template,building_type,space_type,Notes,lighting_per_area,electric_equipment_per
 90.1-2007,SuperMarket,Sales,,x,x,ASHRAE_90_1_2007,SuperMarket,SuperMarket-Main
 90.1-2007,Warehouse,Office,,x,x,ASHRAE_90_1_2007,Warehouse,Warehouse-Office
 90.1-2007,Warehouse,Bulk,,x,x,ASHRAE_90_1_2007,Warehouse,Warehouse-Storage
+90.1-2007,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2007,Lab,Lab-Equipment_corridor
+90.1-2007,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2007,Lab,Lab-Lab_fumehood
+90.1-2007,Laboratory,Office,,x,x,ASHRAE_90_1_2007,Lab,Lab-Office
+90.1-2007,Laboratory,Open lab,,x,x,ASHRAE_90_1_2007,Lab,Lab-Open
+90.1-2007,College,College -  Conference,,x,x,ASHRAE_90_1_2007,College,College-Conference
+90.1-2007,College,College -  Corridor,,x,x,ASHRAE_90_1_2007,College,College-Corridor
+90.1-2007,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2007,College,College-ElevatorShaft
+90.1-2007,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2007,College,College-EnteranceLobby
+90.1-2007,College,College -  Lounge,,x,x,ASHRAE_90_1_2007,College,College-Lounge
+90.1-2007,College,College -  Office,,x,x,ASHRAE_90_1_2007,College,College-Office
+90.1-2007,College,College -  Restroom,,x,x,ASHRAE_90_1_2007,College,College-Restroom
+90.1-2007,College,College -  Utility,,x,x,ASHRAE_90_1_2007,College,College-Utility
+90.1-2007,College,College - Art Classroom,,x,x,ASHRAE_90_1_2007,College,College-ArtClassroom
+90.1-2007,College,College - Classroom,,x,x,ASHRAE_90_1_2007,College,College-Classroom
+90.1-2007,College,College - Conference,,x,x,ASHRAE_90_1_2007,College,College-Conference
+90.1-2007,College,College - Corridor,,x,x,ASHRAE_90_1_2007,College,College-Corridor
+90.1-2007,College,College - Laboratory,,x,x,ASHRAE_90_1_2007,College,College-Laboratory
+90.1-2007,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2007,College,College-LectureHall
+90.1-2007,College,College - Media Center,,x,x,ASHRAE_90_1_2007,College,College-MediaCenter
+90.1-2007,College,College - Stairs,,x,x,ASHRAE_90_1_2007,College,College-Stairs
+90.1-2007,College,College - Storage,,x,x,ASHRAE_90_1_2007,College,College-Storage
 90.1-2010,Office,OfficeLarge Data Center,,x,x,ASHRAE_90_1_2010,LargeOffice,Office-DataCenter
 90.1-2010,Office,Stair,,x,x,ASHRAE_90_1_2010,LargeOffice,Office-Stair
 90.1-2010,Office,Lobby,,x,x,ASHRAE_90_1_2010,LargeOffice,Office-Lobby
@@ -301,6 +322,29 @@ template,building_type,space_type,Notes,lighting_per_area,electric_equipment_per
 90.1-2010,SuperMarket,Sales,,x,x,ASHRAE_90_1_2010,SuperMarket,SuperMarket-Main
 90.1-2010,Warehouse,Office,,x,x,ASHRAE_90_1_2010,Warehouse,Warehouse-Office
 90.1-2010,Warehouse,Bulk,,x,x,ASHRAE_90_1_2010,Warehouse,Warehouse-Storage
+90.1-2010,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2010,Lab,Lab-Equipment_corridor
+90.1-2010,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2010,Lab,Lab-Lab_fumehood
+90.1-2010,Laboratory,Office,,x,x,ASHRAE_90_1_2010,Lab,Lab-Office
+90.1-2010,Laboratory,Open lab,,x,x,ASHRAE_90_1_2010,Lab,Lab-Open
+90.1-2010,College,College -  Conference,,x,x,ASHRAE_90_1_2010,College,College-Conference
+90.1-2010,College,College -  Corridor,,x,x,ASHRAE_90_1_2010,College,College-Corridor
+90.1-2010,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2010,College,College-ElevatorShaft
+90.1-2010,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2010,College,College-EnteranceLobby
+90.1-2010,College,College -  Lounge,,x,x,ASHRAE_90_1_2010,College,College-Lounge
+90.1-2010,College,College -  Office,,x,x,ASHRAE_90_1_2010,College,College-Office
+90.1-2010,College,College -  Restroom,,x,x,ASHRAE_90_1_2010,College,College-Restroom
+90.1-2010,College,College -  Utility,,x,x,ASHRAE_90_1_2010,College,College-Utility
+90.1-2010,College,College - Art Classroom,,x,x,ASHRAE_90_1_2010,College,College-ArtClassroom
+90.1-2010,College,College - Classroom,,x,x,ASHRAE_90_1_2010,College,College-Classroom
+90.1-2010,College,College - Conference,,x,x,ASHRAE_90_1_2010,College,College-Conference
+90.1-2010,College,College - Corridor,,x,x,ASHRAE_90_1_2010,College,College-Corridor
+90.1-2010,College,College - Laboratory,,x,x,ASHRAE_90_1_2010,College,College-Laboratory
+90.1-2010,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2010,College,College-LectureHall
+90.1-2010,College,College - Media Center,,x,x,ASHRAE_90_1_2010,College,College-MediaCenter
+90.1-2010,College,College - Stairs,,x,x,ASHRAE_90_1_2010,College,College-Stairs
+90.1-2010,College,College - Storage,,x,x,ASHRAE_90_1_2010,College,College-Storage
+,,,,,,,,
+,,,,,,,,
 90.1-2013,Office,OfficeLarge Data Center,,x,x,ASHRAE_90_1_2013,LargeOffice,Office-DataCenter
 90.1-2013,Office,Stair,,x,x,ASHRAE_90_1_2013,LargeOffice,Office-Stair
 90.1-2013,Office,Lobby,,x,x,ASHRAE_90_1_2013,LargeOffice,Office-Lobby
@@ -754,3 +798,24 @@ template,building_type,space_type,Notes,lighting_per_area,electric_equipment_per
 90.1-2019,SuperMarket,Sales,,x,x,ASHRAE_90_1_2019,SuperMarket,SuperMarket-Main
 90.1-2019,Warehouse,Office,,x,x,ASHRAE_90_1_2019,Warehouse,Warehouse-Office
 90.1-2019,Warehouse,Bulk,,x,x,ASHRAE_90_1_2019,Warehouse,Warehouse-Storage
+90.1-2013,College,College -  Conference,,x,x,ASHRAE_90_1_2013,College,College-Conference
+90.1-2013,College,College -  Corridor,,x,x,ASHRAE_90_1_2013,College,College-Corridor
+90.1-2013,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2013,College,College-ElevatorShaft
+90.1-2013,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2013,College,College-EnteranceLobby
+90.1-2013,College,College -  Lounge,,x,x,ASHRAE_90_1_2013,College,College-Lounge
+90.1-2013,College,College -  Office,,x,x,ASHRAE_90_1_2013,College,College-Office
+90.1-2013,College,College -  Restroom,,x,x,ASHRAE_90_1_2013,College,College-Restroom
+90.1-2013,College,College -  Utility,,x,x,ASHRAE_90_1_2013,College,College-Utility
+90.1-2013,College,College - Art Classroom,,x,x,ASHRAE_90_1_2013,College,College-ArtClassroom
+90.1-2013,College,College - Classroom,,x,x,ASHRAE_90_1_2013,College,College-Classroom
+90.1-2013,College,College - Conference,,x,x,ASHRAE_90_1_2013,College,College-Conference
+90.1-2013,College,College - Corridor,,x,x,ASHRAE_90_1_2013,College,College-Corridor
+90.1-2013,College,College - Laboratory,,x,x,ASHRAE_90_1_2013,College,College-Laboratory
+90.1-2013,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2013,College,College-LectureHall
+90.1-2013,College,College - Media Center,,x,x,ASHRAE_90_1_2013,College,College-MediaCenter
+90.1-2013,College,College - Stairs,,x,x,ASHRAE_90_1_2013,College,College-Stairs
+90.1-2013,College,College - Storage,,x,x,ASHRAE_90_1_2013,College,College-Storage
+90.1-2013,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2013,Lab,Lab-Equipment_corridor
+90.1-2013,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2013,Lab,Lab-Lab_fumehood
+90.1-2013,Laboratory,Office,,x,x,ASHRAE_90_1_2013,Lab,Lab-Office
+90.1-2013,Laboratory,Open lab,,x,x,ASHRAE_90_1_2013,Lab,Lab-Open

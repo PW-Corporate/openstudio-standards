@@ -41,3 +41,8 @@ coverage/
 /data/standards/openstudio_standards_duplicates_log.csv
 /data/standards/export
 /data/geometry/../*.osw
+/data/standards/construction_lib.osm
+/data/standards/SpeedSchedules.osm
+/data/standards/inputs.json
+/data/standards/inputs_new.json
+/data/standards/construction_inputs_new.json
