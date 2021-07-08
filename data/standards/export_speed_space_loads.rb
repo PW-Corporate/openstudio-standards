@@ -15,8 +15,8 @@ base_path = File.dirname(__FILE__)
 csv_path = File.join(base_path, 'InputJSONData_SpaceLoads.csv')
 speed_space_types = CSV.table(csv_path, header_converters: nil).map { |row| row.to_hash }
 
+errors = String.new
 no_lpd = String.new
-
 no_epd = String.new
 
 
@@ -68,6 +68,12 @@ templates.each do |template|
     st_props = {}
 
     #if spd_st['space_type'] == "College -  Conference" then binding.pry end
+    if data["occupancy_per_area"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} occupancy_per_area is nil no people definitions! \n" end
+    if data["lighting_fraction_radiant"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} lighting_fraction_radiant is nil! \n" end
+    if data["lighting_fraction_visible"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} lighting_fraction_visible is nil! \n" end
+    if data["lighting_fraction_to_return_air"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} lighting_fraction_to_return_air is nil! \n" end
+    if data["electric_equipment_fraction_radiant"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} electric_equipment_fraction_radiant is nil! \n" end
+
 
     # Lighting
     if spd_st['lighting_per_area'] == 'x'
@@ -83,6 +89,7 @@ templates.each do |template|
       lpd_multipliers.each do |lpd_mult|
         lpd_options << (lpd * lpd_mult).round(2)
       end
+
       st_props['Lighting_Power_Density']['Options'] = lpd_options
     end
 
@@ -120,29 +127,21 @@ templates.each do |template|
 
     
 
-    if lpd_options.include? 0 then no_lpd << "speed space type #{space_type_speed} has zero in lpd options with ashrae space type #{spd_st['space_type']} \n" end
-    if epd_options.include? 0 then no_epd << "speed space type #{space_type_speed} has zero in epd options with ashrae space type #{spd_st['space_type']} \n" end
+    if lpd_options.include? 0 then no_lpd << "speed space type #{space_type_speed} has zero in lpd options with ashrae space type #{spd_st['space_type']} and template #{spd_st['template']} \n" end
+    if epd_options.include? 0 then no_epd << "speed space type #{space_type_speed} has zero in epd options with ashrae space type #{spd_st['space_type']} and template #{spd_st['template']}  \n" end
 
     # Save properties to hash
     # if space_type_speed == 'College-Conference' then puts search_criteria ; puts st_props['Lighting_Power_Density']['Default'] end
     inputs[template_speed][building_type_speed][space_type_speed] = st_props
   end
 end
-puts "NO LPD"
+
+puts errors
 puts no_lpd
-puts "NO EPD"
 puts no_epd
 
 # Add the Space_Loads key as the top level of the hash
 inputs = {'Space_Loads' => inputs}
-
-puts " outputting college conference 2007"
-#binding.pry
-puts inputs['Space_Loads']['ASHRAE_90_1_2007']['College']['College-Conference']
-
-puts " outputting college College-Classroom 2007"
-puts inputs['Space_Loads']['ASHRAE_90_1_2007']['College']['College-Classroom']
-
 
 # Save results to disk
 File.open(File.join(base_path, 'space_loads_inputs_new.json'), 'w') do |f|
