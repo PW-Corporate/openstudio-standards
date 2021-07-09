@@ -15,10 +15,17 @@ base_path = File.dirname(__FILE__)
 csv_path = File.join(base_path, 'InputJSONData_SpaceLoads.csv')
 speed_space_types = CSV.table(csv_path, header_converters: nil).map { |row| row.to_hash }
 
-errors = String.new
-no_lpd = String.new
-no_epd = String.new
+space_loads_issues = []
 
+space_loads_issues << ['ASHRAE standard','ASHRAE space type','speed space type name','zero lpd','zero epd','occupancy_per_area is zero','lighting_fraction_radiant is nil','lighting_fraction_visible is nil','lighting_fraction_to_return_air is nil','electric_equipment_fraction_radiant is nil']
+
+## lpd --> 3
+## epd --> 4
+## occupancy_per_area --> 5
+## lighting_fraction_radiant --> 6
+## lighting_fraction_visible --> 7
+### lighting_fraction_to_return_air --> 8
+### electric_equipment_fraction_radiant --> 9
 
 # Export space loads for each standard to JSON
 templates.each do |template|
@@ -67,14 +74,15 @@ templates.each do |template|
     # Hash to hold data for this space type
     st_props = {}
 
+    space_type_column = [spd_st['template'],spd_st['space_type'],spd_st['space_type_speed'],'','','']
+
     #if spd_st['space_type'] == "College -  Conference" then binding.pry end
-    if data["occupancy_per_area"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} occupancy_per_area is nil no people definitions! \n" end
-    if data["lighting_fraction_radiant"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} lighting_fraction_radiant is nil! \n" end
-    if data["lighting_fraction_visible"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} lighting_fraction_visible is nil! \n" end
-    if data["lighting_fraction_to_return_air"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} lighting_fraction_to_return_air is nil! \n" end
-    if data["electric_equipment_fraction_radiant"].nil? then errors << " #{spd_st['space_type']} and template #{spd_st['template']} electric_equipment_fraction_radiant is nil! \n" end
-
-
+    if data["occupancy_per_area"].nil? then space_type_column[5] = 'x' end
+    if data["lighting_fraction_radiant"].nil? then space_type_column[6] = 'x'end
+    if data["lighting_fraction_visible"].nil? then space_type_column[7] = 'x' end
+    if data["lighting_fraction_to_return_air"].nil? then space_type_column[8] = 'x' end
+    if data["electric_equipment_fraction_radiant"].nil? then space_type_column[9] = 'x' end
+    
     # Lighting
     if spd_st['lighting_per_area'] == 'x'
       st_props['Lighting_Power_Density'] = {}
@@ -110,6 +118,11 @@ templates.each do |template|
       st_props['Equipment_Power_Density']['Options'] = epd_options
     end
 
+    if lpd_options.include? 0 then space_type_column[3] = 'x' end
+    if epd_options.include? 0 then space_type_column[4] = 'x' end
+
+    space_loads_issues << space_type_column  
+  
     # Outside Air
     st_props['Outside_Air'] = {}
     st_props['Outside_Air']['Default'] = 'Code'
@@ -125,20 +138,12 @@ templates.each do |template|
     st_props['Heating_Setpoint']['Default'] = 70
     st_props['Heating_Setpoint']['Options'] = [70]
 
-    
-
-    if lpd_options.include? 0 then no_lpd << "speed space type #{space_type_speed} has zero in lpd options with ashrae space type #{spd_st['space_type']} and template #{spd_st['template']} \n" end
-    if epd_options.include? 0 then no_epd << "speed space type #{space_type_speed} has zero in epd options with ashrae space type #{spd_st['space_type']} and template #{spd_st['template']}  \n" end
-
     # Save properties to hash
     # if space_type_speed == 'College-Conference' then puts search_criteria ; puts st_props['Lighting_Power_Density']['Default'] end
     inputs[template_speed][building_type_speed][space_type_speed] = st_props
   end
 end
 
-puts errors
-puts no_lpd
-puts no_epd
 
 # Add the Space_Loads key as the top level of the hash
 inputs = {'Space_Loads' => inputs}
@@ -146,4 +151,11 @@ inputs = {'Space_Loads' => inputs}
 # Save results to disk
 File.open(File.join(base_path, 'space_loads_inputs_new.json'), 'w') do |f|
   f.write(JSON.pretty_generate(inputs, {:indent => "    "}))
+end
+
+# Save warnings
+CSV.open("#{__dir__}/space_loads_issues.csv", 'w') do |f|
+  space_loads_issues.each do |line|
+    f << line
+  end
 end

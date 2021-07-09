@@ -150,21 +150,20 @@ template,building_type,space_type,Notes,lighting_per_area,electric_equipment_per
 90.1-2007,SuperMarket,Sales,,x,x,ASHRAE_90_1_2007,SuperMarket,SuperMarket-Main
 90.1-2007,Warehouse,Office,,x,x,ASHRAE_90_1_2007,Warehouse,Warehouse-Office
 90.1-2007,Warehouse,Bulk,,x,x,ASHRAE_90_1_2007,Warehouse,Warehouse-Storage
-90.1-2007,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2007,Lab,Lab-Equipment_corridor
-90.1-2007,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2007,Lab,Lab-Lab_fumehood
-90.1-2007,Laboratory,Office,,x,x,ASHRAE_90_1_2007,Lab,Lab-Office
-90.1-2007,Laboratory,Open lab,,x,x,ASHRAE_90_1_2007,Lab,Lab-Open
+90.1-2007,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2007,Laboratory,Laboratory-EquipmentCorridor
+90.1-2007,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2007,Laboratory,Laboratory-LabFumeHood
+90.1-2007,Laboratory,Office,,x,x,ASHRAE_90_1_2007,Laboratory,Laboratory-Office
+90.1-2007,Laboratory,Open lab,,x,x,ASHRAE_90_1_2007,Laboratory,Laboratory-OpenLab
 90.1-2007,College,College -  Conference,,x,x,ASHRAE_90_1_2007,College,College-Conference
 90.1-2007,College,College -  Corridor,,x,x,ASHRAE_90_1_2007,College,College-Corridor
 90.1-2007,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2007,College,College-ElevatorShaft
-90.1-2007,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2007,College,College-EnteranceLobby
+90.1-2007,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2007,College,College-Lobby
 90.1-2007,College,College -  Lounge,,x,x,ASHRAE_90_1_2007,College,College-Lounge
 90.1-2007,College,College -  Office,,x,x,ASHRAE_90_1_2007,College,College-Office
 90.1-2007,College,College -  Restroom,,x,x,ASHRAE_90_1_2007,College,College-Restroom
 90.1-2007,College,College -  Utility,,x,x,ASHRAE_90_1_2007,College,College-Utility
 90.1-2007,College,College - Art Classroom,,x,x,ASHRAE_90_1_2007,College,College-ArtClassroom
 90.1-2007,College,College - Classroom,,x,x,ASHRAE_90_1_2007,College,College-Classroom
-90.1-2007,College,College - Conference,,x,x,ASHRAE_90_1_2007,College,College-Conference
 90.1-2007,College,College - Corridor,,x,x,ASHRAE_90_1_2007,College,College-Corridor
 90.1-2007,College,College - Laboratory,,x,x,ASHRAE_90_1_2007,College,College-Laboratory
 90.1-2007,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2007,College,College-LectureHall
@@ -322,29 +321,26 @@ template,building_type,space_type,Notes,lighting_per_area,electric_equipment_per
 90.1-2010,SuperMarket,Sales,,x,x,ASHRAE_90_1_2010,SuperMarket,SuperMarket-Main
 90.1-2010,Warehouse,Office,,x,x,ASHRAE_90_1_2010,Warehouse,Warehouse-Office
 90.1-2010,Warehouse,Bulk,,x,x,ASHRAE_90_1_2010,Warehouse,Warehouse-Storage
-90.1-2010,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2010,Lab,Lab-Equipment_corridor
-90.1-2010,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2010,Lab,Lab-Lab_fumehood
-90.1-2010,Laboratory,Office,,x,x,ASHRAE_90_1_2010,Lab,Lab-Office
-90.1-2010,Laboratory,Open lab,,x,x,ASHRAE_90_1_2010,Lab,Lab-Open
+90.1-2010,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2010,Laboratory,Laboratory-EquipmentCorridor
+90.1-2010,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2010,Laboratory,Laboratory-LabFumeHood
+90.1-2010,Laboratory,Office,,x,x,ASHRAE_90_1_2010,Laboratory,Laboratory-Office
+90.1-2010,Laboratory,Open lab,,x,x,ASHRAE_90_1_2010,Laboratory,Laboratory-OpenLab
 90.1-2010,College,College -  Conference,,x,x,ASHRAE_90_1_2010,College,College-Conference
 90.1-2010,College,College -  Corridor,,x,x,ASHRAE_90_1_2010,College,College-Corridor
 90.1-2010,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2010,College,College-ElevatorShaft
-90.1-2010,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2010,College,College-EnteranceLobby
+90.1-2010,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2010,College,College-Lobby
 90.1-2010,College,College -  Lounge,,x,x,ASHRAE_90_1_2010,College,College-Lounge
 90.1-2010,College,College -  Office,,x,x,ASHRAE_90_1_2010,College,College-Office
 90.1-2010,College,College -  Restroom,,x,x,ASHRAE_90_1_2010,College,College-Restroom
 90.1-2010,College,College -  Utility,,x,x,ASHRAE_90_1_2010,College,College-Utility
 90.1-2010,College,College - Art Classroom,,x,x,ASHRAE_90_1_2010,College,College-ArtClassroom
 90.1-2010,College,College - Classroom,,x,x,ASHRAE_90_1_2010,College,College-Classroom
-90.1-2010,College,College - Conference,,x,x,ASHRAE_90_1_2010,College,College-Conference
 90.1-2010,College,College - Corridor,,x,x,ASHRAE_90_1_2010,College,College-Corridor
 90.1-2010,College,College - Laboratory,,x,x,ASHRAE_90_1_2010,College,College-Laboratory
 90.1-2010,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2010,College,College-LectureHall
 90.1-2010,College,College - Media Center,,x,x,ASHRAE_90_1_2010,College,College-MediaCenter
 90.1-2010,College,College - Stairs,,x,x,ASHRAE_90_1_2010,College,College-Stairs
 90.1-2010,College,College - Storage,,x,x,ASHRAE_90_1_2010,College,College-Storage
-,,,,,,,,
-,,,,,,,,
 90.1-2013,Office,OfficeLarge Data Center,,x,x,ASHRAE_90_1_2013,LargeOffice,Office-DataCenter
 90.1-2013,Office,Stair,,x,x,ASHRAE_90_1_2013,LargeOffice,Office-Stair
 90.1-2013,Office,Lobby,,x,x,ASHRAE_90_1_2013,LargeOffice,Office-Lobby
@@ -496,6 +492,26 @@ template,building_type,space_type,Notes,lighting_per_area,electric_equipment_per
 90.1-2013,SuperMarket,Sales,,x,x,ASHRAE_90_1_2013,SuperMarket,SuperMarket-Main
 90.1-2013,Warehouse,Office,,x,x,ASHRAE_90_1_2013,Warehouse,Warehouse-Office
 90.1-2013,Warehouse,Bulk,,x,x,ASHRAE_90_1_2013,Warehouse,Warehouse-Storage
+90.1-2013,College,College -  Conference,,x,x,ASHRAE_90_1_2013,College,College-Conference
+90.1-2013,College,College -  Corridor,,x,x,ASHRAE_90_1_2013,College,College-Corridor
+90.1-2013,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2013,College,College-ElevatorShaft
+90.1-2013,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2013,College,College-Lobby
+90.1-2013,College,College -  Lounge,,x,x,ASHRAE_90_1_2013,College,College-Lounge
+90.1-2013,College,College -  Office,,x,x,ASHRAE_90_1_2013,College,College-Office
+90.1-2013,College,College -  Restroom,,x,x,ASHRAE_90_1_2013,College,College-Restroom
+90.1-2013,College,College -  Utility,,x,x,ASHRAE_90_1_2013,College,College-Utility
+90.1-2013,College,College - Art Classroom,,x,x,ASHRAE_90_1_2013,College,College-ArtClassroom
+90.1-2013,College,College - Classroom,,x,x,ASHRAE_90_1_2013,College,College-Classroom
+90.1-2013,College,College - Corridor,,x,x,ASHRAE_90_1_2013,College,College-Corridor
+90.1-2013,College,College - Laboratory,,x,x,ASHRAE_90_1_2013,College,College-Laboratory
+90.1-2013,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2013,College,College-LectureHall
+90.1-2013,College,College - Media Center,,x,x,ASHRAE_90_1_2013,College,College-MediaCenter
+90.1-2013,College,College - Stairs,,x,x,ASHRAE_90_1_2013,College,College-Stairs
+90.1-2013,College,College - Storage,,x,x,ASHRAE_90_1_2013,College,College-Storage
+90.1-2013,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2013,Laboratory,Laboratory-EquipmentCorridor
+90.1-2013,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2013,Laboratory,Laboratory-LabFumeHood
+90.1-2013,Laboratory,Office,,x,x,ASHRAE_90_1_2013,Laboratory,Laboratory-Office
+90.1-2013,Laboratory,Open lab,,x,x,ASHRAE_90_1_2013,Laboratory,Laboratory-OpenLab
 90.1-2016,Office,OfficeLarge Data Center,,x,x,ASHRAE_90_1_2016,LargeOffice,Office-DataCenter
 90.1-2016,Office,Stair,,x,x,ASHRAE_90_1_2016,LargeOffice,Office-Stair
 90.1-2016,Office,Lobby,,x,x,ASHRAE_90_1_2016,LargeOffice,Office-Lobby
@@ -647,175 +663,23 @@ template,building_type,space_type,Notes,lighting_per_area,electric_equipment_per
 90.1-2016,SuperMarket,Sales,,x,x,ASHRAE_90_1_2016,SuperMarket,SuperMarket-Main
 90.1-2016,Warehouse,Office,,x,x,ASHRAE_90_1_2016,Warehouse,Warehouse-Office
 90.1-2016,Warehouse,Bulk,,x,x,ASHRAE_90_1_2016,Warehouse,Warehouse-Storage
-90.1-2019,Office,OfficeLarge Data Center,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-DataCenter
-90.1-2019,Office,Stair,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Stair
-90.1-2019,Office,Lobby,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Lobby
-90.1-2019,Office,Elec/MechRoom,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-MechRoom
-90.1-2019,Office,Corridor,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Corridor
-90.1-2019,Office,Conference,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Conference
-90.1-2019,Office,BreakRoom,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-BreakRoom
-90.1-2019,Office,Storage,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Storage
-90.1-2019,Office,Restroom,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Restroom
-90.1-2019,Office,OpenOffice,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-OpenOffice
-90.1-2019,Office,ClosedOffice,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-PrivateOffice
-90.1-2019,Office,Dining,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Dining
-90.1-2019,Office,Classroom,,x,x,ASHRAE_90_1_2019,LargeOffice,Office-Classroom
-90.1-2019,Office,OfficeLarge Data Center,This same object as for large office 2013 above must be duplicated for MediumOffice and SmallOffice building_type_speed 2013 for lighting and equipment.,x,x,ASHRAE_90_1_2019,MediumOffice,Office-DataCenter
-90.1-2019,Office,MediumOffice - Stair,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Stair
-90.1-2019,Office,MediumOffice - Lobby,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Lobby
-90.1-2019,Office,MediumOffice - Elec/MechRoom,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-MechRoom
-90.1-2019,Office,MediumOffice - Corridor,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Corridor
-90.1-2019,Office,MediumOffice - Conference,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Conference
-90.1-2019,Office,MediumOffice - Breakroom,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-BreakRoom
-90.1-2019,Office,MediumOffice - Storage,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Storage
-90.1-2019,Office,MediumOffice - Restroom,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Restroom
-90.1-2019,Office,MediumOffice - OpenOffice,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-OpenOffice
-90.1-2019,Office,MediumOffice - ClosedOffice,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-PrivateOffice
-90.1-2019,Office,MediumOffice - Dining,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Dining
-90.1-2019,Office,MediumOffice - Classroom,,x,x,ASHRAE_90_1_2019,MediumOffice,Office-Classroom
-90.1-2019,Office,OfficeLarge Data Center,This same object as for large office 2013 above must be duplicated for MediumOffice and SmallOffice building_type_speed 2013 for lighting and equipment.,x,x,ASHRAE_90_1_2019,SmallOffice,Office-DataCenter
-90.1-2019,Office,SmallOffice - Stair,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Stair
-90.1-2019,Office,SmallOffice - Lobby,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Lobby
-90.1-2019,Office,SmallOffice - Elec/MechRoom,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-MechRoom
-90.1-2019,Office,SmallOffice - Corridor,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Corridor
-90.1-2019,Office,SmallOffice - Conference,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Conference
-90.1-2019,Office,SmallOffice - Breakroom,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-BreakRoom
-90.1-2019,Office,SmallOffice - Storage,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Storage
-90.1-2019,Office,SmallOffice - Restroom,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Restroom
-90.1-2019,Office,SmallOffice - OpenOffice,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-OpenOffice
-90.1-2019,Office,SmallOffice - ClosedOffice,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-PrivateOffice
-90.1-2019,Office,SmallOffice - Dining,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Dining
-90.1-2019,Office,SmallOffice - Classroom,,x,x,ASHRAE_90_1_2019,SmallOffice,Office-Classroom
-90.1-2019,FullServiceRestaurant,Kitchen,,x,x,ASHRAE_90_1_2019,FullServiceRestaurant,FullServiceRestaurant-Kitchen
-90.1-2019,FullServiceRestaurant,Dining,,x,x,ASHRAE_90_1_2019,FullServiceRestaurant,FullServiceRestaurant-Dining
-90.1-2019,HighriseApartment,Apartment,,x,x,ASHRAE_90_1_2019,HighriseApartment,HighriseApt-Apartment
-90.1-2019,HighriseApartment,Corridor,,x,x,ASHRAE_90_1_2019,HighriseApartment,HighriseApt-Corridor
-90.1-2019,HighriseApartment,Office,,x,x,ASHRAE_90_1_2019,HighriseApartment,HighriseApt-Office
-90.1-2019,Hospital,Kitchen,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Kitchen
-90.1-2019,Hospital,Basement,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Basement
-90.1-2019,Hospital,Corridor,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Corridor
-90.1-2019,Hospital,Dining,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Dining
-90.1-2019,Hospital,ER_Exam,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-ER_Exam
-90.1-2019,Hospital,ER_NurseStn,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-ER_NurseStn
-90.1-2019,Hospital,ER_Trauma,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-ER_Trauma
-90.1-2019,Hospital,ER_Triage,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-ER_Triage
-90.1-2019,Hospital,ICU_NurseStn,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-ICU_NurseStn
-90.1-2019,Hospital,ICU_Open,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-ICU_Open
-90.1-2019,Hospital,ICU_PatRm,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-ICU_PatRm
-90.1-2019,Hospital,Lab,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Lab
-90.1-2019,Hospital,Lobby,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Lobby
-90.1-2019,Hospital,NurseStn,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-NurseStn
-90.1-2019,Hospital,Office,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Office
-90.1-2019,Hospital,OR,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-OR
-90.1-2019,Hospital,PatRoom,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-PatRoom
-90.1-2019,Hospital,PhysTherapy,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-PhysTherapy
-90.1-2019,Hospital,Radiology,,x,x,ASHRAE_90_1_2019,Hospital,Hospital-Radiology
-90.1-2019,LargeHotel,Kitchen,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Kitchen
-90.1-2019,LargeHotel,Banquet,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Banquet
-90.1-2019,LargeHotel,Basement,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Basement
-90.1-2019,LargeHotel,Cafe,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Cafe
-90.1-2019,LargeHotel,Corridor,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Corridor
-90.1-2019,LargeHotel,GuestRoom,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-GuestRoom
-90.1-2019,LargeHotel,Laundry,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Laundry
-90.1-2019,LargeHotel,Lobby,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Lobby
-90.1-2019,LargeHotel,Mechanical,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Mech
-90.1-2019,LargeHotel,Retail,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Retail
-90.1-2019,LargeHotel,Storage,,x,x,ASHRAE_90_1_2019,LargeHotel,LrgHotel-Storage
-90.1-2019,MidriseApartment,Apartment,,x,x,ASHRAE_90_1_2019,MidriseApartment,MidriseApt-Apartment
-90.1-2019,MidriseApartment,Corridor,,x,x,ASHRAE_90_1_2019,MidriseApartment,MidriseApt-Corridor
-90.1-2019,MidriseApartment,Office,,x,x,ASHRAE_90_1_2019,MidriseApartment,MidriseApt-Office
-90.1-2019,Outpatient,Anesthesia,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Anesthesia
-90.1-2019,Outpatient,BioHazard,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-BioHazard
-90.1-2019,Outpatient,Cafe,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Cafe
-90.1-2019,Outpatient,Conference,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Conference
-90.1-2019,Outpatient,DressingRoom,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-DressingRoom
-90.1-2019,Outpatient,Elec/MechRoom,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Mechanical
-90.1-2019,Outpatient,Exam,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Exam
-90.1-2019,Outpatient,Hall,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Hall
-90.1-2019,Outpatient,IT_Room,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-IT_Room
-90.1-2019,Outpatient,Janitor,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Janitor
-90.1-2019,Outpatient,Lobby,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Lobby
-90.1-2019,Outpatient,LockerRoom,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-LockerRoom
-90.1-2019,Outpatient,Lounge,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Lounge
-90.1-2019,Outpatient,MedGas,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-MedGas
-90.1-2019,Outpatient,MRI,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-MRI
-90.1-2019,Outpatient,NurseStation,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-NurseStation
-90.1-2019,Outpatient,Office,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Office
-90.1-2019,Outpatient,OR,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-OR
-90.1-2019,Outpatient,PACU,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-PACU
-90.1-2019,Outpatient,PhysicalTherapy,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-PhysTherapy
-90.1-2019,Outpatient,PreOp,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-PreOp
-90.1-2019,Outpatient,ProcedureRoom,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-ProcedureRoom
-90.1-2019,Outpatient,Reception,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Reception
-90.1-2019,Outpatient,Stair,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Stair
-90.1-2019,Outpatient,Toilet,,x,x,ASHRAE_90_1_2019,Outpatient,Outpatient-Toilet
-90.1-2019,Outpatient,Xray,,x,x,ASHRAE_90_1_2019,PrimarySchool,Outpatient-Xray
-90.1-2019,PrimarySchool,Restroom,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Restroom
-90.1-2019,PrimarySchool,Office,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Office
-90.1-2019,PrimarySchool,Mechanical,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Mechanical
-90.1-2019,PrimarySchool,Lobby,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Lobby
-90.1-2019,PrimarySchool,Library,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Library
-90.1-2019,PrimarySchool,Gym,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Gym
-90.1-2019,PrimarySchool,Corridor,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Corridor
-90.1-2019,PrimarySchool,Classroom,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Classroom
-90.1-2019,PrimarySchool,Cafeteria,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Cafeteria
-90.1-2019,PrimarySchool,Kitchen,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Kitchen
-90.1-2019,PrimarySchool,ComputerRoom,,x,x,ASHRAE_90_1_2019,PrimarySchool,PrimarySchool-Computer
-90.1-2019,QuickServiceRestaurant,Dining,,x,x,ASHRAE_90_1_2019,QuickServiceRestaurant,QuickServiceRestaurant-Dining
-90.1-2019,QuickServiceRestaurant,Kitchen,,x,x,ASHRAE_90_1_2019,QuickServiceRestaurant,QuickServiceRestaurant-Kitchen
-90.1-2019,Retail,Back_Space,,x,x,ASHRAE_90_1_2019,Retail,Retail-Storage
-90.1-2019,Retail,Point_of_Sale,,x,x,ASHRAE_90_1_2019,Retail,Retail-Point_of_Sale
-90.1-2019,Retail,Retail,,x,x,ASHRAE_90_1_2019,Retail,Retail-Retail
-90.1-2019,SecondarySchool,Auditorium,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Auditorium
-90.1-2019,SecondarySchool,Cafeteria,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Cafeteria
-90.1-2019,SecondarySchool,Classroom,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Classroom
-90.1-2019,SecondarySchool,Corridor,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Corridor
-90.1-2019,SecondarySchool,Gym,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Gym
-90.1-2019,SecondarySchool,Library,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Library
-90.1-2019,SecondarySchool,Lobby,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Lobby
-90.1-2019,SecondarySchool,Mechanical,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Mechanical
-90.1-2019,SecondarySchool,Office,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Office
-90.1-2019,SecondarySchool,Restroom,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Restroom
-90.1-2019,SecondarySchool,Kitchen,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Kitchen
-90.1-2019,SecondarySchool,ComputerRoom,,x,x,ASHRAE_90_1_2019,SecondarySchool,SecondarySchool-Computer
-90.1-2019,SmallHotel,Corridor,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Corridor
-90.1-2019,SmallHotel,Elec/MechRoom,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Mechanical
-90.1-2019,SmallHotel,ElevatorCore,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-ElevatorCore
-90.1-2019,SmallHotel,Exercise,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Exercise
-90.1-2019,SmallHotel,GuestLounge,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-GuestLounge
-90.1-2019,SmallHotel,GuestRoom123Occ,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-GuestRoomOcc
-90.1-2019,SmallHotel,GuestRoom123Vac,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-GuestRoomVac
-90.1-2019,SmallHotel,Laundry,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Laundry
-90.1-2019,SmallHotel,Meeting,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Meeting
-90.1-2019,SmallHotel,Office,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Office
-90.1-2019,SmallHotel,PublicRestroom,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Restroom
-90.1-2019,SmallHotel,StaffLounge,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Lounge
-90.1-2019,SmallHotel,Stair,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Stair
-90.1-2019,SmallHotel,Storage,,x,x,ASHRAE_90_1_2019,SmallHotel,SmallHotel-Storage
-90.1-2019,SuperMarket,Sales,,x,x,ASHRAE_90_1_2019,SuperMarket,SuperMarket-Sales
-90.1-2019,SuperMarket,Office,,x,x,ASHRAE_90_1_2019,SuperMarket,SuperMarket-Office
-90.1-2019,SuperMarket,DryStorage,,x,x,ASHRAE_90_1_2019,SuperMarket,SuperMarket-Storage
-90.1-2019,SuperMarket,Sales,,x,x,ASHRAE_90_1_2019,SuperMarket,SuperMarket-Main
-90.1-2019,Warehouse,Office,,x,x,ASHRAE_90_1_2019,Warehouse,Warehouse-Office
-90.1-2019,Warehouse,Bulk,,x,x,ASHRAE_90_1_2019,Warehouse,Warehouse-Storage
-90.1-2013,College,College -  Conference,,x,x,ASHRAE_90_1_2013,College,College-Conference
-90.1-2013,College,College -  Corridor,,x,x,ASHRAE_90_1_2013,College,College-Corridor
-90.1-2013,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2013,College,College-ElevatorShaft
-90.1-2013,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2013,College,College-EnteranceLobby
-90.1-2013,College,College -  Lounge,,x,x,ASHRAE_90_1_2013,College,College-Lounge
-90.1-2013,College,College -  Office,,x,x,ASHRAE_90_1_2013,College,College-Office
-90.1-2013,College,College -  Restroom,,x,x,ASHRAE_90_1_2013,College,College-Restroom
-90.1-2013,College,College -  Utility,,x,x,ASHRAE_90_1_2013,College,College-Utility
-90.1-2013,College,College - Art Classroom,,x,x,ASHRAE_90_1_2013,College,College-ArtClassroom
-90.1-2013,College,College - Classroom,,x,x,ASHRAE_90_1_2013,College,College-Classroom
-90.1-2013,College,College - Conference,,x,x,ASHRAE_90_1_2013,College,College-Conference
-90.1-2013,College,College - Corridor,,x,x,ASHRAE_90_1_2013,College,College-Corridor
-90.1-2013,College,College - Laboratory,,x,x,ASHRAE_90_1_2013,College,College-Laboratory
-90.1-2013,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2013,College,College-LectureHall
-90.1-2013,College,College - Media Center,,x,x,ASHRAE_90_1_2013,College,College-MediaCenter
-90.1-2013,College,College - Stairs,,x,x,ASHRAE_90_1_2013,College,College-Stairs
-90.1-2013,College,College - Storage,,x,x,ASHRAE_90_1_2013,College,College-Storage
-90.1-2013,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2013,Lab,Lab-Equipment_corridor
-90.1-2013,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2013,Lab,Lab-Lab_fumehood
-90.1-2013,Laboratory,Office,,x,x,ASHRAE_90_1_2013,Lab,Lab-Office
-90.1-2013,Laboratory,Open lab,,x,x,ASHRAE_90_1_2013,Lab,Lab-Open
+90.1-2016,College,College -  Conference,,x,x,ASHRAE_90_1_2016,College,College-Conference
+90.1-2016,College,College -  Corridor,,x,x,ASHRAE_90_1_2016,College,College-Corridor
+90.1-2016,College,College -  Elevator Shaft,,x,x,ASHRAE_90_1_2016,College,College-ElevatorShaft
+90.1-2016,College,College -  Entrance Lobby,,x,x,ASHRAE_90_1_2016,College,College-Lobby
+90.1-2016,College,College -  Lounge,,x,x,ASHRAE_90_1_2016,College,College-Lounge
+90.1-2016,College,College -  Office,,x,x,ASHRAE_90_1_2016,College,College-Office
+90.1-2016,College,College -  Restroom,,x,x,ASHRAE_90_1_2016,College,College-Restroom
+90.1-2016,College,College -  Utility,,x,x,ASHRAE_90_1_2016,College,College-Utility
+90.1-2016,College,College - Art Classroom,,x,x,ASHRAE_90_1_2016,College,College-ArtClassroom
+90.1-2016,College,College - Classroom,,x,x,ASHRAE_90_1_2016,College,College-Classroom
+90.1-2016,College,College - Corridor,,x,x,ASHRAE_90_1_2016,College,College-Corridor
+90.1-2016,College,College - Laboratory,,x,x,ASHRAE_90_1_2016,College,College-Laboratory
+90.1-2016,College,College - Lecture Hall,,x,x,ASHRAE_90_1_2016,College,College-LectureHall
+90.1-2016,College,College - Media Center,,x,x,ASHRAE_90_1_2016,College,College-MediaCenter
+90.1-2016,College,College - Stairs,,x,x,ASHRAE_90_1_2016,College,College-Stairs
+90.1-2016,College,College - Storage,,x,x,ASHRAE_90_1_2016,College,College-Storage
+90.1-2016,Laboratory,Equipment corridor,,x,x,ASHRAE_90_1_2016,Laboratory,Laboratory-EquipmentCorridor
+90.1-2016,Laboratory,Lab with fume hood,,x,x,ASHRAE_90_1_2016,Laboratory,Laboratory-LabFumeHood
+90.1-2016,Laboratory,Office,,x,x,ASHRAE_90_1_2016,Laboratory,Laboratory-Office
+90.1-2016,Laboratory,Open lab,,x,x,ASHRAE_90_1_2016,Laboratory,Laboratory-OpenLab
