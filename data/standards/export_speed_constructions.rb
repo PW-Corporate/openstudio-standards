@@ -2,9 +2,10 @@ require 'openstudio'
 require 'openstudio-standards'
 require 'json'
 require_relative 'speed_constructions'
+require 'pry-nav'
 
 # Standards to export
-templates = ['90.1-2007', '90.1-2010', '90.1-2013']
+templates = ['90.1-2007', '90.1-2010', '90.1-2013','90.1-2016']#,'90.1-2019']
 
 # Surface types to export
 intended_surface_types = ['ExteriorRoof', 'ExteriorWall', 'GroundContactFloor', 'ExteriorWindow']
@@ -133,6 +134,9 @@ templates.each do |template|
         }
         props = std.model_find_object(std.standards_data['construction_properties'], search_criteria)
 
+        #if standards_construction_type.include? "Weighted" then binding.pry end
+        if standards_construction_type.include? "Weighted" then next end
+
         # Make sure that a construction is specified
         if props['construction'].nil?
           puts "ERROR No typical construction is specified for construction properties of: #{template}-#{climate_zone_set}-#{intended_surface_type}-#{standards_construction_type}-#{building_category}, cannot add constructions for this combination."
@@ -220,6 +224,8 @@ templates.each do |template|
           props['convert_to_simple_glazing'] = 'yes'
           default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
           # Prepend "Typical" for the default construction
+          if template == '90.1-2019' then binding.pry end
+
           default_name = "#{typical_prefix}#{default.name}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get

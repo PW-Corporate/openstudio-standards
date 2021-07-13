@@ -1,3 +1,5 @@
+
+
 module SpeedConstructions
   extend self
 
@@ -14,6 +16,7 @@ module SpeedConstructions
       '90.1-2007' => {'key' => 'ASHRAE_90_1_2007', 'gui' => 'ASHRAE_90_1_2007'},
       '90.1-2010' => {'key' => 'ASHRAE_90_1_2010', 'gui' => 'ASHRAE_90_1_2010'},
       '90.1-2013' => {'key' => 'ASHRAE_90_1_2013', 'gui' => 'ASHRAE_90_1_2013'},
+      '90.1-2016' => {'key' => 'ASHRAE_90_1_2016', 'gui' => 'ASHRAE_90_1_2016'},
       # Climate Zones
       '1' => {'key' => '1', 'gui' => 'CZ1'},
       '2' => {'key' => '2', 'gui' => 'CZ2'},
@@ -45,12 +48,15 @@ module SpeedConstructions
 
     speed_enum = speed_construction_enum_map[os_enum]
     if speed_enum.nil?
+
       puts "ERROR Missing SPEED enum for #{os_enum}"
       return "TODO add SPEED enum for #{os_enum}"
     end
 
     speed_enum = speed_construction_enum_map[os_enum][enum_type]
     if speed_enum.nil?
+      #### Not executing with 2016
+      binding.pry
       puts "ERROR Missising SPEED #{enum_type} enum for #{os_enum}"
       return "TODO add SPEED #{enum_type} enum for #{os_enum}"
     end
@@ -196,6 +202,8 @@ module SpeedConstructions
   # Create a construction from the openstudio standards dataset.
   # If construction_props are specified, modifies the insulation layer accordingly.
   def model_add_construction(std, model, construction_name, construction_props = nil, climate_zone = nil)
+
+    ### 2016 needs building type too?
     # Get the object data
     data = std.model_find_object(std.standards_data['constructions'], 'name' => construction_name)
     unless data
