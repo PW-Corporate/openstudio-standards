@@ -12,4 +12,10 @@ WORKDIR /usr/local/src
 # Install bundler
 RUN gem install bundle
 
+### Cannot do anything more with build as installing openstudio gems requires all the local OpenStudio files must do this once container exists!
+### Once build container mount this dir on container /usr/local/src and run
+### 1. bundle install
+### 2. bundle update
+### 3. bundle exec rake library:export_speed to export
+
 CMD [ "/bin/bash" ]

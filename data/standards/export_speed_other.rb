@@ -34,21 +34,42 @@ def get_option(all_data, i, j)
   return option
 end
 
-def process_column(all_data, cell_data, option_row, j, num_rows, indent)
+def process_column(all_data, cell_data, option_row, j, num_rows, indent,key = nil)
 
   option = get_option(all_data, option_row, j)
 
   puts "#{indent}#{option}"
 
   if option == 'Default'
-    cell_data[option] = all_data[option_row + 1][j]
+    #binding.pry
+    if key == "Overhang_Depth" || key == "Fin_Depth"
+      cell_data[option] = all_data[option_row + 1][j].to_i.to_s + ' | ' + (all_data[option_row + 1][j]*0.3048).to_i.to_s
+    else
+      cell_data[option] = all_data[option_row + 1][j]
+    end
+
   elsif option == 'Options'
     options = []
     ((option_row+1)...num_rows).each do |i|
       value = all_data[i][j] if all_data[i]
-      options << value if value
+
+      if key == "Overhang_Depth" || key == "Fin_Depth"
+        
+        if value
+          #binding.pry
+          values = value == 0 ?  ' 0 | 0' : value.to_s + '|' + (value.to_f*0.3048).round(1).to_s
+          #binding.pry
+          options << values
+        end
+      
+      else
+        options << value if value
+      end
+
     end
+    
     cell_data[option] = options
+
   elsif option == 'Footprint_Dimensions'
     cell_data[option] = {}
 
@@ -89,6 +110,8 @@ workbook.worksheets.each do |worksheet|
   sheet_name = worksheet.sheet_name.underscore
   puts "Processing #{sheet_name}"
 
+  
+
   header_row = 0
   option_row = 1
 
@@ -105,11 +128,11 @@ workbook.worksheets.each do |worksheet|
       offset += 1
     end
 
-    puts "  #{key}"
+    puts " processing key  #{key}"
 
     sheet_data[key] = {} if sheet_data[key].nil?
 
-    process_column(all_data, sheet_data[key], option_row, j, num_rows, '    ')
+    process_column(all_data, sheet_data[key], option_row, j, num_rows, '    ',key)
 
   end
 
@@ -118,7 +141,7 @@ end
 
 # additional data
 
-#other_data['Project_Information']['Units'] = { "Default"=>"IP", "Options"=>["IP"] }
+other_data['Project_Information']['Units'] = { "Default"=>"IP", "Options"=>["IP","SI"] }
 
 # Inputs JSON
 File.open(File.join(base_path, 'other_inputs_new.json'), 'w') do |f|

@@ -87,15 +87,39 @@ templates.each do |template|
     if spd_st['lighting_per_area'] == 'x'
       st_props['Lighting_Power_Density'] = {}
       lpd = data['lighting_per_area'].to_f
-      #binding.pry
-      # Default
-      st_props['Lighting_Power_Density']['Default'] = lpd.round(2)
 
-      # Options
-      lpd_multipliers = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5]
-      lpd_options = []
-      lpd_multipliers.each do |lpd_mult|
-        lpd_options << (lpd * lpd_mult).round(2)
+      ### Check for duplicates
+      values_ip_check = []
+      values_si_check = []
+
+      if lpd == 0
+
+        st_props['Lighting_Power_Density']['Default'] = "0 | 0"
+
+        lpd_options = [st_props['Lighting_Power_Density']['Default']]
+        ## mark in space type issue lpd is zero
+        space_type_column[3] = 'x'
+        
+      else
+        ### Round IP to hundredth, round SI to tenth
+        ## as per spec in visualization query logic
+
+        # Default
+        st_props['Lighting_Power_Density']['Default'] = "#{lpd.round(2)} | #{OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(1)}"
+
+        values_ip_check.push(lpd.round(2))
+        values_si_check.push(OpenStudio.convert(lpd.round(2),"m^2","ft^2").get.round(1))
+
+        # Options
+        lpd_multipliers = [ 0.9, 0.8, 0.7, 0.6, 0.5]
+        lpd_options = [st_props['Lighting_Power_Density']['Default']]
+        lpd_multipliers.each do |lpd_mult|
+          lpd_options << "#{(lpd * lpd_mult).round(2)} | #{OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(1)}"
+
+          if values_ip_check.include? (lpd * lpd_mult).round(2) then raise " #{(lpd * lpd_mult).round(2)} ip is duplicate!!!" else values_ip_check.push((lpd * lpd_mult).round(2)) end
+          if values_si_check.include? OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(1) then raise " #{values_si_check} si is duplicate!!!" else OpenStudio.convert((lpd.round(2) * lpd_mult),"m^2","ft^2").get.round(1) end
+        
+          end
       end
 
       st_props['Lighting_Power_Density']['Options'] = lpd_options
@@ -103,40 +127,50 @@ templates.each do |template|
 
     # Equipment
     if spd_st['electric_equipment_per_area'] == 'x'
+
       st_props['Equipment_Power_Density'] = {}
       epd = data['electric_equipment_per_area'].to_f
 
-      # Default
-      st_props['Equipment_Power_Density']['Default'] = epd.round(2)
+      if epd == 0
 
-      # Options
-      epd_multipliers = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5]
-      epd_options = []
-      epd_multipliers.each do |epd_mult|
-        epd_options << (epd * epd_mult).round(2)
+        st_props['Equipment_Power_Density']['Default'] = "0 | 0"
+
+        epd_options = [st_props['Equipment_Power_Density']['Default']]
+        ## mark in space type issue epd is zero
+        space_type_column[4] = 'x'
+
+      else
+        ### Round IP to hundredth, round SI to tenth
+        ## as per spec in visualization query logic
+        st_props['Equipment_Power_Density']['Default'] = "#{epd.round(2)} | #{OpenStudio.convert((epd),"m^2","ft^2").get.round(1)}"
+
+        # Options
+        epd_multipliers = [0.9, 0.8, 0.7, 0.6, 0.5]
+        epd_options = [st_props['Equipment_Power_Density']['Default']]
+        epd_multipliers.each do |epd_mult|
+          epd_options << "#{(epd * epd_mult).round(2)} | #{OpenStudio.convert((epd.round(2) * epd_mult),"m^2","ft^2").get.round(1)}"
+        end
       end
+
       st_props['Equipment_Power_Density']['Options'] = epd_options
     end
-
-    if lpd_options.include? 0 then space_type_column[3] = 'x' end
-    if epd_options.include? 0 then space_type_column[4] = 'x' end
 
     space_loads_issues << space_type_column  
   
     # Outside Air
     st_props['Outside_Air'] = {}
-    st_props['Outside_Air']['Default'] = 'Code'
+    st_props['Outside_Air']['Default'] = '30% Better'
     st_props['Outside_Air']['Options'] = ['Code', '30% Better', '40% Better', '50% Better']
 
     # Cooling Setpoint
     st_props['Cooling_Setpoint'] = {}
-    st_props['Cooling_Setpoint']['Default'] = 75
-    st_props['Cooling_Setpoint']['Options'] = [75]
+    st_props['Cooling_Setpoint']['Default'] = "75 | 24.9"
+    st_props['Cooling_Setpoint']['Options'] = ["75 | 24.9"]
 
     # Heating Setpoint
     st_props['Heating_Setpoint'] = {}
-    st_props['Heating_Setpoint']['Default'] = 70
-    st_props['Heating_Setpoint']['Options'] = [70]
+    st_props['Heating_Setpoint']['Default'] = "70 | 21.1"
+    st_props['Heating_Setpoint']['Options'] = ["70 | 21.1"]
 
     # Save properties to hash
     # if space_type_speed == 'College-Conference' then puts search_criteria ; puts st_props['Lighting_Power_Density']['Default'] end

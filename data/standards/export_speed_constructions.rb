@@ -148,25 +148,34 @@ templates.each do |template|
         when 'ExteriorRoof', 'ExteriorWall'
           type_data = {'Default' => '', 'Options' => []}
           r_val_data = {'Default' => '', 'Options' => []}
+          ### Check for duplicates
+          values_ip_check = []
+
+          values_si_check = []
 
           # Make the default construction
-          default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
-          # Prepend "Typical" for the default construction
-          default_name = "#{typical_prefix}#{default.name}"
+          default, target_r_value_ip , target_r_value_si = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
+          # Prepend "Typical" for the default construction to si and ip name
+
+          values_ip_check.push(target_r_value_ip)
+          values_si_check.push(target_r_value_si)
+
+          default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
             default.setName(default_name)
           else
             default = model.getConstructionByName(default_name).get
           end
-          # Get the R-value
-          target_r_value_ip = 1.0 / props['assembly_maximum_u_value'].to_f
-          # Add as the default
+
           type_data['Default'] = default.name.get.to_s
-          r_val_data['Default'] = target_r_value_ip.round(0)
-          # Add to the options
+          r_val_data['Default'] = "#{target_r_value_ip} | #{target_r_value_si}"
+
           type_data['Options'] << default.name.get.to_s
-          r_val_data['Options'] << target_r_value_ip.round(0)
+
+          r_val_data['Options'] << "#{target_r_value_ip} | #{target_r_value_si}"
+
+          # Add to the options
 
           # Make four incrementally better constructions
           r_val_ip_increases = case intended_surface_type
@@ -178,12 +187,19 @@ templates.each do |template|
 
           r_val_ip_increases.each do |r_val_increase_ip|
             upgraded_props = SpeedConstructions.upgrade_opaque_construction_properties(props, r_val_increase_ip)
-            upgrade = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone)
+            upgrade_construction , upgrade_r_value_ip, upgrade_r_value_si = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone)
             # Get the modified R-value
-            upgrade_r_value_ip = 1.0 / upgraded_props['assembly_maximum_u_value'].to_f
+
+            #if upgrade_construction.name.get.include? "IEAD" then binding.pry end
+
+            #if upgrade_construction.name.get.to_s.include? 'Attic & Other Roof' then binding.pry end
             # Add to the options
-            type_data['Options'] << upgrade.name.get.to_s
-            r_val_data['Options'] << upgrade_r_value_ip.round(0)
+            type_data['Options'] << upgrade_construction.name.get.to_s
+            #binding.pry
+            if values_ip_check.include? upgrade_r_value_ip then raise " #{upgrade_r_value_ip} ip is duplicate!!!" else  values_ip_check.push(upgrade_r_value_ip) end
+            if values_si_check.include? upgrade_r_value_si then raise " #{upgrade_r_value_si} si is duplicate!!!" else  values_si_check.push(upgrade_r_value_si) end
+
+            r_val_data['Options'] << "#{upgrade_r_value_ip.to_s} | #{upgrade_r_value_si.to_s}"
           end
 
           # Store the outputs
@@ -193,9 +209,9 @@ templates.each do |template|
           type_data = {'Default' => '', 'Options' => []}
 
           # Make the default construction
-          default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
-          # Prepend "Typical" for the default construction
-          default_name = "#{typical_prefix}#{default.name}"
+          default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone).first
+          # Prepend "Typical" for the default construction to si and ip name
+          default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
             default.setName(default_name)
@@ -220,13 +236,16 @@ templates.each do |template|
         when 'ExteriorWindow'
           type_data = {'Default' => '', 'Options' => []}
 
+          ### Check for duplicates
+          values_ip_check = []
+          values_si_check = []
+
           # Make the default construction, using SimpleGlazing
           props['convert_to_simple_glazing'] = 'yes'
-          default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone)
-          # Prepend "Typical" for the default construction
-          if template == '90.1-2019' then binding.pry end
-
-          default_name = "#{typical_prefix}#{default.name}"
+          # When window only returns construction as dont need ip and si value
+          default = SpeedConstructions.model_add_construction(std, model, props['construction'], props, climate_zone).first
+          # Prepend "Typical" for the default construction to si and ip name
+          default_name = "#{typical_prefix}#{default.name.get.insert(default.name.get.index('|')+1, typical_prefix)}"
           if model.getConstructionByName(default_name).empty?
             default = default.clone(model).to_Construction.get
             default.setName(default_name)
@@ -238,6 +257,9 @@ templates.each do |template|
           # Add to the options
           type_data['Options'] << default.name.get.to_s
 
+          values_ip_check.push(default.name.get.split('|')[0])
+          values_si_check.push(default.name.get.split('|')[1])
+
           # Make four incrementally better constructions
           shgc_decreases = [0.1, 0.2, 0.3, 0.4]
           u_val_decreases = [0.2, 0.3, 0.4, 0.5]
@@ -246,9 +268,13 @@ templates.each do |template|
             upgraded_props = SpeedConstructions.upgrade_window_construction_properties(props, shgc_decrease, u_val_decrease)
             # Use SimpleGlazing for the beyond-code options
             upgraded_props['convert_to_simple_glazing'] = 'yes'
-            upgrade = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone)
+            upgrade = SpeedConstructions.model_add_construction(std, model, upgraded_props['construction'], upgraded_props, climate_zone).first
             # Add to the options
             type_data['Options'] << upgrade.name.get.to_s
+            #binding.pry
+            if values_ip_check.include? upgrade.name.get.split('|')[0] then raise " #{upgrade.name.get.split('|')[0]} ip is duplicate!!!" else  values_ip_check.push(upgrade.name.get.split('|')[0]) end
+            if values_si_check.include? upgrade.name.get.split('|')[1] then raise " #{upgrade.name.get.split('|')[1]} si is duplicate!!!" else  values_si_check.push(upgrade.name.get.split('|')[1]) end
+
           end
 
           # Store the outputs
@@ -264,7 +290,9 @@ templates.each do |template|
     intended_surface_type = 'InteriorWall'
     surf_type_data = {} # Hash to store data for JSON level
     method_data = {} # Hash to store data for JSON level
-    default = SpeedConstructions.model_add_construction(std, model, 'Typical Interior Wall')
+
+    default = SpeedConstructions.model_add_construction(std, model, 'Typical Interior Wall').first
+
     method_data['Default'] = default.name.get.to_s
     method_data['Options'] = [default.name.get.to_s]
     method_type = SpeedConstructions.speed_enum(intended_surface_type, 'method') + '_Type'
@@ -275,7 +303,9 @@ templates.each do |template|
     intended_surface_type = 'InteriorFloor'
     surf_type_data = {} # Hash to store data for JSON level
     method_data = {} # Hash to store data for JSON level
-    default = SpeedConstructions.model_add_construction(std, model, 'Typical Interior Floor')
+
+    default = SpeedConstructions.model_add_construction(std, model, 'Typical Interior Floor').first
+
     method_data['Default'] = default.name.get.to_s
     method_data['Options'] = [default.name.get.to_s]
     method_type = SpeedConstructions.speed_enum(intended_surface_type, 'method') + '_Type'
@@ -339,18 +369,157 @@ File.open("#{__dir__}/construction_inputs_new.json", 'w') do |f|
   f.write(JSON.pretty_generate(inputs, {:indent => "    "}))
 end
 
+# Save CSV that can be used to fill in cost data for next run
+
+construction_costs = {}
+
 # Read Construction Costs
 options = { :headers => true }
 File.open("#{__dir__}/construction_costs.csv", 'r') do |f|
   csv = CSV.parse(f.read, options)
   m2_per_ft2 = 10.7639
-  csv.each do |row|
-    name = row['construction_name']
-    cost = 10.7639 * row['cost ($/ft2)'].to_f
+
+  csv.each do |construction_cost_row|
+
+    construction_costs[construction_cost_row['construction_name_ip'].to_s] = 10.7639 * construction_cost_row['cost ($/ft2)'].to_f
+  
+  end
+  
+end
+
+### Hash of constructions and their ip and si names comes in handy
+construction_ip_si_names = {}
+
+construction_names = {}
+construction_csv = []
+construction_csv << ['energy_code', 'climate_zone', 'surface_type', 'assembly_type', 'construction_name', 'ip_name' , 'si_name','r value ip','r value si','is_duplicate','ip match','si match','cost data']
+constructions = inputs['Constructions']
+constructions.keys.each do |energy_code_key|
+  energy_code = constructions[energy_code_key]
+  energy_code.keys.each do |climate_zone_key|
+    climate_zone = energy_code[climate_zone_key]
+    climate_zone.keys.each do |surface_type_key|
+      surface_type = climate_zone[surface_type_key]
+      surface_type.keys.each do |assembly_or_type_key|
+        #binding.pry
+        if /.*_Type/.match(assembly_or_type_key)
+          ### This is ONLY for e.g Slab_Type, Int_Wall_Type ,Floor_Type
+          type = surface_type[assembly_or_type_key]
+          # If assembly_or_type_key contains Type 
+          options = type['Options']
+          next unless options
+          options.each do |construction_name|
+            is_duplicate = construction_names.include?(construction_name)
+
+            construction_csv << [energy_code_key, climate_zone_key, surface_type_key, '', construction_name, "NA" ,"NA", "NA" , "NA" ,is_duplicate]
+
+            # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
+            construction_names[construction_name] = true
+            construction_names[typical_prefix + construction_name] = true
+            construction_names[construction_name.gsub(typical_prefix,'')] = true
+          end
+        else
+          assembly_type = surface_type[assembly_or_type_key]
+          assembly_type.keys.each do |type_key|
+            ##  
+            ## Attic and Other
+
+            next unless /.*_Type/.match(type_key) ## Exclude the R_values here
+            type = assembly_type[type_key]
+            options = type['Options']
+            #puts type
+            next unless options
+            options.each do |construction_name|
+              is_duplicate = construction_names.include?(construction_name)
+
+              #binding.pry
+
+              ip_name = construction_name.split('|')[0]
+
+              si_name = construction_name.split('|')[1]
+              
+              #puts construction_name
+              #puts type
+              #binding.pry
+              if surface_type_key != "Exterior_Window"
+
+                ip_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('|')[0].strip
+
+                si_rvalue = surface_type[assembly_or_type_key][type_key.split('_')[0] + '_R_Value']['Options'][options.index construction_name].split('|')[1].strip
+
+                #si_rvalue.to_f
+
+                #ip_rvalue.to_f
+
+                ### Check R value in construction matches actual R-value
+
+                ip_match = (ip_name.split('-').last.to_f == ip_rvalue.to_f).to_s
+
+                si_match = (si_name.split('-').last.to_f == si_rvalue.to_f).to_s
+
+                construction_ip_si_names[construction_name] = {'ip_name' => ip_name,'si_name' => si_name}
+
+                cost_data = (construction_costs.include?(ip_name.rstrip))
+            
+                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , ip_rvalue , si_rvalue ,is_duplicate,ip_match,si_match,cost_data]
+
+              else
+
+                construction_ip_si_names[construction_name] = {'ip_name' => ip_name,'si_name' => si_name}
+
+                cost_data = (construction_costs.include?(ip_name.rstrip))
+
+                ## works but we dont need it
+                # ip_uvalue = ip_name.split('U-')[1].split(' ')[0]
+
+                # si_uvalue = si_name.split('U-')[1].split(' ')[0]
+
+                # binding.pry
+
+                construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, ip_name ,si_name , "NA" , "NA" ,is_duplicate,"NA","NA",cost_data]
+              end
+
+              # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
+              construction_names[construction_name] = true
+              construction_names[typical_prefix + construction_name] = true
+              construction_names[construction_name.gsub(typical_prefix,'')] = true
+            end
+          end
+        end
+      end
+    end
+  end
+end
+
+puts "***"
+puts " *** Starting to check costs - can see in construction_list.csv ***"
+puts "***"
+
+# Iterate through constructions not construction costs that way we can find constructions which have no costs, we dont care about costs that have no construction
+construction_ip_si_names.each do |speed_construction|
+
+    #binding.pry
+    ### Item 5 is ip name
+
+    #binding.pry
+    # construction[:ip_name].to_s == construction_cost_row['construction_name_ip'].to_s
+    # Get first as find returns an array 
+
+    if construction_costs.include?(speed_construction[1]["ip_name"].rstrip)
+      ## we got the cost for the construction from construction_costs.csv
+      name = speed_construction[0]
+
+      cost = construction_costs[speed_construction[1]["ip_name"].rstrip]
+
+    else
+
+      puts "Could not find cost for #{speed_construction[0]} in construction_costs.csv cannot add construction costs will add default costs cost data flag will be set to false in construction list"
+      next
+    end
 
     construction = model.getConstructionByName(name)
     if construction.empty?
-      puts "Warning: Cannot find construction '#{name}' to apply costs"
+      puts "XXX Warning: Cannot find construction '#{name}' to apply costs XXX"
       next
     end
 
@@ -398,6 +567,7 @@ File.open("#{__dir__}/construction_costs.csv", 'r') do |f|
       end
 
     else
+
       lcc = OpenStudio::Model::LifeCycleCost.new(construction)
       lcc.setName("LCC_MAT - #{name}")
       lcc.setCategory('Construction')
@@ -406,8 +576,6 @@ File.open("#{__dir__}/construction_costs.csv", 'r') do |f|
       lcc.setStartOfCosts('ServicePeriod')
       lcc.setRepeatPeriodYears(20)
     end
-
-  end
 end
 
 # check that every construction has one cost associated
@@ -438,54 +606,6 @@ end
 
 # OSM library
 model.save(SpeedConstructions.construction_lib_path, true)
-
-# Save CSV that can be used to fill in cost data for next run
-construction_names = {}
-construction_csv = []
-construction_csv << ['energy_code', 'climate_zone', 'surface_type', 'assembly_type', 'construction_name', 'is_duplicate']
-constructions = inputs['Constructions']
-constructions.keys.each do |energy_code_key|
-  energy_code = constructions[energy_code_key]
-  energy_code.keys.each do |climate_zone_key|
-    climate_zone = energy_code[climate_zone_key]
-    climate_zone.keys.each do |surface_type_key|
-      surface_type = climate_zone[surface_type_key]
-      surface_type.keys.each do |assembly_or_type_key|
-        if /.*_Type/.match(assembly_or_type_key)
-          type = surface_type[assembly_or_type_key]
-          options = type['Options']
-          next unless options
-          options.each do |construction_name|
-            is_duplicate = construction_names.include?(construction_name)
-            construction_csv << [energy_code_key, climate_zone_key, surface_type_key, '', construction_name, is_duplicate]
-
-            # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
-            construction_names[construction_name] = true
-            construction_names[typical_prefix + construction_name] = true
-            construction_names[construction_name.gsub(typical_prefix,'')] = true
-          end
-        else
-          assembly_type = surface_type[assembly_or_type_key]
-          assembly_type.keys.each do |type_key|
-            next unless /.*_Type/.match(type_key)
-            type = assembly_type[type_key]
-            options = type['Options']
-            next unless options
-            options.each do |construction_name|
-              is_duplicate = construction_names.include?(construction_name)
-              construction_csv << [energy_code_key, climate_zone_key, surface_type_key, assembly_or_type_key, construction_name, is_duplicate]
-
-              # for costing 'IEAD Roof CZ5 R-31' and 'Typical IEAD Roof CZ5 R-31' are the same
-              construction_names[construction_name] = true
-              construction_names[typical_prefix + construction_name] = true
-              construction_names[construction_name.gsub(typical_prefix,'')] = true
-            end
-          end
-        end
-      end
-    end
-  end
-end
 
 # add hard coded constructions
 construction_csv << ['', '', '', '', 'Typical Interior Floor Reversed', false]

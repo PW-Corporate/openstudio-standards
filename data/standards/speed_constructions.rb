@@ -164,6 +164,8 @@ module SpeedConstructions
       material = OpenStudio::Model::SimpleGlazing.new(model)
       material.setName(material_name)
 
+      #binding.pry
+
       material.setUFactor(OpenStudio.convert(data['u_factor'].to_f, 'Btu/hr*ft^2*R', 'W/m^2*K').get)
       material.setSolarHeatGainCoefficient(data['solar_heat_gain_coefficient'].to_f)
       material.setVisibleTransmittance(data['visible_transmittance'].to_f)
@@ -171,6 +173,8 @@ module SpeedConstructions
     elsif material_type == 'StandardGlazing'
       material = OpenStudio::Model::StandardGlazing.new(model)
       material.setName(material_name)
+
+      #binding.pry
 
       material.setOpticalDataType(data['optical_data_type'].to_s)
       material.setThickness(OpenStudio.convert(data['thickness'].to_f, 'in', 'm').get)
@@ -205,10 +209,11 @@ module SpeedConstructions
 
     ### 2016 needs building type too?
     # Get the object data
+
     data = std.model_find_object(std.standards_data['constructions'], 'name' => construction_name)
     unless data
       puts("WARNING Cannot find data for construction: #{construction_name}, will not be created.")
-      return OpenStudio::Model::OptionalConstruction.new
+      return [OpenStudio::Model::OptionalConstruction.new]
     end
 
     # Create a new SPEED name for the contruction
@@ -223,7 +228,9 @@ module SpeedConstructions
       target_u_value_ip = construction_props['assembly_maximum_u_value']
       target_f_factor_ip = construction_props['assembly_maximum_f_factor']
       target_c_factor_ip = construction_props['assembly_maximum_c_factor']
-      target_shgc = construction_props['assembly_maximum_solar_heat_gain_coefficient'].to_f
+
+      ### 1. ROUND 1 round SHGC values
+      target_shgc = construction_props['assembly_maximum_solar_heat_gain_coefficient'].to_f.round(2)
 
       # If the minimum VT to SHGC ratio is included in the construction properties,
       # set the VT using this ratio.
@@ -233,12 +240,13 @@ module SpeedConstructions
       # which results in very low VTs that are only found in windows
       # with reflective metal films.  These window types are not
       # representative of typical design practice.
+
       target_vt = nil
       if construction_props['intended_surface_type'] == 'ExteriorWindow'
         if construction_props['assembly_minimum_vt_shgc']
           target_vt = target_shgc * construction_props['assembly_minimum_vt_shgc'].to_f
         else
-          target_vt = target_shgc * 1.1
+          target_vt = (target_shgc * 1.1)
         end
       end
 
@@ -252,18 +260,33 @@ module SpeedConstructions
       end
 
       # Convert U-Value to R-Value for naming
-      target_r_value_ip = 1.0 / target_u_value_ip.to_f
+      
+      target_r_value_ip = (1.0 / target_u_value_ip.to_f)
+      ### Should be round 1 maybe?
+        ### Round IP to integer, round SI to tenth
+        ## as per spec in visualization query logic
+
+      target_r_value_si = OpenStudio.convert(target_r_value_ip,"ft^2*h*R/Btu","m^2*K/W").get.round(1)
+
+      target_r_value_ip = target_r_value_ip.round
+
+      ### target u value is just for windows
+      target_u_value_si = 1 / target_r_value_si
 
       # Construction names differ between windows and opaque constructions
       if construction_props['intended_surface_type'] == 'ExteriorWindow'
         construction_name = "#{speed_const_type} #{speed_climate_zone}" # Leave ExteriorWindow out of the name
+
+        ### We can round window uvalues here as target_u_value_ip does not need to be anywhere else
+         ### 2. ROUND 2 round VT values
         if target_vt
-          construction_name = "#{construction_name} U-#{target_u_value_ip.to_f.round(2)} SHGC-#{target_shgc.round(2)} VT-#{target_vt.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)} |#{construction_name} U-#{target_u_value_si.round(2)} SHGC-#{target_shgc} VT-#{target_vt.round(2)}"
         else
-          construction_name = "#{construction_name} U-#{target_u_value_ip.to_f.round(2)} SHGC-#{target_shgc.round(2)}"
+          construction_name = "#{construction_name} U-#{target_u_value_ip.round(2)} SHGC-#{target_shgc} |#{construction_name} U-#{target_u_value_si.round(2)} SHGC-#{target_shgc}"
         end
       elsif target_u_value_ip
-        construction_name = "#{construction_name} R-#{target_r_value_ip.round(0)}"
+        
+        construction_name = "#{construction_name} R-#{target_r_value_ip} |#{construction_name} R-#{target_r_value_si}"
       end
     end
 
@@ -272,7 +295,10 @@ module SpeedConstructions
     existing_constructions.each do |existing_construction|
       if existing_construction.name.get.to_s == construction_name
         # puts("INFO Reusing #{construction_name}, already in model")
-        return existing_construction
+
+        #if !target_r_value_ip.nil? and !target_r_value_si.nil? then binding.pry end
+
+        return [existing_construction,target_r_value_ip,target_r_value_si]
       end
     end
 
@@ -296,8 +322,12 @@ module SpeedConstructions
       material = OpenStudio::Model::SimpleGlazing.new(model)
       material.setName('Simple Glazing')
       layers << material
+
     else
       data['materials'].each do |material_name|
+
+        #binding.pry
+
         material = model_add_material(std, model, material_name)
         if material
           layers << material
@@ -315,6 +345,7 @@ module SpeedConstructions
         # Handle Opaque and Fenestration Constructions differently
         if construction.isFenestration && construction_simple_glazing?(construction)
           # Set the U-Value, SHGC, and VT
+          ## TODO there are duplicate materials
           construction_set_glazing_u_value(construction, target_u_value_ip.to_f, data['intended_surface_type'], u_includes_int_film, u_includes_ext_film)
           construction_set_glazing_shgc(construction, target_shgc.to_f)
           if target_vt
@@ -338,9 +369,10 @@ module SpeedConstructions
       end
     end
 
-    # puts("INFO Added construction #{construction.name}.")
+    #if target_r_value_ip == nil then binding.pry end
 
-    return construction
+    # puts("INFO Added construction #{construction.name}.")
+    return [construction, target_r_value_ip ,target_r_value_si]
   end
 
   # Sets the U-value of a construction to a specified value
@@ -812,10 +844,12 @@ module SpeedConstructions
 
       # Get the properties from the name
       name = const.name.get.to_s
-      matches = name.match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
-      name_u_ip = matches[1].gsub('U-','').to_f
-      name_shgc = matches[2].gsub('SHGC-','').to_f
-      name_vt = matches[3].gsub('VT-','').to_f
+      # Remember America first! Ip value is first split
+      matches_ip = name.split('|')[0].match(/.*(U-\d*\.\d*).*(SHGC-\d*\.\d*).*(VT-\d*\.\d*)/)
+
+      name_u_ip = matches_ip[1].gsub('U-','').to_f
+      name_shgc = matches_ip[2].gsub('SHGC-','').to_f
+      name_vt = matches_ip[3].gsub('VT-','').to_f
       # puts name
       # puts ".... from name U = #{name_u_ip}"
       # puts ".... from name SHGC = #{name_shgc}"
@@ -909,12 +943,14 @@ module SpeedConstructions
 
       # Get the R-Value from the name
       name = const.name.get.to_s
-      matches = name.match(/.*(R-\d*).*/)
-      if matches.nil?
+      # always remember America first ! IP is first
+      matches_ip = name.split('|')[0].match(/.*(R-\d*).*/)
+      if matches_ip.nil?
         puts "ERROR For #{name}, could not find properties in name of construction, cannot compare to model inputs."
         next
       end
-      name_r_ip = matches[1].gsub('R-','').to_f
+
+      name_r_ip = matches_ip[1].gsub('R-','').to_f
       # puts name
       # puts ".... from name R IP = #{name_r_ip}"
 

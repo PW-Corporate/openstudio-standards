@@ -1,4 +1,5 @@
 require 'json'
+require 'git'
 
 base_path = File.dirname(__FILE__)
 
@@ -17,8 +18,32 @@ File.open(File.join(base_path, 'other_inputs_new.json')) do |file|
   other_inputs = JSON.parse(file.read)
 end
 
+g = Git.open(File.join(File.dirname(__FILE__),'..','..'))
+
+version_info = {}
+version_info['pw_openstudio_standards_git_sha'] = g.log.first.sha
+version_info['pw_openstudio_standards_describe'] = g.describe
+
+# https://stackoverflow.com/questions/35958632/replace-a-specific-line-in-a-file-using-ruby
+
+### Appends g describe to end of both files
+File.open(File.join(File.dirname(__FILE__),'construction_lib.osm'),"a+") {|f|
+
+  f.write("\n")
+  f.write('### Produced by : openstudio-standards describe - ' << g.describe)
+  
+}
+
+File.open(File.join(File.dirname(__FILE__),'SpeedSchedules.osm'),"a+") {|f|
+
+  f.write("\n")
+  f.write('### Produced by : openstudio-standards describe - ' << g.describe)
+  
+}
+
 # combine inputs
 inputs = {}
+inputs['version_info'] = version_info
 inputs['Project_Information'] = other_inputs['Project_Information']
 inputs['Site_Context'] = other_inputs['Site_Context']
 inputs['Geometry'] = other_inputs['Geometry']
