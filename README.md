@@ -2,9 +2,26 @@
 
 To create core speed resources from spreadsheet data
 
-1. construction_lib.osm (For speed engine and constructions measures)
+Data required:
+
+1. construction_costs.csv
+2. InputJSONData_SpaceLoads.csv
+3. InputJSONData.xlsx
+4. OpenStudio_Standards-speed(schedules).xlsx
+
+Data generated:
+
+1. construction_lib.osm (For speed engine and constructions measures) and an accompanying constructions_list.csv with all the constructions listed
 2. SpeedSchedules.osm (For speed engine)
 3. inputs_new.json - the input.json
+# Consisting of:
+
+A. construction_inputs_new.json
+B. space_loads_inputs_new.json - Uses InputJSONData_SpaceLoads.csv
+C. other_inputs_new.json - Uses InputJSONData.xlsx
+
+Which are combined to form: inputs_new.json
+
 
 Run with rake task export_speed:
 https://github.com/PW-Corporate/openstudio-standards/blob/master/Rakefile#L245-L252
@@ -13,9 +30,11 @@ https://github.com/PW-Corporate/openstudio-standards/blob/master/Rakefile#L245-L
 
 # PW Fork of OpenStudio-Standards
 
-Install Ruby and OpenStudio as described below for either OpenStudio 3.0.0 or 2.9.1. Note if switching between versions of OpenStudio you will have to delete the `Gemfile.lock` file in the root directory of this repository.
+Install Ruby and OpenStudio as described below for either OpenStudio 3.2.0,3.1.0,3.0.0 or 2.9.1. Note if switching between versions of OpenStudio you will have to delete the `Gemfile.lock` file in the root directory of this repository.
 
 Edit `./data/standards/OpenStudio_Standards.xslx`.
+
+Note for Schedules: When pulling SPEED Schedules from dropbox make sure that all tabs EXCEPT Schedules are deleted and the schedules tab is named Schedules
 
 Run the commands:
 ```

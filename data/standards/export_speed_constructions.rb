@@ -5,7 +5,7 @@ require_relative 'speed_constructions'
 require 'pry-nav'
 
 # Standards to export
-templates = ['90.1-2007', '90.1-2010', '90.1-2013']
+templates = ['90.1-2007', '90.1-2010', '90.1-2013','90.1-2016']#,'90.1-2019']
 
 # Surface types to export
 intended_surface_types = ['ExteriorRoof', 'ExteriorWall', 'GroundContactFloor', 'ExteriorWindow']
@@ -133,6 +133,9 @@ templates.each do |template|
           'building_category' => building_category
         }
         props = std.model_find_object(std.standards_data['construction_properties'], search_criteria)
+
+        #if standards_construction_type.include? "Weighted" then binding.pry end
+        if standards_construction_type.include? "Weighted" then next end
 
         # Make sure that a construction is specified
         if props['construction'].nil?
